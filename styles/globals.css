@@ -26,12 +26,6 @@ body {
   background: red;
 }
 
-.test {
-  /* background-color: red;
-  min-height: 100%;
-  border: 10px solid green; */
-}
-
 .progress-bar {
   position: fixed;
   top: 0;

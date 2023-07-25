@@ -3,7 +3,7 @@ import { ReactLenis, useLenis } from '@studio-freight/react-lenis';
 import { useScroll, motion } from 'framer-motion';
 
 // core styles shared by all of react-notion-x (required)
-import 'react-notion-x/src/styles.css';
+//import 'react-notion-x/src/styles.css';
 
 import '../styles/globals.css';
 
