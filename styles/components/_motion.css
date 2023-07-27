@@ -1,0 +1,9 @@
+.motion {
+  /* border: 2px solid red; */
+  width: inherit;
+}
+
+.motion-wrapper {
+  overflow: hidden;
+  width: 100%;
+}
