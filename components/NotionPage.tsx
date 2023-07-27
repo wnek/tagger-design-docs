@@ -24,7 +24,7 @@ export const NotionPage = ({
   //   console.log('This is branding page');
   // }
 
-  // console.log(title, recordMap);
+  console.log(title, recordMap);
 
   return (
     <>
