@@ -1,6 +1,6 @@
 .notion {
-  font-size: 18px;
-  line-height: 1.8;
+  font-size: 22px;
+  line-height: 1.6;
   color: var(--fg-color);
   caret-color: var(--fg-color);
   font-family: var(--notion-font);
@@ -118,7 +118,6 @@
 .notion-app {
   position: relative;
   background: var(--bg-color);
-  background-color: #f5f5f5;
   min-height: 100vh;
 }
 
