@@ -1,57 +1,54 @@
 import * as React from 'react';
+import {ExtendedRecordMap} from 'notion-types';
+import {getPageTitle} from 'notion-utils';
+import {NotionRenderer} from '../lib/react-notion-x/src/index';
+import {Menu} from './Menu';
+
+import {motion, useScroll} from 'framer-motion';
 import Head from 'next/head';
-
-import notion from '../lib/notion';
-import { ExtendedRecordMap } from 'notion-types';
-import { getPageTitle, getAllPagesInSpace } from 'notion-utils';
-import { NotionRenderer } from '../lib/react-notion-x/src/index';
-
-import { motion, useScroll } from 'framer-motion';
+import {rootNotionPageId} from '../lib/config';
 
 export const NotionPage = ({
-  recordMap,
-  rootPageId,
-}: {
-  recordMap: ExtendedRecordMap;
-  rootPageId?: string;
+                               recordMap,
+                               rootPageId,
+                               pages
+                           }: {
+    recordMap: ExtendedRecordMap;
+    rootPageId?: string;
+    pages?: any[]
 }) => {
-  if (!recordMap) {
-    return null;
-  }
-  const title = getPageTitle(recordMap);
+    if (!recordMap) {
+        return null;
+    }
+    const title = getPageTitle(recordMap);
 
-  // if (title === 'Branding') {
-  //   console.log('This is branding page');
-  // }
+    return (
+        <>
+            <Menu pages={pages} recordMap={recordMap} rootOnly={false} id={rootNotionPageId}/>
+            <Head>
+                <meta name="description" content="React Notion X Minimal Demo"/>
 
-  console.log(title, recordMap);
-
-  return (
-    <>
-      <Head>
-        <meta name="description" content="React Notion X Minimal Demo" />
-
-        <title>{title}</title>
-      </Head>
-      <ProgressBar />
-      <NotionRenderer
-        recordMap={recordMap}
-        fullPage={true}
-        darkMode={false}
-        rootPageId={rootPageId}
-      />
-    </>
-  );
+                <title>{title}</title>
+            </Head>
+            <ProgressBar/>
+            <NotionRenderer
+                recordMap={recordMap}
+                fullPage={true}
+                darkMode={false}
+                rootPageId={rootPageId}
+            />
+        </>
+    );
 };
 
 function ProgressBar() {
-  const { scrollYProgress } = useScroll();
+    const {scrollYProgress} = useScroll();
 
-  return (
-    <motion.div
-      initial={false}
-      style={{ scaleX: scrollYProgress }}
-      className="progress-bar"
-    />
-  );
+    return (
+        <motion.div
+            initial={false}
+            style={{scaleX: scrollYProgress}}
+            className="progress-bar"
+        />
+    );
 }
