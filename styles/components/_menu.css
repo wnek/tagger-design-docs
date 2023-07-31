@@ -1,0 +1,56 @@
+@import '../core/_typography.css';
+
+.aside-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    min-width: 300px;
+
+    background: #fff;
+
+    -webkit-box-shadow: 14px -2px 28px -14px rgba(66, 68, 90, 0.09);
+    -moz-box-shadow: 14px -2px 28px -14px rgba(66, 68, 90, 0.09);
+    box-shadow: 14px -2px 28px -14px rgba(66, 68, 90, 0.09);
+
+    border-right: 12px;
+    border-bottom-right-radius: 12px;
+
+    padding: 24px;
+
+    z-index: 1000000;
+}
+
+.aside-menu-item {
+    display: block;
+    padding: 16px 32px;
+    margin-bottom: 4px;
+    border-radius: 8px;
+    text-decoration: none;
+    color: #000;
+
+    transition: 0.3s;
+}
+
+.aside-menu-item.active {
+    background: #F7F7F7;
+    font-weight: 600;
+}
+
+.aside-menu-item.active:hover {
+    background: #eeeeee;
+}
+
+.aside-menu-item:hover {
+    background: #F7F7F7;
+    cursor: pointer;
+}
+
+.aside-menu-item-icon {
+    display: inline !important;
+    margin-right: 8px;
+}
+
+.content-wrapper {
+    margin-left: 350px;
+}
