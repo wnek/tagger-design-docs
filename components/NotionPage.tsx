@@ -2,20 +2,19 @@ import * as React from 'react';
 import {ExtendedRecordMap} from 'notion-types';
 import {getPageTitle} from 'notion-utils';
 import {NotionRenderer} from '../lib/react-notion-x/src/index';
-import {Menu} from './Menu';
 
 import {motion, useScroll} from 'framer-motion';
 import Head from 'next/head';
-import {rootNotionPageId} from '../lib/config';
+import {MenuWithSearch} from './MenuWithSearch';
 
 export const NotionPage = ({
                                recordMap,
                                rootPageId,
-                               pages
+                               id
                            }: {
     recordMap: ExtendedRecordMap;
-    rootPageId?: string;
-    pages?: any[]
+    rootPageId: string,
+    id: string,
 }) => {
     if (!recordMap) {
         return null;
@@ -24,13 +23,14 @@ export const NotionPage = ({
 
     return (
         <>
-            <Menu pages={pages} recordMap={recordMap} rootOnly={false} id={rootNotionPageId}/>
+            <MenuWithSearch pageId={id}/>
             <Head>
                 <meta name="description" content="React Notion X Minimal Demo"/>
 
                 <title>{title}</title>
             </Head>
             <ProgressBar/>
+
             <NotionRenderer
                 recordMap={recordMap}
                 fullPage={true}
