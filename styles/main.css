@@ -1,11 +1,22 @@
+/* Abstracts */
 @import url('abstracts/_variables.css');
 
+
+/* Core */
 @import url('core/_reset.css');
 @import url('core/_typography.css');
 @import url('core/_react-notion-x.css');
 
+
+/* Components */
 @import url('components/_hr.css');
 @import url('components/_list.css');
 @import url('components/_callout.css');
 @import url('components/_motion.css');
 @import url('components/_menu.css');
+@import url('components/_breadcrumbs.css');
+@import url('components/_progress-bar.css');
+
+/* Layout */
+@import url('layout/_body.css');
+@import url('layout/_navbar.css');

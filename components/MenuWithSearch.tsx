@@ -1,8 +1,6 @@
-import {faSearch} from "@fortawesome/free-solid-svg-icons";
-import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
-import React, {useState} from "react";
-import {MenuItems} from "../models/MenuItems";
-import {Menu} from "./Menu";
+import React, { useState } from "react";
+import { MenuItems } from "../models/MenuItems";
+import { Menu } from "./Menu";
 
 
 const searchItem = (query, array) => {
@@ -14,7 +12,7 @@ const searchItem = (query, array) => {
     });
 }
 
-export const MenuWithSearch = ({pageId}) => {
+export const MenuWithSearch = ({ pageId }) => {
     const ref = React.useRef(null);
     const [className, setClassName] = useState('menu-search');
     const [query, setQuery] = useState('menu-search');
@@ -27,22 +25,9 @@ export const MenuWithSearch = ({pageId}) => {
 
     return (
         <div className='aside-menu' key='aside-menu'>
-            <a href={'../'}>
-                <img src={'./img/taggerLogo.svg'}/>
-            </a>
-            <div className={className}>
-                <FontAwesomeIcon icon={faSearch} size={'xs'} style={{width: '16px'}}/>
-                <input
-                    ref={ref}
-                    className='menu-search-input'
-                    type={'text'}
-                    placeholder={'Search'}
-                    onFocus={() => setClassName('menu-search menu-search-focused')}
-                    onBlur={() => setClassName('menu-search')}
-                    onChange={(el) => onSearch(el.target.value)}
-                />
-            </div>
-            <Menu pages={menuItems} activeId={pageId} query={query}/>
+
+
+            <Menu pages={menuItems} activeId={pageId} query={query} />
         </div>
     );
 };

@@ -1954,44 +1954,6 @@ svg.notion-page-icon {
     gap: 12px;
 }
 
-.notion-header .breadcrumbs {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    height: 100%;
-    flex-grow: 0;
-    min-width: 0;
-}
-
-.notion-header .breadcrumb {
-    display: inline-flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    white-space: nowrap;
-    text-overflow: ellipsis;
-
-    color: var(--fg-color);
-    text-decoration: none;
-    margin: 1px 0px;
-    padding: 4px 6px;
-    border-radius: 3px;
-    transition: background 120ms ease-in 0s;
-    user-select: none;
-    background: transparent;
-    cursor: pointer;
-}
-
-.notion-header .breadcrumb .notion-page-icon-inline {
-    font-size: 18px;
-    line-height: 1.1;
-    margin: 0 6px 0 0;
-}
-
-.notion-header .breadcrumb .notion-page-icon-span {
-    position: relative;
-    top: 1px;
-}
 
 .notion-header .searchIcon {
     width: 14px;
@@ -2004,17 +1966,7 @@ svg.notion-page-icon {
     gap: 8px;
 }
 
-.notion-header .breadcrumb:not(.active):hover {
-    background: var(--bg-color-0);
-}
 
-.notion-header .breadcrumb:not(.active):active {
-    background: var(--bg-color-1);
-}
-
-.notion-header .breadcrumb.active {
-    cursor: default;
-}
 
 .notion-header .spacer {
     margin: 0 2px;
@@ -2472,24 +2424,7 @@ svg.notion-page-icon {
     cursor: pointer;
 }
 
-.box {
-    width: 200px;
-    height: 200px;
-    border-radius: 50%;
-    background: red;
-}
 
-.progress-bar {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 8px;
-    background: #222;
-    transform-origin: 0%;
-    z-index: 2;
-    transform: scaleX(0) translateZ(0);
-}
 
 .notion-page-icon-hero {
     display: none;
@@ -2500,6 +2435,3 @@ svg.notion-page-icon {
     overflow: hidden;
 }
 
-.notion-page-scroller {
-    padding: 80px 0 0 300px;
-}

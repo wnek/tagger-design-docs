@@ -1,0 +1,15 @@
+body{
+    background-color: var(--bg-color-4);
+    padding: 1em;
+    font-family: var(--notion-font);
+}
+
+.body-container{
+    border-radius: 0.5em;
+    overflow: hidden;
+    background-color: #fff;
+}
+
+.notion-container{
+    min-height: 100vh;
+}

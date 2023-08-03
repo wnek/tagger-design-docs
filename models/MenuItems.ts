@@ -7,7 +7,8 @@ export const MenuItems = [
         title: 'Brand',
         id: '3021674f-0289-4c5c-82ed-64018ac71500',
         children: [
-            {id: '974cc4d3-a3a0-451f-99e2-eb66ed53bbe1', title: 'Illustrations'}
+            {id: '974cc4d3-a3a0-451f-99e2-eb66ed53bbe1', title: 'Illustrations'},
+            {id:'fb9d58b2e73a4fc797ca2b322bd2b51d', title: 'Test'}
         ],
         active: false
     },
