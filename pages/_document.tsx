@@ -12,9 +12,10 @@ export default class MyDocument extends Document {
             <Html lang="en">
                 <Head />
                 <body>
+                    <Navbar />
                     <div className='body-container'>
                         <motion.div className="test">
-                            <Navbar />
+
                             <div className='notion-container'>
                                 <Main />
                                 <NextScript />
