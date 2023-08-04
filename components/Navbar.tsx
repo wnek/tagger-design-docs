@@ -1,6 +1,4 @@
-import Link from 'next/link';
-import { useRouter } from 'next/router';
-
+'use client'
 export default function Navbar() {
 
     return (
@@ -9,7 +7,8 @@ export default function Navbar() {
             <nav>
                 <div className="nav_links_wrapper">
                     <div className='nav_links'>
-                        <a className="selected" href={'../getting-started'}>Getting Started</a>
+                        <a className="selected" href={'../'}>Home</a>
+                        <a href={'pages/getting-started'}>Getting Started</a>
                         <a href={'../methodology'}>Methodology</a>
                         <a href={'../brand'}>Brand</a>
                         <a href={'../tagger-labs'}>Tagger Labs</a>
