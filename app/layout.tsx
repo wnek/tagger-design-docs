@@ -1,14 +1,17 @@
 import '../styles/main.css';
+
+// Next.js
 import { Metadata } from 'next'
+
+// Components
 import Navbar from '../components/Navbar';
+import Footer from '../components/Footer';
 
 export const metadata: Metadata = {
     title: 'My Page Title',
 }
 
 export default function RootLayout({
-    // Layouts must accept a children prop.
-    // This will be populated with nested layouts or pages
     children,
 }: {
     children: React.ReactNode
@@ -18,7 +21,8 @@ export default function RootLayout({
         <html lang="en">
             <body>
                 <Navbar />
-                {children}</body>
+                {children}
+                <Footer /></body>
 
         </html>
 
