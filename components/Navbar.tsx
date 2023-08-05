@@ -1,4 +1,6 @@
 'use client'
+
+import Link from "next/link"
 export default function Navbar() {
 
     return (
@@ -7,8 +9,8 @@ export default function Navbar() {
             <nav>
                 <div className="nav_links_wrapper">
                     <div className='nav_links'>
-                        <a className="selected" href={'../'}>Home</a>
-                        <a href={'pages/getting-started'}>Getting Started</a>
+                        <Link className="selected" href={'../'}>Home</Link>
+                        <Link href={'getting-started'}>Getting Started</Link>
                         <a href={'../methodology'}>Methodology</a>
                         <a href={'../brand'}>Brand</a>
                         <a href={'../tagger-labs'}>Tagger Labs</a>
