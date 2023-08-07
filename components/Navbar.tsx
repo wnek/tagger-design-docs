@@ -15,14 +15,8 @@ export default function Navbar() {
                         <Link href={'tagger-labs'}>Tagger Labs</Link>
                     </div>
                 </div>
-                <div className='nav_logo'>
-                    <Link href={'../'}>
-                        <img src={'./img/taggerLogo.svg'} />
-                    </Link>
-                </div>
-
-
             </nav>
+
         </>
     )
 

@@ -1,4 +1,5 @@
 import React, { useRef } from 'react'
+import Link from 'next/link';
 
 // R3F-Scroll-Rig
 import { GlobalCanvas, ScrollScene, ViewportScrollScene, UseCanvas, SmoothScrollbar } from '@14islands/r3f-scroll-rig'
@@ -15,7 +16,13 @@ export default function Hero() {
 
     return (
         <>
-            <div ref={el} className="hero-scroll-scene"></div >
+            <div ref={el} className="hero-scroll-scene">
+                <div className='logo'>
+                    <Link href={'../'}>
+                        <img src={'./img/tagger-logo-light.svg'} />
+                    </Link>
+                </div>
+            </div >
             <UseCanvas>
                 <HeroScene el={el} />
             </UseCanvas>
@@ -38,7 +45,7 @@ function HeroScene({ el }) {
         // state.camera.lookAt(0, 0, 0)
         // state.camera.updateProjectionMatrix()
 
-        cameraRef.current.position.lerp({ x: -state.pointer.x * 10, y: -state.pointer.y * 2, z: 20 }, 0.1)
+        cameraRef.current.position.lerp({ x: -state.pointer.x * 10, y: -state.pointer.y * 5, z: 20 }, 0.05)
         // cameraRef.current.position.x = - state.pointer.x * 2
         // cameraRef.current.position.y = -state.pointer.y * 2
         // cameraRef.current.position.z = 20
@@ -64,7 +71,7 @@ function StageComponent(props) {
         <>
             <group scale={props.scale.xy.min() * 0.5}>
 
-                <Float floatIntensity={1} rotationIntensity={1} speed={2}>
+                <Float floatIntensity={0.2} rotationIntensity={1} speed={2}>
                     <Box args={[1, 1, 1]} position={[2, 0, 0]} castShadow receiveShadow />
                 </Float>
                 <mesh>
