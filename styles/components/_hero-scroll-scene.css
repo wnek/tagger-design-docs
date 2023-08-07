@@ -1,0 +1,7 @@
+.hero-scroll-scene {
+  display: flex;
+  aspect-ratio: 16/10;
+  width: 100%;
+  border: 10px solid red;
+  height: 70vh;
+}
