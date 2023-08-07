@@ -57,7 +57,7 @@ function HeroScene({ el }) {
             <>
                 <StageComponent {...props} />
 
-                <PerspectiveCamera ref={cameraRef} makeDefault={true} position={[0, 0, 18]} />
+                <PerspectiveCamera fov={70} ref={cameraRef} makeDefault={true} position={[0, 0, 18]} />
             </>
         )}
     </ViewportScrollScene>
@@ -69,7 +69,7 @@ function StageComponent(props) {
     console.log(props)
     return (
         <>
-            <group scale={props.scale.xy.min() * 0.5}>
+            <group position={[0, -2, 0]} scale={props.scale.xy.min() * 0.5}>
 
                 <Float floatIntensity={0.2} rotationIntensity={1} speed={2}>
                     <Box args={[1, 1, 1]} position={[2, 0, 0]} castShadow receiveShadow />
