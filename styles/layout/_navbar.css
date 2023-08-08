@@ -60,6 +60,6 @@ nav {
 }
 
 .nav_links .selected:hover {
-  background-color: #ffffff42;
+  background-color: var(--orange-500);
   color: #ffffff;
 }

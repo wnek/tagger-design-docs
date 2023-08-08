@@ -24,7 +24,7 @@ export default function Hero() {
                 </div>
             </div >
             <UseCanvas>
-                <HeroScene el={el} />
+                {/* <HeroScene el={el} /> */}
             </UseCanvas>
         </>
 
