@@ -19,12 +19,14 @@ export default function Navbar() {
     const toggleMenu = () => {
         setIsOpened(!isOpened)
     }
-    console.log(isOpened)
 
     return (
         <>
             <nav>
-                <button className="nav_button" onClick={toggleMenu}>&times;</button>
+                <button className="nav_button" onClick={toggleMenu}>
+                    {isOpened ? <img src="./img/x.svg" alt="Close Icon" /> : <img src="./img/hamburger.svg" alt="Hamburger Icon" />}
+                </button>
+
                 <div className={`nav_links_wrapper ${isOpened ? "is-opened" : ""} `}>
 
                     <div className={`nav_links ${isOpened ? "is-opened" : ""} `}>

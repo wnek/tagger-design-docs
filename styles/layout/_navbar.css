@@ -147,6 +147,19 @@ nav {
   .nav_button {
     display: block;
     position: fixed;
+    top: 2em;
+    right: 2em;
     z-index: 2;
+    background-color: #ffffff12;
+    backdrop-filter: blur(8px);
+    border: 1px solid #c9c9c911;
+    border-radius: 50%;
+    height: 3em;
+    width: 3em;
+  }
+
+  .nav_button img {
+    margin: 0 auto;
+    width: 1.5em;
   }
 }
