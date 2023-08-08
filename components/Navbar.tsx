@@ -5,7 +5,8 @@ import { useState } from 'react'
 
 import { usePathname } from 'next/navigation'
 import Link from "next/link"
-import { is } from '@react-three/fiber/dist/declarations/src/core/utils'
+import Image from 'next/image'
+
 
 
 
@@ -24,7 +25,7 @@ export default function Navbar() {
         <>
             <nav>
                 <button className="nav_button" onClick={toggleMenu}>
-                    {isOpened ? <img src="./img/x.svg" alt="Close Icon" /> : <img src="./img/hamburger.svg" alt="Hamburger Icon" />}
+                    {isOpened ? <Image width={32} height={32} src="/img/x.svg" alt="Close Icon" /> : <Image width={32} height={32} src="/img/hamburger.svg" alt="Hamburger Icon" />}
                 </button>
 
                 <div className={`nav_links_wrapper ${isOpened ? "is-opened" : ""} `}>

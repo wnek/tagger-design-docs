@@ -1,5 +1,5 @@
 body {
-  background-color: var(--light-grey);
+  background-color: #101010;
   font-family: var(--notion-font);
   padding: 1em 1em;
   color: var(--grey900);
@@ -7,13 +7,6 @@ body {
 
 .body-container {
   overflow: hidden;
-  background-color: #fff;
-  border-radius: 1em;
-}
 
-.page,
-.page-body {
-  display: flex;
-  gap: 3em;
-  flex-direction: column;
+  border-radius: 1em;
 }
