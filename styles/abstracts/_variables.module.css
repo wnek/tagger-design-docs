@@ -1,8 +1,9 @@
 :root {
-  --orange-400: #FFB847;
+  --grey900: #222222;
+  --grey700: #606060;
+  --orange-400: #ffb847;
   --orange-500: #ee6848;
   --light-grey: #f5f5f5;
-
 
   /* --shadow-color: 0deg 0% 0%; */
   --shadow-color: 0deg 0% 10%;

@@ -2,6 +2,7 @@ body {
   background-color: var(--light-grey);
   font-family: var(--notion-font);
   padding: 1em 1em;
+  color: var(--grey900);
 }
 
 .body-container {
@@ -10,7 +11,8 @@ body {
   border-radius: 1em;
 }
 
-.page, .page-body{
+.page,
+.page-body {
   display: flex;
   gap: 3em;
   flex-direction: column;

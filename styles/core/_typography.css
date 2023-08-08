@@ -1,5 +1,9 @@
 /* @import url('https://fonts.googleapis.com/css2?family=Newsreader:wght@300&family=Plus+Jakarta+Sans:wght@400;600;700&display=swap'); */
 
-h1{
-    font-size: 4em;
+h1 {
+  font-size: 4em;
+}
+
+p {
+  color: var(--grey700);
 }
