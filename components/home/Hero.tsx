@@ -24,7 +24,7 @@ export default function Hero() {
                 </div>
             </div >
             <UseCanvas>
-                {/* <HeroScene el={el} /> */}
+                <HeroScene el={el} />
             </UseCanvas>
         </>
 
@@ -39,16 +39,7 @@ function HeroScene({ el }) {
     useFrame((state) => {
 
         v.copy({ x: state.pointer.x, y: state.pointer.y, z: 0 })
-        // v.unproject(state.camera)
-        // state.camera.position.lerp({ x: -state.pointer.x * 2000, y: -state.pointer.y * 10, z: 160 }, 0.1)
-        // console.log(state.camera.position)
-        // state.camera.lookAt(0, 0, 0)
-        // state.camera.updateProjectionMatrix()
-
         cameraRef.current.position.lerp({ x: -state.pointer.x * 10, y: -state.pointer.y * 5, z: 20 }, 0.05)
-        // cameraRef.current.position.x = - state.pointer.x * 2
-        // cameraRef.current.position.y = -state.pointer.y * 2
-        // cameraRef.current.position.z = 20
         cameraRef.current.lookAt(0, 0, 0)
 
     })

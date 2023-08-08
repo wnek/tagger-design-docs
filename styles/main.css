@@ -1,5 +1,5 @@
 /* Abstracts */
-@import url('abstracts/_variables.css');
+@import url('abstracts/_variables.module.css');
 
 /* Core */
 @import url('core/_reset.css');
@@ -14,3 +14,4 @@
 /* Layout */
 @import url('layout/_body.css');
 @import url('layout/_navbar.css');
+@import url('layout/_content-page.css');

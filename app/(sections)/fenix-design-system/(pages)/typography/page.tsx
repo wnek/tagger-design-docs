@@ -4,7 +4,6 @@ export default function Typography() {
     return (
         <article id="b57987a2-8f14-4135-bbeb-63ba1584446b" className="page sans">
             <header>
-                <div className="page-header-icon undefined"><span className="icon">⌨️</span></div>
                 <h1 className="page-title">Typography</h1>
                 <p className="page-description"></p>
             </header>
