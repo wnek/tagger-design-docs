@@ -15,6 +15,8 @@ import { Box, PerspectiveCamera, Float, Grid, Text, Billboard, Environment, Ligh
 import Model from '../3d/Hero3d';
 import OrangeCursor from '../3d/OrangeCursor';
 import Comment from '../3d/Comment';
+import RedCursor from '../3d/RedCursor';
+import GreyCursor from '../3d/GreyCursor';
 
 export default function Hero() {
     const el = useRef()
@@ -50,7 +52,7 @@ function HeroScene({ el }) {
     useFrame((state) => {
 
         v.copy({ x: state.pointer.x, y: state.pointer.y, z: 0 })
-        cameraRef.current.position.lerp({ x: -state.pointer.x * 5, y: Math.max(0, -state.pointer.y * 5), z: 20 }, 0.02)
+        cameraRef.current.position.lerp({ x: -state.pointer.x * 10, y: Math.max(-6, -state.pointer.y * 5), z: 20 }, 0.02)
         cameraRef.current.lookAt(0, 0, 0)
     })
     return <ViewportScrollScene track={el} hideOffscreen={false}>
@@ -124,6 +126,15 @@ function StageComponent(props) {
 
 
                 <Model castShadow />
+
+                <Float floatIntensity={0.1} rotationIntensity={0.2} speed={1.1}>
+                    <GreyCursor castShadow />
+                </Float>
+
+                <Float floatIntensity={0.4} rotationIntensity={0.2} speed={1.2}>
+                    <RedCursor castShadow />
+                </Float>
+
                 <Float floatIntensity={0.5} rotationIntensity={0.1} speed={1.5}>
                     <OrangeCursor castShadow />
                 </Float>

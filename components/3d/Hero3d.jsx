@@ -11,15 +11,16 @@ export default function Model(props) {
   const { nodes, materials } = useGLTF('./img/models/hero-transformed.glb')
   return (
     <group {...props} dispose={null}>
-      <mesh castShadow receiveShadow geometry={nodes.browser.geometry} material={materials.ToBake_Bake} />
-      <mesh castShadow receiveShadow geometry={nodes.Cube001.geometry} material={materials.ToBake_Bake} />
-      <mesh castShadow receiveShadow geometry={nodes.Cube002.geometry} material={materials.ToBake_Bake} />
-      <mesh castShadow receiveShadow geometry={nodes.Cylinder001.geometry} material={materials['Material.002']} position={[0, 0.054, 0]} />
-      <mesh castShadow receiveShadow geometry={nodes.Text.geometry} material={materials['Material.003']} position={[0.177, 0.985, 1.746]} rotation={[Math.PI / 2, 0, 0]} scale={0.029} />
-      <mesh castShadow receiveShadow geometry={nodes.Text001.geometry} material={materials['Material.003']} position={[-1.085, 1.428, 1.236]} rotation={[Math.PI / 2, 0, 0]} scale={0.029} />
-      <mesh castShadow receiveShadow geometry={nodes.Cylinder002.geometry} material={materials['Material.005']} />
-    </group>
+    <mesh castShadow receiveShadow geometry={nodes.browser.geometry} material={materials.ToBake_Bake} />
+    <mesh castShadow receiveShadow geometry={nodes.Cube001.geometry} material={materials.ToBake_Bake} />
+    <mesh castShadow receiveShadow geometry={nodes.Cube002.geometry} material={materials.ToBake_Bake} />
+    <mesh castShadow receiveShadow geometry={nodes.Cylinder001.geometry} material={materials['Material.002']} position={[0, 0.054, 0]} />
+    <mesh castShadow receiveShadow geometry={nodes.Text.geometry} material={materials['Material.003']} position={[0.177, 0.985, 1.746]} rotation={[Math.PI / 2, 0, 0]} />
+    <mesh castShadow receiveShadow geometry={nodes.Text001.geometry} material={materials['Material.003']} position={[-1.085, 1.428, 1.236]} rotation={[Math.PI / 2, 0, 0]} />
+    <mesh castShadow receiveShadow geometry={nodes.Cylinder002.geometry} material={materials['Material.005']} />
+    <mesh castShadow receiveShadow geometry={nodes.logo.geometry} material={materials['Material.007']} position={[-0.869, 1.202, 1.059]} rotation={[Math.PI / 2, 0, 0]} />
+  </group>
   )
 }
 
-useGLTF.preload('/hero-transformed.glb')
+useGLTF.preload('./img/models/hero-transformed.glb')

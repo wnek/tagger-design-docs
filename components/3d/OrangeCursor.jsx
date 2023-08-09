@@ -6,9 +6,9 @@ export default function OrangeCursor(props) {
   const { nodes, materials } = useGLTF('/img/models/orange-cursor-transformed.glb')
   return (
     <group {...props} dispose={null}>
-    <mesh castShadow receiveShadow geometry={nodes['orange-cursor'].geometry} material={materials['Material.002']} position={[1.099, 0.752, 1.798]} rotation={[Math.PI / 2, 0.203, 0]} scale={2.487} />
-    <mesh castShadow receiveShadow geometry={nodes.paulina.geometry} material={materials['Material.008']} position={[1.179, 0.724, 1.802]} rotation={[Math.PI / 2, 0, 0]} scale={0.05} />
-    <mesh castShadow receiveShadow geometry={nodes.button.geometry} material={materials['Material.002']} position={[0.287, 0.555, 0.451]} scale={0.708} />
+    <mesh castShadow receiveShadow geometry={nodes['orange-cursor'].geometry} material={materials['Material.002']} position={[0.902, 0.62, 1.951]} rotation={[Math.PI / 2, 0.203, 0]} scale={4.09} />
+    <mesh castShadow receiveShadow geometry={nodes.paulina.geometry} material={materials['Material.008']} position={[1.105, 0.529, 1.958]} rotation={[Math.PI / 2, 0, 0]} scale={0.082} />
+    <mesh castShadow receiveShadow geometry={nodes.button002.geometry} material={materials['Material.002']} position={[1.103, 0.528, 1.957]} scale={1.165} />
   </group>
   )
 }

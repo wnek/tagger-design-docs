@@ -5,12 +5,12 @@ export default function Comment(props) {
   const { nodes, materials } = useGLTF('/img/models/comment-transformed.glb')
   return (
     <group {...props} dispose={null}>
-      <mesh castShadow receiveShadow geometry={nodes.Plane.geometry} material={materials['Material.001']} position={[-0.483, 1.056, 1.381]} scale={0.758} />
-      <mesh castShadow receiveShadow geometry={nodes.Damian.geometry} material={materials['Material.010']} position={[-0.557, 1.129, 1.386]} rotation={[Math.PI / 2, 0, 0]} scale={0.05} />
-      <mesh castShadow receiveShadow geometry={nodes.D.geometry} material={materials['Material.010']} position={[-0.642, 1.107, 1.386]} rotation={[Math.PI / 2, 0, 0]} scale={0.05} />
-      <mesh castShadow receiveShadow geometry={nodes.Cylinder.geometry} material={materials['Material.005']} position={[-0.63, 1.119, 1.383]} rotation={[Math.PI / 2, 0, 0]} scale={0.758} />
-      <mesh castShadow receiveShadow geometry={nodes.paulina003.geometry} material={materials['Material.010']} position={[-0.557, 1.087, 1.386]} rotation={[Math.PI / 2, 0, 0]} scale={0.033} />
-    </group>
+    <mesh castShadow receiveShadow geometry={nodes.Plane.geometry} material={materials['Material.001']} position={[-1.061, 0.623, 1.38]} scale={0.877} />
+    <mesh castShadow receiveShadow geometry={nodes.Damian.geometry} material={materials['Material.010']} position={[-1.147, 0.708, 1.386]} rotation={[Math.PI / 2, 0, 0]} scale={0.058} />
+    <mesh castShadow receiveShadow geometry={nodes.D.geometry} material={materials['Material.010']} position={[-1.245, 0.681, 1.386]} rotation={[Math.PI / 2, 0, 0]} scale={0.058} />
+    <mesh castShadow receiveShadow geometry={nodes.Cylinder.geometry} material={materials['Material.005']} position={[-1.232, 0.696, 1.383]} rotation={[Math.PI / 2, 0, 0]} scale={0.877} />
+    <mesh castShadow receiveShadow geometry={nodes.paulina003.geometry} material={materials['Material.010']} position={[-1.147, 0.658, 1.386]} rotation={[Math.PI / 2, 0, 0]} scale={0.038} />
+  </group>
   )
 }
 
