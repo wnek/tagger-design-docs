@@ -1,12 +1,12 @@
 body {
   background-color: #101010;
   font-family: var(--notion-font);
+  font-weight: 500;
   padding: 1em 1em;
   color: var(--grey900);
 }
 
 .body-container {
   overflow: hidden;
-
   border-radius: 1em;
 }

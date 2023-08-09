@@ -10,7 +10,9 @@ import * as THREE from 'three'
 
 // R3F
 import { useFrame } from '@react-three/fiber'
-import { Box, PerspectiveCamera, Float, Grid } from '@react-three/drei'
+import { Box, PerspectiveCamera, Float, Grid, Text, Billboard } from '@react-three/drei'
+
+
 
 export default function Hero() {
     const el = useRef()
@@ -23,9 +25,15 @@ export default function Hero() {
                         <img src={'./img/tagger-logo-light.svg'} />
                     </Link>
                 </div>
+                <div className='content'>
+                    <p>Tagger Design Nest</p>
+                    <h1>Shape Ideas into Reality</h1>
+                </div>
+
             </div >
             <UseCanvas>
                 <HeroScene el={el} />
+
             </UseCanvas>
         </>
 
@@ -42,16 +50,18 @@ function HeroScene({ el }) {
         v.copy({ x: state.pointer.x, y: state.pointer.y, z: 0 })
         cameraRef.current.position.lerp({ x: -state.pointer.x * 5, y: Math.max(0, -state.pointer.y * 5), z: 20 }, 0.02)
         cameraRef.current.lookAt(0, 0, 0)
-
+        console.log(state)
     })
     return <ViewportScrollScene track={el} hideOffscreen={false}>
         {(props) => (
             <>
+
                 <StageComponent {...props} />
 
                 <PerspectiveCamera fov={80} ref={cameraRef} makeDefault={true} position={[0, 0, 18]} />
             </>
         )}
+
     </ViewportScrollScene>
 
 }
@@ -61,15 +71,23 @@ function StageComponent(props) {
 
     return (
         <>
-            <group position={[0, -2, 0]} scale={props.scale.xy.min() * 0.5}>
+            <group position={[0, -5, 0]} scale={props.scale.xy.min() * 0.5}>
+
+                {/* 
+                <Billboard>
+                    <Text position={[0, 2, 0]} fontSize={0.1} color={'#ffffff'} text="Tagger Design Nest" />
+                    <Text position={[0, 1.5, 0]} fontSize={0.75} color={'#ffffff'} text="Shape Ideas into Reality" textAlign='center' maxWidth={6} />
+                </Billboard> */}
 
                 <Float floatIntensity={0.2} rotationIntensity={1} speed={2}>
                     <Box args={[1, 1, 1]} position={[2, 1, 0]} castShadow receiveShadow />
                 </Float>
+
                 <mesh position={[0, 0.5, 1]} >
                     <boxGeometry />
                     <meshNormalMaterial />
                 </mesh>
+
                 <Grid position={[0, -0.01, 0]}
                     gridSize={[5, 5]}
                     cellSize={0.25}
@@ -85,6 +103,7 @@ function StageComponent(props) {
 
                 />
             </group>
+
 
         </>
     )

@@ -38,7 +38,7 @@ export default function RootLayout({
                 <div ref={eventSource} className="event-source">
                     <div className='body-container'>
                         <Navbar />
-                        <GlobalCanvas scaleMultiplier={0.01} eventSource={eventSource} eventPrefix="client" style={{ pointerEvents: 'none' }}>
+                        <GlobalCanvas globalRender={false} scaleMultiplier={0.01} eventSource={eventSource} eventPrefix="client" style={{ pointerEvents: 'none' }}>
                             <ambientLight />
                         </GlobalCanvas>
                         {children}
