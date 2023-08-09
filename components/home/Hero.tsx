@@ -10,9 +10,11 @@ import * as THREE from 'three'
 
 // R3F
 import { useFrame } from '@react-three/fiber'
-import { Box, PerspectiveCamera, Float, Grid, Text, Billboard, Environment, Lightformer, AccumulativeShadows, RandomizedLight, ContactShadows } from '@react-three/drei'
+import { Box, PerspectiveCamera, Float, Grid, Text, Billboard, Environment, Lightformer, AccumulativeShadows, RandomizedLight, Sparkles, Stars } from '@react-three/drei'
 
 import Model from '../3d/Hero3d';
+import OrangeCursor from '../3d/OrangeCursor';
+import Comment from '../3d/Comment';
 
 export default function Hero() {
     const el = useRef()
@@ -61,14 +63,14 @@ function HeroScene({ el }) {
 
 
 
-                <Environment blur={1}>
+                <Environment blur={5}>
                     <Lightformer
-                        position={[0, 10, 2]}
+                        position={[0, 15, 2]}
                         form="rect" // circle | ring | rect (optional, default = rect)
-                        intensity={4} // power level (optional = 1)
-                        color="ring" // (optional = white)
+                        intensity={13} // power level (optional = 1)
+                        color="white" // (optional = white)
                         scale={[50, 50]} // Scale it any way you prefer (optional = [1, 1])
-                        target={[0, 0, 0]} // Target position (optional = undefined)
+                        target={[0, 10, 0]} // Target position (optional = undefined)
                     />
                     <Lightformer
                         position={[0, -10, 2]}
@@ -79,9 +81,17 @@ function HeroScene({ el }) {
                         target={[0, 0, 0]} // Target position (optional = undefined)
                     />
                     <Lightformer
-                        position={[50, 50, 0]}
+                        position={[-5, 15, 1]}
                         form="ring" // circle | ring | rect (optional, default = rect)
-                        intensity={100} // power level (optional = 1)
+                        intensity={20} // power level (optional = 1)
+                        color="#FA6A42" // (optional = white)
+                        scale={[10, 50]} // Scale it any way you prefer (optional = [1, 1])
+                        target={[0, 0, 0]} // Target position (optional = undefined)
+                    />
+                    <Lightformer
+                        position={[10, 20, 0]}
+                        form="ring" // circle | ring | rect (optional, default = rect)
+                        intensity={2} // power level (optional = 1)
                         color="#FA6A42" // (optional = white)
                         scale={[10, 50]} // Scale it any way you prefer (optional = [1, 1])
                         target={[0, 0, 0]} // Target position (optional = undefined)
@@ -99,19 +109,27 @@ function StageComponent(props) {
 
     return (
         <>
-            <group position={[0, -5, 0]} scale={props.scale.xy.min() * 0.5}>
-                <AccumulativeShadows temporal frames={100} color="black" colorBlend={1} toneMapped={false} alphaTest={0.5} opacity={2} scale={24}>
+            <group position={[0, -7, 0]} scale={props.scale.xy.min() * 0.5}>
+
+                <Sparkles color="#FA6A42" count={1000} size={3} speed={0.4} position={[1, 0, 0]} scale={[10]} />
+
+                <AccumulativeShadows temporal frames={100} color="black" colorBlend={1} toneMapped={false} alphaTest={0.4} opacity={2} scale={24}>
                     <RandomizedLight amount={8} radius={4} ambient={0.5} intensity={2} position={[5, 5, -10]} bias={0.001} />
                 </AccumulativeShadows>
-                {/* 
-                <Billboard>
+
+                {/* <Billboard>
                     <Text position={[0, 2, 0]} fontSize={0.1} color={'#ffffff'} text="Tagger Design Nest" />
                     <Text position={[0, 1.5, 0]} fontSize={0.75} color={'#ffffff'} text="Shape Ideas into Reality" textAlign='center' maxWidth={6} />
                 </Billboard> */}
+
+
                 <Model castShadow />
-                <Float floatIntensity={0.2} rotationIntensity={1} speed={2}>
-                    <Box args={[1, 1, 1]} position={[2, 1, 0]} castShadow receiveShadow />
-                    <Box args={[1, 1, 1]} position={[-2, 1, 0]} castShadow receiveShadow />
+                <Float floatIntensity={0.5} rotationIntensity={0.1} speed={1.5}>
+                    <OrangeCursor castShadow />
+                </Float>
+
+                <Float floatIntensity={0.3} rotationIntensity={0.25} speed={1.5}>
+                    <Comment castShadow />
                 </Float>
 
                 {/* <mesh castShadow position={[0, 0.5, 1]} >
