@@ -110,7 +110,7 @@ function HeroScene({ el }) {
 function StageComponent(props) {
 
     const { size, viewport } = useThree();
-    const modelScaleMultiplier = size.width > 768 ? 0.6 : 1.2
+    const modelScaleMultiplier = size.width > 768 ? 0.5 : 1.2
 
     console.log(size, viewport)
     return (
