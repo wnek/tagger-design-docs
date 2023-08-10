@@ -9,8 +9,9 @@ import { GlobalCanvas, ScrollScene, ViewportScrollScene, UseCanvas, SmoothScroll
 import * as THREE from 'three'
 
 // R3F
-import { useFrame } from '@react-three/fiber'
+import { useFrame, useThree } from '@react-three/fiber'
 import { Box, PerspectiveCamera, Float, Grid, Text, Billboard, Environment, Lightformer, AccumulativeShadows, RandomizedLight, Sparkles, Stars } from '@react-three/drei'
+
 
 import Model from '../3d/Hero3d';
 import OrangeCursor from '../3d/OrangeCursor';
@@ -108,22 +109,19 @@ function HeroScene({ el }) {
 
 function StageComponent(props) {
 
+    const { size, viewport } = useThree();
+    const modelScaleMultiplier = size.width > 768 ? 0.6 : 1.2
 
+    console.log(size, viewport)
     return (
         <>
-            <group position={[0, -7, 0]} scale={props.scale.xy.min() * 0.5}>
+            <group position={[0, -7, 0]} scale={props.scale.xy.min() * modelScaleMultiplier}>
 
                 <Sparkles color="#FA6A42" count={1000} size={3} speed={0.4} position={[1, 0, 0]} scale={[10]} />
 
                 <AccumulativeShadows temporal frames={100} color="black" colorBlend={1} toneMapped={false} alphaTest={0.4} opacity={2} scale={24}>
                     <RandomizedLight amount={8} radius={4} ambient={0.5} intensity={2} position={[5, 5, -10]} bias={0.001} />
                 </AccumulativeShadows>
-
-                {/* <Billboard>
-                    <Text position={[0, 2, 0]} fontSize={0.1} color={'#ffffff'} text="Tagger Design Nest" />
-                    <Text position={[0, 1.5, 0]} fontSize={0.75} color={'#ffffff'} text="Shape Ideas into Reality" textAlign='center' maxWidth={6} />
-                </Billboard> */}
-
 
                 <Model castShadow />
 
@@ -160,7 +158,6 @@ function StageComponent(props) {
                     fadeStrength={3}
                     followCamera={false}
                     infiniteGrid={true}
-
                 />
             </group>
 

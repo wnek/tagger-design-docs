@@ -1,0 +1,29 @@
+section{
+    padding: 0 10%;
+    color: var(--grey700);
+    display: flex;
+    grid-template-columns: repeat(4, 1fr);
+
+}
+
+.motto{
+    padding: 10em 0;
+}
+.motto h2{
+    padding: 1em 0 0 0;
+    font-weight: 500;
+}
+
+@media screen and (max-width: 1024px) {
+    .motto h2{
+        color: white;
+        grid-column-start: 1;
+        grid-column-end: 5;
+    }
+}
+
+.philosophy{
+    grid-column-start: 2;
+    grid-column-end: 4;   
+
+}
