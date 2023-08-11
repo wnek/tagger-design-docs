@@ -112,12 +112,12 @@ function StageComponent(props) {
     const { size, viewport } = useThree();
     const modelScaleMultiplier = size.width > 768 ? 0.5 : 1.2
 
-    console.log(size, viewport)
+
     return (
         <>
             <group position={[0, -7, 0]} scale={props.scale.xy.min() * modelScaleMultiplier}>
 
-                <Sparkles color="#FA6A42" count={1000} size={3} speed={0.4} position={[1, 0, 0]} scale={[10]} />
+                {/* <Sparkles color="#FA6A42" count={1000} size={3} speed={0.4} position={[1, 0, 0]} scale={[10]} /> */}
 
                 <AccumulativeShadows temporal frames={100} color="black" colorBlend={1} toneMapped={false} alphaTest={0.4} opacity={2} scale={24}>
                     <RandomizedLight amount={8} radius={4} ambient={0.5} intensity={2} position={[5, 5, -10]} bias={0.001} />

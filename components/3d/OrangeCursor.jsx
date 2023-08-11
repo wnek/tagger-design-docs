@@ -13,4 +13,4 @@ export default function OrangeCursor(props) {
   )
 }
 
-useGLTF.preload('/orange-cursor-transformed.glb')
+useGLTF.preload('/img/models/orange-cursor-transformed.glb')

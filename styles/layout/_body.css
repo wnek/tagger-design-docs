@@ -11,3 +11,13 @@ body {
   overflow: hidden;
   border-radius: 1em;
 }
+
+.subpage{
+  background-color: var(--light-grey);
+}
+
+.subpage .body-container{
+  background-color: var(--white);
+  min-height: 100vh;
+  min-height: calc(100svh - 2em);
+}
