@@ -1,0 +1,11 @@
+.side-nav{
+    display: flex;
+    flex-direction: column;
+    padding: 2em;
+    width: 200px;
+    
+}
+
+.side-nav .selected{
+    background-color: red;
+}
