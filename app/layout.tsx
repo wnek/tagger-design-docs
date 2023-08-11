@@ -23,8 +23,6 @@ const plusJakarta = Plus_Jakarta_Sans({
     display: 'swap',
 })
 
-
-
 export default function RootLayout({
     children,
 }: {
@@ -41,7 +39,6 @@ export default function RootLayout({
                     <div className='body-container'>
                         <Navbar />
                         <GlobalCanvas shadows globalRender={false} scaleMultiplier={0.01} eventSource={eventSource} eventPrefix="client" style={{ pointerEvents: 'none' }}>
-
                         </GlobalCanvas>
                         {children}
 

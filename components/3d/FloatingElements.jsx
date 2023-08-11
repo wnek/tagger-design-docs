@@ -2,7 +2,7 @@ import React, { useRef } from 'react'
 import { useGLTF } from '@react-three/drei'
 
 export default function FloatingElements(props) {
-  const { nodes, materials } = useGLTF('img/models/floats-transformed.glb')
+  const { nodes, materials } = useGLTF('/img/models/floats-transformed.glb')
   return (
     <group {...props} dispose={null}>
       <mesh castShadow receiveShadow geometry={nodes['orange-cursor'].geometry} material={materials['Material.002']} position={[1.159, 0.3, 1.798]} rotation={[Math.PI / 2, 0.203, 0]} scale={2.487} />
@@ -11,4 +11,4 @@ export default function FloatingElements(props) {
   )
 }
 
-useGLTF.preload('img/models/floats-transformed.glb')
+useGLTF.preload('/img/models/floats-transformed.glb')

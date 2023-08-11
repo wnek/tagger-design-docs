@@ -2,7 +2,7 @@ import React, { useRef } from 'react'
 import { useGLTF } from '@react-three/drei'
 
 export default function Comment(props) {
-  const { nodes, materials } = useGLTF('img/models/comment-transformed.glb')
+  const { nodes, materials } = useGLTF('/img/models/comment-transformed.glb')
   return (
     <group {...props} dispose={null}>
     <mesh castShadow receiveShadow geometry={nodes.Plane.geometry} material={materials['Material.001']} position={[-1.061, 0.623, 1.38]} scale={0.877} />
@@ -14,4 +14,4 @@ export default function Comment(props) {
   )
 }
 
-useGLTF.preload('img/models/comment-transformed.glb')
+useGLTF.preload('/img/models/comment-transformed.glb')

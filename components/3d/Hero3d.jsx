@@ -8,7 +8,7 @@ import React, { useRef } from 'react'
 import { useGLTF } from '@react-three/drei'
 
 export default function Model(props) {
-  const { nodes, materials } = useGLTF('img/models/hero-transformed.glb')
+  const { nodes, materials } = useGLTF('/img/models/hero-transformed.glb')
   return (
     <group {...props} dispose={null}>
     <mesh castShadow receiveShadow geometry={nodes.browser.geometry} material={materials.ToBake_Bake} />
@@ -23,4 +23,4 @@ export default function Model(props) {
   )
 }
 
-useGLTF.preload('img/models/hero-transformed.glb')
+useGLTF.preload('/img/models/hero-transformed.glb')

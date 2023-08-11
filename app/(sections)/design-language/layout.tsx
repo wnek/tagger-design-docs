@@ -24,7 +24,7 @@ export default function Layout({
                             <img src={'/img/tagger-logo-dark.svg'} />
                         </Link>
                     </div>
-                    <h1>Philosophy</h1>
+                    <h1>Design Language</h1>
                     <div className="side-nav">
                         <Link className={lastPage === 'typography' ? "selected" : ""} href="/fenix-design-system/typography">Typography</Link>
                         <Link className={lastPage === 'color' ? "selected" : ""} href="/fenix-design-system/color">Color</Link>

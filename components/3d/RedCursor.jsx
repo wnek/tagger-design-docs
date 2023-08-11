@@ -2,7 +2,7 @@ import React, { useRef } from 'react'
 import { useGLTF } from '@react-three/drei'
 
 export default function RedCursor(props) {
-  const { nodes, materials } = useGLTF('img/models/red-cursor-transformed.glb')
+  const { nodes, materials } = useGLTF('/img/models/red-cursor-transformed.glb')
   return (
     <group {...props} dispose={null}>
       <mesh castShadow receiveShadow geometry={nodes['red-cursor'].geometry} material={materials['Material.005']} position={[0.332, 1.281, 1.105]} rotation={[Math.PI / 2, 0.203, 0]} scale={2.487} />
@@ -12,4 +12,4 @@ export default function RedCursor(props) {
   )
 }
 
-useGLTF.preload('img/models/red-cursor-transformed.glb')
+useGLTF.preload('/img/models/red-cursor-transformed.glb')

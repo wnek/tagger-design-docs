@@ -3,9 +3,21 @@
     flex-direction: column;
     padding: 2em;
     width: 200px;
-    
+    position: -webkit-sticky;
+    position: sticky;
+    top: 10em;
+    min-height: 100vh;
+    overflow-y: visible;
+    border: 1px solid salmon;
 }
 
 .side-nav .selected{
-    background-color: red;
+    background-color: var(--light-grey)
+}
+
+.side-nav a{
+    color: var(--grey700);
+    text-decoration: none;
+    padding: 0.5em;
+    border-radius: 0.25em;
 }
