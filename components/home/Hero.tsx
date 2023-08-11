@@ -66,11 +66,11 @@ function HeroScene({ el }) {
 
 
 
-                <Environment blur={5}>
+                <Environment blur={2}>
                     <Lightformer
                         position={[0, 15, 2]}
                         form="rect" // circle | ring | rect (optional, default = rect)
-                        intensity={13} // power level (optional = 1)
+                        intensity={20} // power level (optional = 1)
                         color="white" // (optional = white)
                         scale={[50, 50]} // Scale it any way you prefer (optional = [1, 1])
                         target={[0, 10, 0]} // Target position (optional = undefined)
@@ -84,17 +84,17 @@ function HeroScene({ el }) {
                         target={[0, 0, 0]} // Target position (optional = undefined)
                     />
                     <Lightformer
-                        position={[-5, 15, 1]}
+                        position={[-2, 15, 1]}
                         form="ring" // circle | ring | rect (optional, default = rect)
-                        intensity={20} // power level (optional = 1)
+                        intensity={50} // power level (optional = 1)
                         color="#FA6A42" // (optional = white)
-                        scale={[10, 50]} // Scale it any way you prefer (optional = [1, 1])
+                        scale={[50, 50]} // Scale it any way you prefer (optional = [1, 1])
                         target={[0, 0, 0]} // Target position (optional = undefined)
                     />
                     <Lightformer
-                        position={[10, 20, 0]}
+                        position={[2, 30, 0]}
                         form="ring" // circle | ring | rect (optional, default = rect)
-                        intensity={2} // power level (optional = 1)
+                        intensity={20} // power level (optional = 1)
                         color="#FA6A42" // (optional = white)
                         scale={[10, 50]} // Scale it any way you prefer (optional = [1, 1])
                         target={[0, 0, 0]} // Target position (optional = undefined)
