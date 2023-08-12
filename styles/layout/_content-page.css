@@ -12,8 +12,9 @@
 
 .content-page article h1 {
   border-bottom: 1px solid var(--grey300);
-  padding: 0 0 5rem 0;
+  padding: 0 0 10rem 0;
   color: var(--grey900);
+  font-size: var(--step-5);
 }
 
 .content-page article h2,
@@ -52,6 +53,13 @@ ol {
   background-position: 0 0, 10px 10px;
   border-radius: 0.5rem;
   padding: 2em;
+}
+
+@media screen and (max-width: 1600px) {
+  .content {
+    grid-template-columns: 1fr 4fr 0fr;
+    gap: 1rem;
+  }
 }
 
 .content-page article {
