@@ -7,9 +7,4 @@ module.exports = {
     // !! WARN !!
     ignoreBuildErrors: true,
   },
-  compiler:{
-  "compilerOptions": {
-    "baseUrl": "."
-  }
-  }
 };

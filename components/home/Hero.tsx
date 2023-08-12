@@ -77,27 +77,27 @@ function HeroScene({ el }) {
                     />
                     <Lightformer
                         position={[0, -10, 2]}
-                        form="ring" // circle | ring | rect (optional, default = rect)
-                        intensity={0.2} // power level (optional = 1)
-                        color="white" // (optional = white)
-                        scale={[10, 5]} // Scale it any way you prefer (optional = [1, 1])
-                        target={[0, 0, 0]} // Target position (optional = undefined)
+                        form="ring"
+                        intensity={0.2}
+                        color="white"
+                        scale={[10, 5]}
+                        target={[0, 0, 0]}
                     />
                     <Lightformer
                         position={[-2, 15, 1]}
-                        form="ring" // circle | ring | rect (optional, default = rect)
-                        intensity={50} // power level (optional = 1)
-                        color="#FA6A42" // (optional = white)
-                        scale={[50, 50]} // Scale it any way you prefer (optional = [1, 1])
-                        target={[0, 0, 0]} // Target position (optional = undefined)
+                        form="ring"
+                        intensity={50}
+                        color="#FA6A42"
+                        scale={[50, 50]}
+                        target={[0, 0, 0]}
                     />
                     <Lightformer
                         position={[2, 30, 0]}
-                        form="ring" // circle | ring | rect (optional, default = rect)
-                        intensity={20} // power level (optional = 1)
-                        color="#FA6A42" // (optional = white)
-                        scale={[10, 50]} // Scale it any way you prefer (optional = [1, 1])
-                        target={[0, 0, 0]} // Target position (optional = undefined)
+                        form="ring"
+                        intensity={20}
+                        color="#FA6A42"
+                        scale={[10, 50]}
+                        target={[0, 0, 0]}
                     />
                 </Environment>
             </>

@@ -1,0 +1,7 @@
+.callout {
+  display: block;
+  background-color: var(--primary-lightest);
+  padding: 1em 2em;
+  border-radius: 0.5em;
+  font-size: var(--step--1);
+}

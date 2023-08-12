@@ -1,14 +1,24 @@
 /* @import url('https://fonts.googleapis.com/css2?family=Newsreader:wght@300&family=Plus+Jakarta+Sans:wght@400;600;700&display=swap'); */
 
 h1 {
-  font-size: var(--step-6)
+  font-size: var(--step-6);
+  letter-spacing: -0.02em;
 }
 
 h2 {
-  font-size: 3em;
+  font-size: var(--step-3);
   line-height: 120%;
+  letter-spacing: -0.015em;
 }
 
-p {
+p,
+ol,
+ul {
   color: var(--grey700);
+  font-size: var(--step--1);
+}
+
+code {
+  font-weight: 700;
+  color: var(--primary-darkest);
 }

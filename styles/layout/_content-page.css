@@ -1,16 +1,109 @@
-.content-page{
-    display: flex;
-    gap: 4em;
-    padding: 2em 2em;
+.content-page {
+  padding: 2em 2em;
+  min-height: 100vh;
 }
 
-.content{
-    width: 1100px;
-    margin: 0 auto;
-    padding: 10em 0;
-    display: flex;
+.content-page article img {
+  border-radius: 0.5em;
+  margin: 1em 0 6em 0;
+  width: 100%;
+  height: auto;
 }
 
-.content article{
-    border: 1px solid salmon;
+.content-page article h1 {
+  border-bottom: 1px solid var(--grey300);
+  padding: 0 0 5rem 0;
+  color: var(--grey900);
+}
+
+.content-page article h2,
+h3,
+h4,
+p,
+ul,
+ol {
+  max-width: 40rem;
+  display: block;
+  margin: 1em auto 1em auto;
+}
+
+li {
+  padding: 0.5rem 0;
+}
+
+.content-page article p,
+ul,
+ol {
+  margin: 1em auto 3em auto;
+}
+
+.content {
+  width: 100%;
+  margin: 6em auto;
+  display: grid;
+  grid-template-columns: 1fr 4fr 1fr;
+  gap: 5%;
+  align-items: flex-start;
+  justify-content: space-between;
+  background-color: white;
+  background-image: radial-gradient(#9f9f9f 0.5px, transparent 0.5px),
+    radial-gradient(#9f9f9f 0.5px, white 0.5px);
+  background-size: 2px 2px;
+  background-position: 0 0, 10px 10px;
+  border-radius: 0.5rem;
+  padding: 2em;
+}
+
+.content-page article {
+  flex-grow: 4;
+  background-color: white;
+  border-radius: 0.5rem;
+  padding: 2em 8rem;
+}
+
+.side-nav {
+  display: flex;
+  flex-direction: column;
+  align-self: start;
+  justify-content: flex-start;
+  gap: 0.2rem;
+  padding: 0;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 2.7em;
+  overflow-y: visible;
+  flex-grow: 1;
+  background-color: white;
+  padding: 2em 2rem;
+  border-radius: 0.5rem;
+}
+
+.side-nav p {
+  font-size: var(--step--3);
+  color: var(--grey400);
+  text-align: left;
+  display: block;
+  width: 100%;
+  padding: 0.5rem 0.5rem 0 0.5rem;
+  border-top: 1px solid var(--grey300);
+  margin-top: 2rem;
+}
+
+.side-nav .selected {
+  background-color: var(--light-grey);
+  font-weight: 700;
+  color: var(--grey900);
+}
+
+.side-nav a {
+  color: var(--grey700);
+  text-decoration: none;
+  padding: 0.5rem;
+  border-radius: 0.25em;
+  border: 1px solid white;
+}
+
+.side-nav a:hover {
+  border: 1px solid var(--grey300);
+  border-radius: 0.25em;
 }

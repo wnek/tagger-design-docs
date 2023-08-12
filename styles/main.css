@@ -11,13 +11,12 @@
 @import url('components/_motion.css');
 @import url('components/_hero-scroll-scene.css');
 @import url('components/_progress-bar.css');
+@import url('components/_callout.css');
 
 /* Layout */
 @import url('layout/_body.css');
 @import url('layout/_navbar.css');
 @import url('layout/_content-page.css');
-@import url('layout/_side-nav.css');
-
 
 /* Pages */
 @import url('pages/_home.css');

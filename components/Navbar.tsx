@@ -28,7 +28,7 @@ export default function Navbar() {
                         <Link className={currentPathname === '/' ? "selected" : ""} href={'../'} onClick={toggleMenu}>Getting Started</Link>
                         <Link className={currentPage === 'philosophy' ? "selected" : ""} href={'/philosophy'} onClick={toggleMenu}>Philosophy</Link>
                         <Link className={currentPage === 'design-language' ? "selected" : ""} href={'/design-language'} onClick={toggleMenu}>Design Language</Link>
-                        <Link className={currentPage === 'fenix-design-system' ? "selected" : ""} href={'/fenix-design-system'} onClick={toggleMenu}>Fenix Design System</Link>
+                        <Link className={currentPage === 'fenix-design-system' ? "selected" : ""} href={'/fenix-design-system'} onClick={toggleMenu}>Design System</Link>
                         <Link className={currentPage === 'tagger-labs' ? "selected" : ""} href={'/tagger-labs'} onClick={toggleMenu}>Tagger Labs</Link>
                     </div>
 

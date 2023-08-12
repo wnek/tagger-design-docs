@@ -1,14 +1,17 @@
 :root {
-  
   /* Colors */
   --white: #ffffff;
-  --grey900: #222222;
+  --grey300: #eaeaea;
+  --grey400: #a0a0a0;
   --grey700: #606060;
+  --grey900: #222222;
+
   --orange-400: #ffb847;
   --orange-500: #ee6848;
   --light-grey: #f5f5f5;
-  
 
+  --primary-lightest: #eefaff;
+  --primary-darkest: #01729c;
 
   /* Shadows */
   --shadow-color: 0deg 0% 10%;
@@ -25,17 +28,17 @@
     0px 3.5px 3.8px -2.1px hsl(var(--shadow-color-black) / 0.35),
     0px 7px 7.5px -2.8px hsl(var(--shadow-color-black) / 0.33);
 
-/* Typography */
-    --step--3: clamp(0.51rem, calc(0.43rem + 0.39vw), 0.70rem);
-    --step--2: clamp(0.61rem, calc(0.50rem + 0.53vw), 0.88rem);
-    --step--1: clamp(0.73rem, calc(0.58rem + 0.72vw), 1.10rem);
-    --step-0: clamp(0.88rem, calc(0.68rem + 0.98vw), 1.38rem);
-    --step-1: clamp(1.05rem, calc(0.79rem + 1.30vw), 1.72rem);
-    --step-2: clamp(1.26rem, calc(0.91rem + 1.73vw), 2.15rem);
-    --step-3: clamp(1.51rem, calc(1.05rem + 2.29vw), 2.69rem);
-    --step-4: clamp(1.81rem, calc(1.21rem + 3.01vw), 3.36rem);
-    --step-5: clamp(2.18rem, calc(1.39rem + 3.94vw), 4.20rem);
-    --step-6: clamp(2.61rem, calc(1.59rem + 5.14vw), 5.25rem);
-    --step-7: clamp(3.14rem, calc(1.80rem + 6.68vw), 6.56rem);
-    --step-8: clamp(3.76rem, calc(2.03rem + 8.65vw), 8.20rem);    
+  /* Typography */
+  --step--3: clamp(0.51rem, calc(0.43rem + 0.39vw), 0.7rem);
+  --step--2: clamp(0.61rem, calc(0.5rem + 0.53vw), 0.88rem);
+  --step--1: clamp(0.73rem, calc(0.58rem + 0.72vw), 1.1rem);
+  --step-0: clamp(0.88rem, calc(0.68rem + 0.98vw), 1.38rem);
+  --step-1: clamp(1.05rem, calc(0.79rem + 1.3vw), 1.72rem);
+  --step-2: clamp(1.26rem, calc(0.91rem + 1.73vw), 2.15rem);
+  --step-3: clamp(1.51rem, calc(1.05rem + 2.29vw), 2.69rem);
+  --step-4: clamp(1.81rem, calc(1.21rem + 3.01vw), 3.36rem);
+  --step-5: clamp(2.18rem, calc(1.39rem + 3.94vw), 4.2rem);
+  --step-6: clamp(2.61rem, calc(1.59rem + 5.14vw), 5.25rem);
+  --step-7: clamp(3.14rem, calc(1.8rem + 6.68vw), 6.56rem);
+  --step-8: clamp(3.76rem, calc(2.03rem + 8.65vw), 8.2rem);
 }
