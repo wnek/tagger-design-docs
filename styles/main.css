@@ -12,6 +12,7 @@
 @import url('components/_hero-scroll-scene.css');
 @import url('components/_progress-bar.css');
 @import url('components/_callout.css');
+@import url('components/_table.css');
 
 /* Layout */
 @import url('layout/_body.css');
