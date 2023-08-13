@@ -2,6 +2,6 @@ import React from 'react'
 
 export default function Design() {
     return (
-        <div>Design</div>
+        <article><h1>Design</h1></article>
     )
 }

@@ -2,6 +2,6 @@ import React from 'react'
 
 export default function Implement() {
     return (
-        <div>Implement</div>
+        <article><h1>Implement</h1></article>
     )
 }

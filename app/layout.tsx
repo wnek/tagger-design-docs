@@ -34,7 +34,7 @@ export default function RootLayout({
     return (
 
         <html lang="en">
-            <body className={currentPathname === '/' ? plusJakarta.className : plusJakarta.className + " subpage"} >
+            <body className={currentPathname === '/' ? plusJakarta.className : plusJakarta.className + " subpage_body_wrapper"} >
                 <div ref={eventSource} className="event-source">
                     <div className='body-container'>
                         <Navbar />

@@ -4,6 +4,6 @@ import React from 'react'
 export default function FenixDesignSystem() {
     return (
 
-        <article>FenixDesignSystem</article>
+        <article><h1>Fenix Design System</h1></article>
     )
 }

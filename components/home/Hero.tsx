@@ -30,7 +30,7 @@ export default function Hero() {
                         <img src={'./img/tagger-logo-light.svg'} />
                     </Link>
                 </div>
-                <div className='content'>
+                <div className='hero_content'>
                     <p>Tagger Design Nest</p>
                     <h1>Shape Ideas into Reality</h1>
                 </div>

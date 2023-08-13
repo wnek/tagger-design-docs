@@ -20,29 +20,22 @@ export default function Layout({
             {(bind) => (
 
 
-                <div className="content-page">
+                <div className="subpage">
                     <Logo />
-                    <div className="content">
+                    <div className="subpage_content">
                         <div className="side-nav">
 
-                            <Link className={lastPage === 'fenix-design-system' ? "selected" : ""} href="/fenix-design-system">Introduction</Link>
+                            <Link className={lastPage === 'philosophy' ? "selected" : ""} href="/philosophy">Overview</Link>
 
-                            <p>Styles</p>
-                            <Link className={lastPage === 'color' ? "selected" : ""} href="/fenix-design-system/color">Color</Link>
-                            <Link className={lastPage === 'grid' ? "selected" : ""} href="/fenix-design-system/grid">Grid</Link>
-                            <Link className={lastPage === 'typography' ? "selected" : ""} href="/fenix-design-system/typography">Typography</Link>
-                            <Link className={lastPage === 'spacing' ? "selected" : ""} href="/fenix-design-system/spacing">Spacing</Link>
 
-                            <p>Components</p>
-                            <Link className={lastPage === 'badge' ? "selected" : ""} href="/fenix-design-system/badge">Badge</Link>
-                            <Link className={lastPage === 'button' ? "selected" : ""} href="/fenix-design-system/button">Button</Link>
-                            <Link className={lastPage === 'callout' ? "selected" : ""} href="/fenix-design-system/callout">Callout</Link>
-                            <Link className={lastPage === 'card' ? "selected" : ""} href="/fenix-design-system/card">Card</Link>
-                            <Link className={lastPage === 'navigation' ? "selected" : ""} href="/fenix-design-system/navigation">Navigation</Link>
-                            <Link className={lastPage === 'score-card' ? "selected" : ""} href="/fenix-design-system/score-card">Score Card</Link>
-                            <Link className={lastPage === 'toast' ? "selected" : ""} href="/fenix-design-system/toast">Toast</Link>
-                            <Link className={lastPage === 'toggle' ? "selected" : ""} href="/fenix-design-system/toggle">Toggle</Link>
-                            <Link className={lastPage === 'user-block' ? "selected" : ""} href="/fenix-design-system/user-block">User Block</Link>
+
+                            <Link className={lastPage === 'core-principles' ? "selected" : ""} href="/philosophy/core-principles">Core Principles</Link>
+                            <Link className={lastPage === 'understand' ? "selected" : ""} href="/philosophy/understand">Understand</Link>
+                            <Link className={lastPage === 'design' ? "selected" : ""} href="/philosophy/design">Design</Link>
+                            <Link className={lastPage === 'verify' ? "selected" : ""} href="/philosophy/verify">Verify</Link>
+                            <Link className={lastPage === 'implement' ? "selected" : ""} href="/philosophy/implement">Implement</Link>
+
+
 
                         </div>
                         {children}

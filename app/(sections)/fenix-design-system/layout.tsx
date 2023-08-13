@@ -20,9 +20,9 @@ export default function Layout({
             {(bind) => (
 
 
-                <div className="content-page">
+                <div className="subpage">
                     <Logo />
-                    <div className="content">
+                    <div className="subpage_content">
                         <div className="side-nav">
 
                             <Link className={lastPage === 'fenix-design-system' ? "selected" : ""} href="/fenix-design-system">Introduction</Link>

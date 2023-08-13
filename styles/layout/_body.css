@@ -11,11 +11,11 @@ body {
   border-radius: 1em;
 }
 
-.subpage{
+.subpage_body_wrapper {
   background-color: var(--light-grey);
 }
 
-.subpage .body-container{
+.subpage_body_wrapper .body-container {
   background-color: var(--white);
   min-height: 100vh;
   min-height: calc(100svh - 2em);

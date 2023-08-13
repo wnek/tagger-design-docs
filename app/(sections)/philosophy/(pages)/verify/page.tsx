@@ -2,6 +2,6 @@ import React from 'react'
 
 export default function Verify() {
     return (
-        <div>Verify</div>
+        <article><h1>Verify</h1></article>
     )
 }

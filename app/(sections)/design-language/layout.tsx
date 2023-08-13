@@ -20,14 +20,14 @@ export default function Layout({
             {(bind) => (
 
 
-                <div className="content-page">
+                <div className="subpage">
                     <Logo />
-                    <div className="content">
+                    <div className="subpage_content">
                         <div className="side-nav">
 
-                            <Link className={lastPage === 'fenix-design-system' ? "selected" : ""} href="/fenix-design-system">Introduction</Link>
+                            <Link className={lastPage === 'fenix-design-system' ? "selected" : ""} href="/fenix-design-system">About</Link>
 
-                            <p>Styles</p>
+                            <p>Foundations</p>
                             <Link className={lastPage === 'color' ? "selected" : ""} href="/fenix-design-system/color">Color</Link>
                             <Link className={lastPage === 'grid' ? "selected" : ""} href="/fenix-design-system/grid">Grid</Link>
                             <Link className={lastPage === 'typography' ? "selected" : ""} href="/fenix-design-system/typography">Typography</Link>

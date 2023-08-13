@@ -1,23 +1,25 @@
-.content-page {
+.subpage {
   padding: 2em 2em;
   min-height: 100vh;
+  background-color: var(--white);
+  border-radius: 1rem;
 }
 
-.content-page article img {
+.subpage article img {
   border-radius: 0.5em;
   margin: 1em 0 6em 0;
   width: 100%;
   height: auto;
 }
 
-.content-page article h1 {
+.subpage article h1 {
   border-bottom: 1px solid var(--grey300);
   padding: 0 0 10rem 0;
   color: var(--grey900);
   font-size: var(--step-5);
 }
 
-.content-page article h2,
+.subpage article h2,
 h3,
 h4,
 p,
@@ -32,13 +34,13 @@ li {
   padding: 0.5rem 0;
 }
 
-.content-page article p,
+.subpage article p,
 ul,
 ol {
   margin: 1em auto 3em auto;
 }
 
-.subpage s.content {
+.subpage .subpage_content {
   width: 100%;
   margin: 6em auto;
   display: grid;
@@ -56,13 +58,13 @@ ol {
 }
 
 @media screen and (max-width: 1600px) {
-  .content {
+  .subpage .subpage_content {
     grid-template-columns: 1fr 4fr 0fr;
     gap: 1rem;
   }
 }
 
-.content-page article {
+.subpage article {
   flex-grow: 4;
   background-color: white;
   border-radius: 0.5rem;

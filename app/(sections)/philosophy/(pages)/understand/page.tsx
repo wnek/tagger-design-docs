@@ -2,6 +2,6 @@ import React from 'react'
 
 export default function Understand() {
     return (
-        <div>Understand</div>
+        <article><h1>Understand</h1></article>
     )
 }
