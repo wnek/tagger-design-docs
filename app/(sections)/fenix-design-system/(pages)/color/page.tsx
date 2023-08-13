@@ -1,14 +1,25 @@
+"use client"
+
 import React from 'react'
+import dynamic from 'next/dynamic';
+
+const ReactPlayer = dynamic(() => import('react-player/lazy'), { ssr: false });
 
 export default function Color() {
     return (
+
         <article>
+
             <header>
 
                 <h1> Color</h1>
 
             </header>
             <div>
+
+
+                <ReactPlayer url='/img/pages/design-system/color/color.mp4' controls={false}
+                    playing={true} muted={true} loop={true} width="100%" height="100%" />
                 <h2>Typography</h2>
                 <p>In our design system, we employ seven distinct color codes
                     for various typographical purposes:</p>
