@@ -2,6 +2,9 @@ import React from 'react'
 
 export default function Navigation() {
     return (
-        <div>Navigation</div>
+        <article><h1>Navigation</h1>
+
+        </article>
+
     )
 }

@@ -2,6 +2,8 @@ import React from 'react'
 
 export default function Badge() {
     return (
-        <div>Badge</div>
+        <article>
+            <h1>Badge</h1>
+        </article>
     )
 }

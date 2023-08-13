@@ -110,7 +110,27 @@ function HeroScene({ el }) {
 function StageComponent(props) {
 
     const { size, viewport } = useThree();
-    const modelScaleMultiplier = size.width > 768 ? 0.5 : 1.2
+
+    let modelScaleMultiplier = 0.5;
+
+    if (size.width < 480) {
+        modelScaleMultiplier = 1;
+    }
+
+    else if (size.width > 480 && size.width < 1024) {
+        modelScaleMultiplier = 0.7;
+    }
+
+    else if (size.width > 1024 && size.width < 1600) {
+        modelScaleMultiplier = 0.8;
+    }
+
+    else if (size.width > 1600) {
+        modelScaleMultiplier = 0.5;
+    }
+    else {
+        modelScaleMultiplier = 0.2;
+    }
 
 
     return (
@@ -140,11 +160,6 @@ function StageComponent(props) {
                 <Float floatIntensity={0.3} rotationIntensity={0.25} speed={1.5}>
                     <Comment castShadow />
                 </Float>
-
-                {/* <mesh castShadow position={[0, 0.5, 1]} >
-                    <boxGeometry />
-                    <meshNormalMaterial />
-                </mesh> */}
 
                 <Grid position={[0, 0.01, 0]}
                     gridSize={[5, 5]}

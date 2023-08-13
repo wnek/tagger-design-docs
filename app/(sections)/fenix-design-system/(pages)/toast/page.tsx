@@ -2,6 +2,6 @@ import React from 'react'
 
 export default function Toast() {
     return (
-        <div>Toast</div>
+        <article><h1>Toast</h1></article>
     )
 }

@@ -2,6 +2,6 @@ import React from 'react'
 
 export default function Card() {
     return (
-        <div>Card</div>
+        <article><h1>Card</h1></article>
     )
 }

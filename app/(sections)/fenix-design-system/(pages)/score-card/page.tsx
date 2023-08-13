@@ -2,6 +2,6 @@ import React from 'react'
 
 export default function ScoreCard() {
     return (
-        <div>ScoreCard</div>
+        <article><h1>Score Card</h1></article>
     )
 }
