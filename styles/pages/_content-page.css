@@ -34,7 +34,7 @@ li {
   padding: 0.5rem 0;
 }
 
-.subpage article p,
+.subpage .subpage_content article p,
 ul,
 ol {
   margin: 1em auto 3em auto;

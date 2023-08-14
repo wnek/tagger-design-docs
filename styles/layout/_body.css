@@ -11,6 +11,10 @@ body {
   border-radius: 1em;
 }
 
+.body-container p{
+  margin: 0;
+}
+
 .subpage_body_wrapper {
   background-color: var(--light-grey);
 }
