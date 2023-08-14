@@ -57,8 +57,8 @@ export default function Page() {
                         </div>
                         <div className='areas'>
                             <div><p>Core principles</p></div>
+                            <div> <Modular /></div>
 
-                            <Modular />
 
                             <div><p>Hypothesis-driven design</p></div>
                         </div>
