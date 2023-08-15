@@ -14,7 +14,7 @@
 
 .subpage article h1 {
   border-bottom: 1px solid var(--grey300);
-  padding: 0 0 10rem 0;
+  padding: 0 0 4rem 0;
   color: var(--grey900);
   font-size: var(--step-5);
 }

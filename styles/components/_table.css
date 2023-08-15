@@ -1,19 +1,24 @@
 table {
-  max-width: 40rem;
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
+    max-width: 40rem;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
 }
 
 table tbody tr {
-  border-top: 1px solid var(--grey300);
-  display: flex;
+    border-top: 1px solid var(--grey300);
+    display: flex;
+}
+
+table a {
+    color: var(--grey700);
+    font-weight: bolder;
 }
 
 td,
 th {
-  flex-wrap: nowrap;
-  text-align: left;
-  padding: 0.25rem 0 2.5rem 0;
-  width: 100%;
+    flex-wrap: nowrap;
+    text-align: left;
+    padding: 0.25rem 0 2.5rem 0;
+    width: 100%;
 }
