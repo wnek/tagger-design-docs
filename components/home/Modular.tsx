@@ -1,5 +1,6 @@
 import { useRef } from 'react'
 import { useFrame } from '@react-three/fiber'
+import { PerspectiveCamera, AccumulativeShadows, RandomizedLigh, OrbitControls, RandomizedLight } from '@react-three/drei'
 import { UseCanvas, ScrollScene } from '@14islands/r3f-scroll-rig'
 
 export default function Modular() {
@@ -9,7 +10,9 @@ export default function Modular() {
         <>
             <div ref={el} className="modular-scene"></div>
             <UseCanvas>
+
                 <ScrollScene track={el}>{(props) => <SpinningBoxWebGL {...props} />}</ScrollScene>
+
             </UseCanvas>
         </>
 
@@ -19,16 +22,24 @@ export default function Modular() {
 function SpinningBoxWebGL({ scale, scrollState }) {
     const mesh = useRef()
     useFrame(() => {
-        mesh.current.rotation.y = scrollState.progress * Math.PI * 2
+        // mesh.current.rotation.y = scrollState.progress * Math.PI * 2
     })
 
     console.log(mesh)
     return (
-        <group scale={[1, 1, 1]} position={[0, 0, 0]} >
-            <mesh ref={mesh}>
-                <boxGeometry />
-                <meshNormalMaterial />
-            </mesh>
-        </group >
+        <>
+            {/* <PerspectiveCamera makeDefault position={[0, 2, 0]} lookAt={[0, 0, 0]} /> */}
+
+            <group scale={scale.xy.min() * 0.5} position={[0, 0, 0]} >
+
+                <mesh ref={mesh}>
+                    <boxGeometry />
+                    <meshNormalMaterial />
+                </mesh>
+
+            </group >
+
+            <OrbitControls />
+        </>
     )
 }
