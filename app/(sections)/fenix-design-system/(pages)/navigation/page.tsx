@@ -7,7 +7,8 @@ export default function Navigation() {
 
             <h2>Top Nav-Bar</h2>
 
-            <p>The <code>top-nav-bar</code> is a pivotal navigation component designed to guide users through different
+            <p>The <strong>top-nav-bar</strong> is a pivotal navigation component designed to guide users through
+                different
                 sections of the application and provide context about their current location. It is elegantly structured
                 with up to three elements:</p>
 

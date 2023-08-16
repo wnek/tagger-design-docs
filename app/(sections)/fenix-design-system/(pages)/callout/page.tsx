@@ -8,7 +8,7 @@ export default function Callout() {
         <article>
             <h1>Callout</h1>
             <br/>
-            <p>The Callout component is a distinctive section of our user interface designed to draw attention to
+            <p>The <strong>callout</strong> component is a distinctive section of our user interface designed to draw attention to
                 specific content or to convey crucial information.</p>
 
             <h2>Anatomy</h2>

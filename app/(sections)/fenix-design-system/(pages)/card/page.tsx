@@ -5,7 +5,7 @@ export default function Card() {
         <article>
             <h1>Card</h1>
             <br/>
-            <p>The "card" component is an element used to display information in a concise and visually appealing
+            <p>The <strong>Card</strong> component is an element used to display information in a concise and visually appealing
                 manner. It comes in four distinct variations, each tailored to suit specific use cases within the
                 platform. Below are the different scenarios in which the card component is utilized:</p>
 

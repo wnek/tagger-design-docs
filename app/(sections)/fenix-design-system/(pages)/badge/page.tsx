@@ -10,8 +10,11 @@ export default function Badge() {
 
             <br/>
 
-            <p>Badges in our design system are flexible visual components used to communicate various statuses or
-                important pieces of information across multiple components such as campaigns, posts, or creators.</p>
+            <p>
+                <strong>Badges</strong> are flexible visual components used to communicate various
+                statuses or
+                important pieces of information across multiple components such as campaigns, posts, or creators.
+            </p>
 
             <h2>Anatomy</h2>
 
