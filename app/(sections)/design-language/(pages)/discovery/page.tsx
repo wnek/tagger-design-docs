@@ -39,7 +39,7 @@ export default function Labels() {
                 interactive space..</p>
 
             <h2>The Color Palette</h2>
-            <figure><img style={{margin: '0 0 3rem 0'}} src="/img/pages/design-language/15.png"/></figure>
+            <figure><img style={{margin: '3rem auto', maxWidth: '60rem'}} src="/img/pages/design-language/15.png"/></figure>
             <ol type="1" key="1">
                 <li>base<strong>#F4B75F</strong> shadow <strong>#B85A47</strong></li>
                 <li>base<strong>#F6D8AD</strong> shadow <strong>#EEAD4C</strong></li>

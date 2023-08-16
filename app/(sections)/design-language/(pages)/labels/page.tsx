@@ -33,7 +33,7 @@ export default function Labels() {
                 more organized experience.</p>
 
             <h2>The Color Palette</h2>
-            <figure><img style={{margin: '0 0 3rem 0'}} src="/img/pages/design-language/14.png"/></figure>
+            <figure><img style={{margin: '3rem auto', maxWidth: '60rem'}} src="/img/pages/design-language/14.png"/></figure>
             <ol type="1" key="1">
                 <li>base<strong>#F4C453</strong> shadow <strong>#67656F</strong></li>
                 <li>base<strong>#FCF2BC</strong> shadow <strong>#AA782A</strong></li>

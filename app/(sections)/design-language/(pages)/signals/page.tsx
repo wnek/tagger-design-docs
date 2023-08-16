@@ -44,7 +44,7 @@ export default function Badge() {
 
             <h2>The Color Palette</h2>
 
-            <figure><img style={{margin: '0 0 3rem 0'}} src="/img/pages/design-language/17.png"/></figure>
+            <figure><img style={{margin: '3rem auto', maxWidth: '60rem'}} src="/img/pages/design-language/17.png"/></figure>
             <ol type="1" key="1">
                 <li>base<strong>#3564F5</strong> shadow <strong>#303852</strong></li>
                 <li>base<strong>#6FB0F9</strong> shadow <strong>#3957AB</strong></li>
