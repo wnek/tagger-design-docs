@@ -1,5 +1,11 @@
 import React from 'react'
 import Image from 'next/image'
+import {SizesSVG} from './svg-components/sizes'
+import {WeightsSVG} from './svg-components/weights'
+import {ColorsSVG} from './svg-components/colors'
+import {HeadingsSVG} from './svg-components/headings'
+import {ParagraphsSVG} from './svg-components/paragraphs'
+import {HowSVG} from './svg-components/how'
 
 export default function Typography() {
     return (
@@ -20,23 +26,24 @@ export default function Typography() {
                 <h2>Headings</h2>
                 <p>Headers are used to create a hierarchical structure in our
                     content, making it easier for users to navigate and understand the information.</p>
-                <img
-                    src="/img/pages/design-system/typography/Frame_2415.jpg"/>
+                <HeadingsSVG/>
+                <br/>
                 <h2>Paragraph</h2>
                 <p>Paragraphs range in size to offer flexibility in
                     presenting information with different levels of importance.</p>
-                <img
-                    src="/img/pages/design-system/typography/Frame_2416.jpg"/>
-                <h2>How Establishing a Typography Hierarchy?</h2>
-                <img
-                    src="/img/pages/design-system/typography/How.jpg"/>
+                <ParagraphsSVG/>
+
+                <br/>
+                <h2>How to Establish a Typography Hierarchy?</h2>
+                <HowSVG/>
+                <br/>
                 <p>When developing a design system, typography plays a
                     crucial role in creating a visual hierarchy within a project. Here&#x27;s an outline of the process
                     for
                     establishing hierarchy using typography:</p>
                 <h3>Start with Font Sizes:</h3>
-                <img
-                    src="/img/pages/design-system/typography/size.jpg"/>
+                <SizesSVG/>
+                <br/>
                 <p>Begin by defining font sizes that correspond to different
                     levels of hierarchy. Consider using a range of font sizes to convey importance and emphasize
                     content. Larger
@@ -44,8 +51,8 @@ export default function Typography() {
                     body text
                     or less significant information.</p>
                 <h3>Color Variation:</h3>
-                <img
-                    src="/img/pages/design-system/typography/color.jpg"/>
+                <ColorsSVG/>
+                <br/>
                 <p>Next, utilize color to enhance the visual hierarchy.
                     Initially, employ the $primary color for typography throughout the design system. The primary color
                     typically signifies the most important information or key elements on the page. As the hierarchy
@@ -54,8 +61,8 @@ export default function Typography() {
                     differentiate
                     between content levels and guide the user&#x27;s attention accordingly.</p>
                 <h3>Font Weight:</h3>
-                <img
-                    src="/img/pages/design-system/typography/weight.jpg"/>
+                <WeightsSVG/>
+                <br/>
                 <p><code>$normal</code>: This is the standard weight used
                     for the majority of the text within the application.</p>
                 <p><code>$semi</code>: A slightly bolder weight primarily

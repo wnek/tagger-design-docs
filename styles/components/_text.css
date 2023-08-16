@@ -1,0 +1,11 @@
+.gray-text {
+    color: var(--grey700);
+}
+
+.gray-text-light {
+    color: var(--grey400);
+}
+
+.gray-link a {
+    color: var(--grey700);
+}

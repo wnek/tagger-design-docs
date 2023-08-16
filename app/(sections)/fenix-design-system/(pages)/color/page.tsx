@@ -2,22 +2,22 @@
 
 import React from 'react'
 import dynamic from 'next/dynamic';
-import {TypographyPrimSVG} from './images/typography_prim';
-import {TypographyCTASVG} from './images/typography_cta';
-import {BorderSVG} from './images/typography_border';
-import {PrimarySVG} from './images/primary';
-import {GrayscaleSVG} from './images/grayscale';
-import {StatusSuccessSVG} from './images/status_success';
-import {StatusWarningSVG} from './images/status_warning';
-import {StatusErrorSVG} from './images/status_error';
-import {StatusInfoSVG} from './images/status_info';
-import {StatusAdditionalSVG} from './images/status_add';
-import {Additional1SVG} from './images/additional-1';
-import {Additional2SVG} from './images/additional-2';
-import {Additional3SVG} from './images/additional-3';
-import {Additional4SVG} from './images/additional-4';
-import {Additional5SVG} from './images/additional-5';
-import {Additional6SVG} from './images/additional-6';
+import {TypographyPrimSVG} from './svg-components/typography_prim';
+import {TypographyCTASVG} from './svg-components/typography_cta';
+import {BorderSVG} from './svg-components/typography_border';
+import {PrimarySVG} from './svg-components/primary';
+import {GrayscaleSVG} from './svg-components/grayscale';
+import {StatusSuccessSVG} from './svg-components/status_success';
+import {StatusWarningSVG} from './svg-components/status_warning';
+import {StatusErrorSVG} from './svg-components/status_error';
+import {StatusInfoSVG} from './svg-components/status_info';
+import {StatusAdditionalSVG} from './svg-components/status_add';
+import {Additional1SVG} from './svg-components/additional-1';
+import {Additional2SVG} from './svg-components/additional-2';
+import {Additional3SVG} from './svg-components/additional-3';
+import {Additional4SVG} from './svg-components/additional-4';
+import {Additional5SVG} from './svg-components/additional-5';
+import {Additional6SVG} from './svg-components/additional-6';
 
 const ReactPlayer = dynamic(() => import('react-player/lazy'), {ssr: false});
 
@@ -95,7 +95,7 @@ export default function Color() {
                         &quot;Download&quot;.
                     </li>
 
-                    <li><code><strong>$hover</strong></code>: This color is employed to signify the hover state of the
+                    <li><code><strong>$hover</strong></code>: This color is used to signify the hover state of the
                         CTA. When
                         the user&#x27;s cursor moves over the button, the color change provides visual feedback,
                         signaling that
@@ -110,7 +110,7 @@ export default function Color() {
                     </li>
 
                     <li><code><strong>$white</strong></code>: This color holds the same importance as
-                        <code><strong>$primary</strong></code> in the hierarchy but is employed against dark backgrounds
+                        <code><strong>$primary</strong></code> in the hierarchy but is used against dark backgrounds
                         to
                         maintain contrast and readability. It should be used with caution to ensure that the button does
                         not
@@ -200,7 +200,7 @@ export default function Color() {
                         their interaction with the platform.
                     </li>
 
-                    <li><code><strong>$border-error</strong></code>: This color is employed when there&#x27;s a need to
+                    <li><code><strong>$border-error</strong></code>: This color is used when there&#x27;s a need to
                         display
                         an error to the user, commonly in input fields. It acts as a clear visual indicator of areas
                         requiring
@@ -286,7 +286,7 @@ export default function Color() {
 
                     <li><code><strong>$neutral</strong></code>: Five shades of blue are used to indicate a neutral
                         state. These
-                        colors are employed when there is information to be conveyed to the user that doesn&#x27;t fit
+                        colors are used when there is information to be conveyed to the user that doesn&#x27;t fit
                         into the
                         success, warning, or danger categories. This could include general information or less critical
                         system

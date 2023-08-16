@@ -46,7 +46,8 @@ export default function Badge() {
                 align with their evolving needs.</p>
 
             <h2>The Color Palette</h2>
-            <figure><img style={{margin: '0 0 3rem 0'}} src="/img/pages/design-language/16.png"/></figure>
+            <figure><img style={{margin: '3rem auto', maxWidth: '60rem'}} src="/img/pages/design-language/16.png"/>
+            </figure>
             <ol type="1" key="1">
                 <li>base<strong>#EEB7D6</strong> shadow <strong>#C44664</strong></li>
                 <li>base<strong>#97D8FC</strong> shadow <strong>#364572</strong></li>

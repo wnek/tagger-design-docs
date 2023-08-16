@@ -8,7 +8,7 @@ export default function Illustrations() {
 
             <figure>
                 <a>
-                    <img style={{margin: '3rem 0'}} src="/img/pages/design-language/1.png"/>
+                    <img style={{margin: '3rem auto', maxWidth: '60rem'}} src="/img/pages/design-language/1.png"/>
                 </a>
             </figure>
 
@@ -17,16 +17,21 @@ export default function Illustrations() {
                 the platform. The illustrations are created using Adobe Photoshop with <strong>a style featuring grainy
                     gradients</strong>. This document outlines the specifications, guidelines, and best practices for
                 creating and implementing these illustrations within the platform and an illustration library.</h3>
+
             <br/>
-            <hr/>
-            <h2>Illustration style</h2><h3>The illustrations incorporate a grainy gradient effect, adding depth and
-            visual interest to the artwork. This technique brings an organic feel to the illustrations, making them more
-            engaging and memorable. The grainy gradients are carefully applied to different elements, such as
-            backgrounds, shapes, or textures, enhancing the overall composition and providing a cohesive look and feel.
-            The color palette chosen for the illustrations aligns with the platform&#x27;s branding and visual identity.
-            The colors are used strategically to highlight important elements, convey meaning, and create visual
-            hierarchy within the illustrations, making complex concepts and data more accessible and engaging to the
-            platform&#x27;s users.</h3>
+            <h2>Illustration style</h2>
+            <h3>The illustrations incorporate a grainy gradient effect, adding depth and
+                visual interest to the artwork. This technique brings an organic feel to the illustrations, making them
+                more
+                engaging and memorable. The grainy gradients are carefully applied to different elements, such as
+                backgrounds, shapes, or textures, enhancing the overall composition and providing a cohesive look and
+                feel.
+                The color palette chosen for the illustrations aligns with the platform&#x27;s branding and visual
+                identity.
+                The colors are used strategically to highlight important elements, convey meaning, and create visual
+                hierarchy within the illustrations, making complex concepts and data more accessible and engaging to the
+                platform&#x27;s users.</h3>
+            <br/>
             <p>While vector-based illustrations have their advantages in scalability and flexibility, the choice
                 of <strong>using the raster format for these illustrations is driven by the desire for a more natural
                     feel</strong>. The raster format allows for more flexibility in incorporating intricate details and
@@ -34,10 +39,8 @@ export default function Illustrations() {
                 creative freedom, and integration with the existing workflow. These factors contribute to the overall
                 visual appeal and effectiveness of the illustrations in conveying technical information and enhancing
                 the user experience.</p>
-            <hr/>
-            <h2>Technical Specifications</h2><p
-        >
-        </p>
+            <br/>
+            <h2>Technical Specifications</h2>
             <ol type="1" key="1">
                 <li><strong>File Format</strong>: save the illustrations in the PNG format to maintain transparency and
                     preserve image quality.
@@ -49,13 +52,10 @@ export default function Illustrations() {
                     representation on digital platforms.
                 </li>
             </ol>
-            <p>
-            </p><p>To ensure compatibility and optimal visual quality, the
-            following technical specifications should be followed when creating illustrations.</p><p
-        >
-        </p>
-            <figure><img style={{margin: '3rem 0'}} src="/img/pages/design-language/2.png"/></figure>
-            <hr/>
+            <p>To ensure compatibility and optimal visual quality, the
+                following technical specifications should be followed when creating illustrations.</p>
+            <figure><img style={{margin: '3rem auto', maxWidth: '60rem'}} src="/img/pages/design-language/2.png"/>
+            </figure>
             <br/>
             <h2>Creation Process</h2>
             <p>To create illustrations, follow these general steps:</p>
@@ -90,7 +90,7 @@ export default function Illustrations() {
             <p className="callout">NOTE: when shading, remember that thelight always comes from theright upper
                 corner</p>
 
-            <hr/>
+            <br/>
             <h2>Implementation Guidelines</h2>
             <h3>To effectively implement the illustrations, maintain a consistent
                 visual style throughout the platform by using illustrations that adhere to the specified style
@@ -110,45 +110,52 @@ export default function Illustrations() {
                 account<strong> </strong>accessibility guidelines<strong> </strong>while designing the illustrations,
                 ensure
                 that they are easily distinguishable.</p>
-            <figure><img style={{margin: '3rem 0'}} src="/img/pages/design-language/3.png"/></figure>
-            <hr/>
-            <h2>Color Palettes for Illustrations</h2><p
-        >
-        </p>
-            <h3>Main Color Palette</h3>
-            <figure><img style={{margin: '3rem 0'}} src="/img/pages/design-language/4.png"/></figure>
-            <p>
-            </p><p><strong>This palette encompasses both neutral and accent
-            colors, working to create a visually appealing and cohesive character. The main colors in this palette
-            include gray, orange, and red. The color on the left symbolizes the base color, while the color on the right
-            is the complementary color to the base - its shadow.</strong></p><p
-        >
-        </p><p><strong>Orange </strong>(base #FBE1D2, shadow #F57B45) is a
-            color that brings enthusiasm, excitement, and adventure to the platform. It injects energy and vibrancy into
-            the design, adding a touch of liveliness to the user interface. Its use creates a dynamic and engaging
-            visual experience. </p><p>
-        </p><p><strong>Gray</strong> (base #E7E5D9, shadow #484E57) represents
-            balance and stability. It provides a clean and organized backdrop, allowing other colors and elements to
-            stand out effectively. </p><p>
-        </p><p><strong>Red</strong> (base #EB6140, shadow #544447) is a
-            powerful and attention-grabbing color that symbolizes passion and action.</p><p
-        >
-        </p><p>The color representation <strong>is not its rigid frame for RBG
-            code</strong>. Along with the need for a concept, idea, color can be more or less intense, it can be more or
-            less in percentage on the surface, all depending on the need. For example, we will distribute the intensity
-            of colors differently when illustrating a sheet of paper than a metal block, because materials, even in the
-            real world, have completely different physical properties. These guidelines are starting, but there are
-            concessions to them that sometimes occur during the creative process. <strong>The resulting dominant color
-                is created as a result of the base and complementary colors when the grainy brush combines the two
-                colors together. </strong>Depending on the concept, it is allowed to use other natural colors as a
-            supplement.</p>
-            <hr/>
-            <h2>Color Palettes Dedicated to Sections</h2><p
-        >
-        </p><p>Each section of Tagger has an individual color palette for the
-            illustration style to enhance the user experience and effectively communicate specific messages that each
-            section has to offer.</p><p>
-        </p>
+            <figure><img style={{margin: '3rem auto', maxWidth: '60rem'}} src="/img/pages/design-language/3.png"/>
+            </figure>
+
+            <br/>
+            <h2>Color Palettes for Illustrations</h2>
+            <div style={{display: 'flex', flexDirection: 'column', alignItems: 'center', marginBottom: '32px'}}>
+                <figure><img style={{margin: '16px auto', maxWidth: '60rem'}} src="/img/pages/design-language/4.png"/>
+                </figure>
+                <h5 className='gray-text-light'>Main Color Palette</h5>
+            </div>
+            <p><strong>This palette encompasses both neutral and accent
+                colors, working to create a visually appealing and cohesive character. The main colors in this palette
+                include gray, orange, and red. The color on the left symbolizes the base color, while the color on the
+                right
+                is the complementary color to the base - its shadow.</strong>
+            </p>
+            <p><strong>Orange </strong>(base #FBE1D2, shadow #F57B45) is a
+                color that brings enthusiasm, excitement, and adventure to the platform. It injects energy and vibrancy
+                into
+                the design, adding a touch of liveliness to the user interface. Its use creates a dynamic and engaging
+                visual experience. </p>
+            <p><strong>Gray</strong> (base #E7E5D9, shadow #484E57) represents
+                balance and stability. It provides a clean and organized backdrop, allowing other colors and elements to
+                stand out effectively. </p>
+            <p><strong>Red</strong> (base #EB6140, shadow #544447) is a
+                powerful and attention-grabbing color that symbolizes passion and action.</p>
+            <p>The color representation <strong>is not its rigid frame for RBG
+                code</strong>. Along with the need for a concept, idea, color can be more or less intense, it can be
+                more or
+                less in percentage on the surface, all depending on the need. For example, we will distribute the
+                intensity
+                of colors differently when illustrating a sheet of paper than a metal block, because materials, even in
+                the
+                real world, have completely different physical properties. These guidelines are starting, but there are
+                concessions to them that sometimes occur during the creative process. <strong>The resulting dominant
+                    color
+                    is created as a result of the base and complementary colors when the grainy brush combines the two
+                    colors together. </strong>Depending on the concept, it is allowed to use other natural colors as a
+                supplement.</p>
+
+            <h2>Color Palettes Dedicated to Sections</h2>
+            <p>Each section of Tagger has an individual color palette for the
+                illustration style to enhance the user experience and effectively communicate specific messages that
+                each
+                section has to offer.
+            </p>
             <table>
                 <tbody>
                 <tr>
@@ -218,7 +225,7 @@ export default function Illustrations() {
                 its associated emotions and the intended message for each platform section, creating a cohesive and
                 engaging
                 visual environment that aligns with the psychological impact of the chosen colors.</p>
-            <hr/>
+
             <h2>What to Avoid</h2>
             <h3>While illustrations can be a powerful visual tool in enhancing
                 user experiences, it is essential to use them thoughtfully and strategically. Improper use of
@@ -228,142 +235,167 @@ export default function Illustrations() {
                 when incorporating illustrations, emphasizing the importance of maintaining consistency, clarity, and
                 usability.</h3>
 
-            <hr/>
-            <br/>
-            <div style={{display: 'flex'}}>
-                <div style={{maxWidth: '350px', marginRight: '32px'}}>
-                    <figure><img src="/img/pages/design-language/5.png"/>
-                    </figure>
-                    <p>
-                    </p><p>
-                </p></div>
-                <div>
-                    <h3><strong>Lack of Relevance and Context</strong></h3><p
-                >Illustrations should always serve a purpose and be
-                    relevant to the content or functionality they accompany. Including irrelevant or unrelated
-                    illustrations can confuse users and disrupt their understanding of the platform&#x27;s features. It
-                    is important to ensure that illustrations support the content, enhance comprehension, or provide
-                    visual cues that guide users through their journey. A clear and purposeful connection between the
-                    illustrations and the platform&#x27;s functionality fosters an intuitive user experience.</p><p
-                >
-                </p></div>
-            </div>
 
-            <hr/>
             <br/>
-            <div style={{display: 'flex'}}>
-                <div style={{maxWidth: '350px', marginRight: '32px'}}>
-                    <figure><img src="/img/pages/design-language/6.png"/></figure>
+            <br/>
+            <div style={{margin: '0 auto', maxWidth: '60rem'}}>
+                <hr/>
+                <br/>
+                <br/>
+                <div style={{display: 'flex'}}>
+                    <div style={{maxWidth: '350px', marginRight: '32px'}}>
+                        <figure><img src="/img/pages/design-language/5.png"/></figure>
+                    </div>
+                    <div>
+                        <h3><strong>Lack of Relevance and Context</strong></h3>
+                        <p>Illustrations should always serve a purpose and be
+                            relevant to the content or functionality they accompany. Including irrelevant or unrelated
+                            illustrations can confuse users and disrupt their understanding of the platform&#x27;s
+                            features.
+                            It
+                            is important to ensure that illustrations support the content, enhance comprehension, or
+                            provide
+                            visual cues that guide users through their journey. A clear and purposeful connection
+                            between
+                            the
+                            illustrations and the platform&#x27;s functionality fosters an intuitive user
+                            experience.</p>
+                    </div>
                 </div>
-                <div>
-                    <h3><strong>Inconsistent Color Palettes</strong></h3><p
-                >One common mistake is mixing color palettes dedicated to
-                    specific sections within the platform. Each section&#x27;s color palette has been carefully chosen
-                    to convey a distinct message and evoke specific emotions. Mixing these color palettes can lead to
-                    confusion and visual inconsistency, compromising the overall user experience. It is crucial to
-                    adhere to the designated color schemes for each section to maintain a cohesive and coherent visual
-                    identity.</p><p>
-                </p></div>
-            </div>
 
-            <hr/>
-            <br/>
-            <div style={{display: 'flex'}}>
-                <div style={{maxWidth: '350px', marginRight: '32px'}}>
-                    <figure><img src="/img/pages/design-language/7.png"/></figure>
+                <hr/>
+                <br/>
+                <br/>
+                <div style={{display: 'flex'}}>
+                    <div style={{maxWidth: '350px', marginRight: '32px'}}>
+                        <figure><img src="/img/pages/design-language/6.png"/></figure>
+                    </div>
+                    <div>
+                        <h3><strong>Inconsistent Color Palettes</strong></h3>
+                        <p>One common mistake is mixing color palettes dedicated to
+                            specific sections within the platform. Each section&#x27;s color palette has been carefully
+                            chosen
+                            to convey a distinct message and evoke specific emotions. Mixing these color palettes can
+                            lead
+                            to
+                            confusion and visual inconsistency, compromising the overall user experience. It is crucial
+                            to
+                            adhere to the designated color schemes for each section to maintain a cohesive and coherent
+                            visual
+                            identity.</p></div>
                 </div>
-                <div><h3
-                ><strong>Cluttered Visuals</strong></h3><p
-                >While illustrations can enhance engagement, overusing them
-                    or cluttering the platform with excessive visuals can overwhelm users and create visual noise. It is
-                    crucial to strike a balance between visual elements and content clarity. Each illustration should
-                    have a distinct purpose and to guide users or enhance their understanding. Avoid overcrowding
-                    illustrations with too many elements, and prioritize simplicity and clarity to maintain a clean and
-                    user-friendly interface.</p></div>
-            </div>
 
-            <hr/>
-            <br/>
-            <div style={{display: 'flex'}}>
-                <div style={{maxWidth: '350px', marginRight: '32px'}}>
-                    <figure><img src="/img/pages/design-language/8.png"/></figure>
+                <hr/>
+                <br/>
+                <br/>
+                <div style={{display: 'flex'}}>
+                    <div style={{maxWidth: '350px', marginRight: '32px'}}>
+                        <figure><img src="/img/pages/design-language/7.png"/></figure>
+                    </div>
+                    <div><h3><strong>Cluttered Visuals</strong></h3><p>While illustrations can enhance engagement,
+                        overusing them
+                        or cluttering the platform with excessive visuals can overwhelm users and create visual noise.
+                        It is
+                        crucial to strike a balance between visual elements and content clarity. Each illustration
+                        should
+                        have a distinct purpose and to guide users or enhance their understanding. Avoid overcrowding
+                        illustrations with too many elements, and prioritize simplicity and clarity to maintain a clean
+                        and
+                        user-friendly interface.</p></div>
                 </div>
-                <div><h3
-                ><strong>Inconsistent Style or Quality</strong></h3><p
-                >Consistency in the style and quality of illustrations is
-                    paramount to maintain a cohesive visual language throughout the platform. Inconsistent styles, such
-                    as mixing hand-drawn illustrations with 3D graphics in smaller illustrations, can create a
-                    disjointed appearance. It is essential to establish clear guidelines for basic illustration styles
-                    and ensure that illustrations adhere to those guidelines. Consistency in style and quality fosters a
-                    polished and cohesive user experience, reinforcing the platform&#x27;s credibility.</p></div>
+
+                <hr/>
+                <br/>
+                <br/>
+                <div style={{display: 'flex'}}>
+                    <div style={{maxWidth: '350px', marginRight: '32px'}}>
+                        <figure><img src="/img/pages/design-language/8.png"/></figure>
+                    </div>
+                    <div><h3><strong>Inconsistent Style or Quality</strong></h3><p>Consistency in the style and quality
+                        of illustrations is
+                        paramount to maintain a cohesive visual language throughout the platform. Inconsistent styles,
+                        such
+                        as mixing hand-drawn illustrations with 3D graphics in smaller illustrations, can create a
+                        disjointed appearance. It is essential to establish clear guidelines for basic illustration
+                        styles
+                        and ensure that illustrations adhere to those guidelines. Consistency in style and quality
+                        fosters a
+                        polished and cohesive user experience, reinforcing the platform&#x27;s credibility.</p></div>
+                </div>
             </div>
 
             <hr/>
             <h2>Best Practices for Using Illustrations in the Platform</h2>
-            <h3>Illustrations can be a powerful tool in enhancing the user
+            <p>Illustrations can be a powerful tool in enhancing the user
                 experience within the influencer analysis platform. When used thoughtfully and strategically,
                 illustrations
                 can communicate complex ideas, guide users, and evoke emotions. This chapter explores best practices for
                 incorporating illustrations in the platform, covering the use of placeholders, creating a cohesive
                 visual
                 language, and avoiding common mistakes to ensure that illustrations contribute positively to the
-                platform&#x27;s effectiveness and user engagement.</h3>
+                platform&#x27;s effectiveness and user engagement.</p>
             <br/>
 
-            <hr/>
-            <h2><strong>Utilizing Placeholders Effectively</strong></h2><p>
-        </p><p>Placeholders are temporary visual cues that indicate the
-            presence of content or interactions that will be added later. When employing placeholders, it is essential
-            to use clear and recognizable icons or illustrations that align with the platform&#x27;s design language.
-            Placeholder illustrations should convey the purpose of the missing content or interaction to keep users
-            informed and engaged.</p>
-            <figure><img style={{margin: '0 0 3rem 0'}} src="/img/pages/design-language/9.png"/></figure>
-            <hr/>
-            <h2><strong>Creating a Cohesive Visual Language</strong></h2><p
-        >
-        </p><p>Determine a specific style for section and for illustrations
-            that align with the platform&#x27;s overall branding and design principles. Consistency in style and
-            presentation creates a sense of familiarity and improves user recognition of visual cues throughout the
-            platform.
-        </p>
-            <figure><img style={{margin: '0 0 3rem 0'}} src="/img/pages/design-language/10.png"/></figure>
-            <hr/>
-            <h2><strong>Enhancing Content Comprehension</strong></h2><p
-        >
-        </p><p>Illustrations can significantly enhance content comprehension,
-            especially when dealing with complex data or information. Consider simple overall data visualizations to
-            represent statistics, trends, or analysis results. However, ensure that the illustrations do not overwhelm
-            the content or overshadow critical information.</p><p>
-        </p>
-            <figure><img style={{margin: '0 0 3rem 0'}} src="/img/pages/design-language/11.png"/></figure>
-            <hr/>
-            <h2><strong>Avoiding Distractions and Overuse</strong></h2><p
-        >
-        </p><p>While illustrations can enrich the user experience, overusing
-            them or incorporating unnecessary visuals can lead to distractions and cognitive overload. Avoid including
-            them where they do not serve a clear function. Ensure that every illustration aligns with the
-            platform&#x27;s objectives and enhances the user&#x27;s understanding and engagement.</p><p
-        >
-        </p>
-            <figure><img style={{margin: '0 0 3rem 0'}} src="/img/pages/design-language/12.png"/></figure>
-            <hr/>
+            <h2><strong>Utilizing Placeholders Effectively</strong></h2>
+            <p>Placeholders are temporary visual cues that indicate the
+                presence of content or interactions that will be added later. When employing placeholders, it is
+                essential
+                to use clear and recognizable icons or illustrations that align with the platform&#x27;s design
+                language.
+                Placeholder illustrations should convey the purpose of the missing content or interaction to keep users
+                informed and engaged.</p>
+            <figure><img style={{margin: '3rem auto', maxWidth: '60rem'}} src="/img/pages/design-language/9.png"/>
+            </figure>
+            <br/>
+
+            <h2><strong>Creating a Cohesive Visual Language</strong></h2>
+            <p>Determine a specific style for section and for illustrations
+                that align with the platform&#x27;s overall branding and design principles. Consistency in style and
+                presentation creates a sense of familiarity and improves user recognition of visual cues throughout the
+                platform.
+            </p>
+            <figure><img style={{margin: '0 auto 3rem', maxWidth: '60rem'}} src="/img/pages/design-language/10.png"/>
+            </figure>
+            <br/>
+
+            <h2><strong>Enhancing Content Comprehension</strong></h2>
+            <p>Illustrations can significantly enhance content comprehension,
+                especially when dealing with complex data or information. Consider simple overall data visualizations to
+                represent statistics, trends, or analysis results. However, ensure that the illustrations do not
+                overwhelm
+                the content or overshadow critical information.</p>
+            <figure><img style={{margin: '3rem auto', maxWidth: '60rem'}} src="/img/pages/design-language/11.png"/>
+            </figure>
+            <br/>
+
+            <h2><strong>Avoiding Distractions and Overuse</strong></h2>
+            <p>While illustrations can enrich the user experience, overusing
+                them or incorporating unnecessary visuals can lead to distractions and cognitive overload. Avoid
+                including
+                them where they do not serve a clear function. Ensure that every illustration aligns with the
+                platform&#x27;s objectives and enhances the user&#x27;s understanding and engagement.</p>
+
+            <figure><img style={{margin: '3rem auto', maxWidth: '60rem'}} src="/img/pages/design-language/12.png"/>
+            </figure>
+            <br/>
+
             <h2>Summary</h2><h3>The
             best practices for using illustrations in the platform empower users, promote engagement, and foster a deep
             connection between the platform and its audience. With the skillful integration of illustrations, the
             platform emerges as a visually compelling and user-friendly space where users can explore, analyze, and make
-            informed decisions. </h3><p>
-        </p><p>Harnessing the power of illustrations as a strategic tool
-            enhances the platform&#x27;s effectiveness, elevates its visual communication, dedicated to delivering
-            excellence and innovation in every user interaction.</p><p>
-        </p>
-            <hr/>
+            informed decisions.</h3>
+            <p>Harnessing the power of illustrations as a strategic tool
+                enhances the platform&#x27;s effectiveness, elevates its visual communication, dedicated to delivering
+                excellence and innovation in every user interaction.</p>
+            <br/>
             <h2>Conclusion</h2>
             <p>Consistency, usability, and alignment with content are essential
                 considerations during the creation and implementation of these illustrations, contributing to an
                 enhanced
-                user experience.</p><p>
-        </p>
-            <figure><img style={{margin: '0 0 3rem 0'}} src="/img/pages/design-language/13.png"/></figure>
+                user experience.</p>
+            <figure><img style={{margin: '3rem auto', maxWidth: '60rem'}} src="/img/pages/design-language/13.png"/>
+            </figure>
+            <br/>
             <hr/>
             <br/>
             <h4 className="gray-link">
