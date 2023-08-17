@@ -9,3 +9,7 @@
 .gray-link a {
     color: var(--grey700);
 }
+
+.component-property-desc {
+    margin-bottom: 24px !important;
+}

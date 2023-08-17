@@ -24,6 +24,7 @@ export default function Badge() {
                 any combination of these elements, though it must always contain a Label.</p>
 
             <BadgeAnatomySVG/>
+            <br/>
 
 
             <h2>Sizes</h2>
@@ -32,26 +33,33 @@ export default function Badge() {
                 Badge Component is offered in four different sizes to fit various interface needs:
             </p>
 
-            <ol type="1" key="1">
-                <li><strong>Small</strong> - This is the smallest available size for our badges. It's particularly
-                    useful in tight
-                    spaces or when paired with small text.
-                </li>
-                <li><strong>Medium</strong> - This is the standard size for badges, used most commonly across the
-                    interface for
-                    typical content.
-                </li>
-                <li><strong>Large</strong> - Large badges are primarily used when the badge needs to be visually
-                    emphasized or when
-                    paired with larger text.
-                </li>
-                <li><strong>Extra Large</strong> - This size is used sparingly, only for significant points of focus or
-                    when the
-                    badge is used alongside very large text or within large components.
-                </li>
-            </ol>
+            <p className='component-property-desc'><strong><code>Small</code></strong> - This is the smallest available
+                size for our badges. It's
+                particularly
+                useful in tight
+                spaces or when paired with small text.
+            </p>
+            <p className='component-property-desc'><strong><code>Medium</code></strong> - This is the standard size for
+                badges, used most commonly across
+                the
+                interface for
+                typical content.
+            </p>
+            <p className='component-property-desc'><strong><code>Large</code></strong> - Large badges are primarily used
+                when the badge needs to be visually
+                emphasized or when
+                paired with larger text.
+            </p>
+            <p className='component-property-desc'><strong><code>Extra Large</code></strong> - This size is used
+                sparingly, only for significant points of
+                focus or
+                when the
+                badge is used alongside very large text or within large components.
+            </p>
+            <br/>
 
             <BadgeSizesSVG/>
+            <br/>
 
 
             <h2>Variants</h2>
@@ -70,6 +78,7 @@ export default function Badge() {
                 contrast of the badges adheres to accessibility standards to make them legible for all users. Lastly,
                 the icon chosen should be easily understood and complement the text in effectively conveying the badge's
                 message.</p>
+            <br/>
 
             <h2>Layout and Spacings</h2>
 

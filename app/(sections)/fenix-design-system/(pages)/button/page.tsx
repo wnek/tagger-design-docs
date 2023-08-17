@@ -24,35 +24,40 @@ export default function Badge() {
             <ButtonAnatomySVG/>
             <br/>
 
-            <p><strong><code>Icon</code></strong> - The Icon within a Button provides a visual cue to the user about
+            <p className='component-property-desc'><strong><code>Icon</code></strong> - The Icon within a Button
+                provides a visual cue to the user about
                 the
                 action they are about to perform. It enhances the user experience by making interactions more intuitive.
                 Icons should be relevant to the action that the button performs.
             </p>
 
-            <p>
+            <p className='component-property-desc'>
                 <strong><code>Label</code></strong> - The Label serves to describe the button's action in text form. It
                 should be clear, concise, and action-oriented. It also improves accessibility as it can be read by
                 screen
                 readers.
             </p>
 
-            <p>
+            <p className='component-property-desc'>
                 <strong><code>Dropdown</code></strong> - This is an optional component of a Button that can be used to
                 display a list of actions that the user can choose from. This element is used when multiple related
                 actions
                 can be grouped under a single button.
             </p>
+            <br/>
 
             <h2>Variants</h2>
 
-            <p><strong><code>Primary</code></strong> - This is the main call to action and should be used for the most
+            <p className='component-property-desc'><strong><code>Primary</code></strong> - This is the main call to
+                action and should be used for the most
                 important actions. It is generally more visually striking to draw the user's attention.</p>
 
-            <p><strong><code>Secondary</code></strong> - This is used for actions that are secondary or supplementary to
+            <p className='component-property-desc'><strong><code>Secondary</code></strong> - This is used for actions
+                that are secondary or supplementary to
                 the primary actions. This variant is typically less visually striking than the primary button.</p>
 
-            <p><strong><code>Plain</code></strong> - This is used for less important or less frequently used
+            <p className='component-property-desc'><strong><code>Plain</code></strong> - This is used for less important
+                or less frequently used
                 actions. It
                 is the least visually striking variant and should be used sparingly to avoid confusion or visual
                 clutter.</p>
