@@ -1,13 +1,14 @@
 .hero-scroll-scene {
   display: flex;
   aspect-ratio: 16/10;
-  width: 100%;
+  width: calc(100% - 2em);
   height: calc(100vh - 2em);
   height: calc(100svh - 2em);
   text-align: center;
   border-radius: 1em;
   overflow: hidden;
   background: #090909;
+  margin: 1em auto;
 }
 
 .hero-scroll-scene .logo {

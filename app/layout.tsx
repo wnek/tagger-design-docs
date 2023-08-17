@@ -42,8 +42,9 @@ export default function RootLayout({
                         </GlobalCanvas>
                         {children}
 
-                        <Footer />
+
                     </div>
+                    <Footer />
                 </div>
             </body>
         </html >

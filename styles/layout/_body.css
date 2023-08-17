@@ -1,9 +1,7 @@
 body {
   background-color: #101010;
   background-color: #000;
-  font-family: var(--notion-font);
   font-weight: 500;
-  padding: 1em 1em;
   color: var(--grey900);
 }
 
@@ -11,12 +9,13 @@ body {
   border-radius: 1em;
 }
 
-.body-container p{
+.body-container p {
   margin: 0;
 }
 
 .subpage_body_wrapper {
   background-color: var(--light-grey);
+  padding: 1em 1em;
 }
 
 .subpage_body_wrapper .body-container {

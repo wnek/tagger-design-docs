@@ -20,6 +20,7 @@
 /* Layout */
 @import url('layout/_body.css');
 @import url('layout/_navbar.css');
+@import url('layout/_footer.css');
 
 /* Pages */
 @import url('pages/_home.css');

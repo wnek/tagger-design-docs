@@ -4,16 +4,19 @@ section {
   flex-direction: column;
 }
 
-
-
 /* Motto */
 
-.motto_wrapper{
-  padding: 10em 0 0 0;
+.motto_wrapper {
+  padding: 10em 1em 0;
 }
+
 .motto_wrapper .motto_content {
   grid-column-start: 2;
   grid-column-end: 4;
+}
+
+.motto_wrapper .motto_content h2 {
+  color: var(--grey700);
 }
 
 .motto_wrapper .motto_content h2:nth-of-type(2) {
@@ -22,7 +25,7 @@ section {
 
 /* Philosophy */
 .philosophy_wrapper {
-  padding: 10em 0;
+  padding: 10em 1em;
 }
 
 .philosophy_wrapper .philosophy_content {
@@ -46,17 +49,16 @@ section {
   border-radius: 0.5em;
 }
 
-
-.design-language_wrapper, .design-system_wrapper{
+.design-language_wrapper,
+.design-system_wrapper {
   background-color: var(--white);
 }
 
-
-.design-language_wrapper{
-  padding: 10em 0 0 0;
+.design-language_wrapper {
+  padding: 10em 1em;
 }
 
-.design-language_content{
+.design-language_content {
   grid-column-start: 1;
   grid-column-end: 3;
   text-align: left;
@@ -65,8 +67,8 @@ section {
 }
 
 .design-language_wrapper .areas {
- display: flex;
- gap: 0.25em;
+  display: flex;
+  gap: 0.25em;
 }
 
 .design-language_wrapper .areas div {
@@ -74,32 +76,31 @@ section {
   height: 40em;
   border-radius: 0.5em;
   background-color: var(--light-grey);
-
 }
 
-.design-system_wrapper{
-  padding: 10em 0 0 0;
+.design-system_wrapper {
+  padding: 10em 1em;
 }
 
-.design-system_content, .tagger-labs_content{
+.design-system_content,
+.tagger-labs_content {
   grid-column-start: 3;
   grid-column-end: 5;
   text-align: left;
-  
+
   margin: 0 0 5em 0;
 }
 
-.modular-scene{
+.modular-scene {
   width: 100%;
   height: 100%;
   position: relative;
   overflow: hidden;
 }
 
-.tagger-labs_wrapper{
-  padding: 10em 0 0 0;
+.tagger-labs_wrapper {
+  padding: 10em 1em;
 }
-
 
 /* Grid wrapper */
 .grid_wrapper {
