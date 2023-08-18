@@ -17,7 +17,7 @@ import { bind } from 'lodash';
 export default function Page() {
     return (
 
-        <SmoothScrollbar disablePointerOnScroll={false} config={{ smoothTouch: true }}>
+        <SmoothScrollbar disablePointerOnScroll={false} config={{ syncTouch: true }}>
             {(bind) => (<div className='body-container'>
                 <Hero />
 
