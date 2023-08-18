@@ -111,7 +111,7 @@ function StageComponent(props) {
 
     const { size, viewport } = useThree();
 
-    let modelScaleMultiplier = 0.5;
+    let modelScaleMultiplier = 0.4;
 
     if (size.width < 480) {
         modelScaleMultiplier = 1;
@@ -132,7 +132,7 @@ function StageComponent(props) {
 
     return (
         <>
-            <group position={[0, -7, 0]} scale={props.scale.xy.min() * modelScaleMultiplier}>
+            <group position={[0, -6, 0]} scale={props.scale.xy.min() * modelScaleMultiplier}>
 
                 {/* <Sparkles color="#FA6A42" count={1000} size={3} speed={0.4} position={[1, 0, 0]} scale={[10]} /> */}
 
@@ -151,7 +151,7 @@ function StageComponent(props) {
                 </Float>
 
                 <Float floatIntensity={0.5} rotationIntensity={0.1} speed={1.5}>
-                    <OrangeCursor castShadow />
+                    <OrangeCursor castShadow />`
                 </Float>
 
                 <Float floatIntensity={0.3} rotationIntensity={0.25} speed={1.5}>
