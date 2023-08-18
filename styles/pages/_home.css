@@ -56,6 +56,8 @@ section {
 
 .design-language_wrapper {
   padding: 10em 1em;
+  position: relative;
+  z-index: -1;
 }
 
 .design-language_content {
@@ -78,6 +80,8 @@ section {
   background-color: var(--light-grey);
 }
 
+
+
 .design-system_wrapper {
   padding: 10em 1em;
 }
@@ -87,7 +91,6 @@ section {
   grid-column-start: 3;
   grid-column-end: 5;
   text-align: left;
-
   margin: 0 0 5em 0;
 }
 

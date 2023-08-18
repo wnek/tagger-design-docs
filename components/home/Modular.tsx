@@ -10,7 +10,6 @@ export default function Modular() {
         <>
             <div ref={el} className="modular-scene"></div>
             <UseCanvas>
-
                 <ScrollScene track={el}>{(props) => <SpinningBoxWebGL {...props} />}</ScrollScene>
 
             </UseCanvas>
