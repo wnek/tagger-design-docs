@@ -117,19 +117,16 @@ function StageComponent(props) {
         modelScaleMultiplier = 1;
     }
 
-    else if (size.width > 480 && size.width < 1024) {
+    if (size.width > 480 && size.width < 1024) {
         modelScaleMultiplier = 0.7;
     }
 
-    else if (size.width > 1024 && size.width < 1600) {
+    if (size.width > 1024 && size.width < 1600) {
         modelScaleMultiplier = 0.8;
     }
 
-    else if (size.width > 1600) {
+    if (size.width > 1600) {
         modelScaleMultiplier = 0.5;
-    }
-    else {
-        modelScaleMultiplier = 0.2;
     }
 
 

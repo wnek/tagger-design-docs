@@ -17,7 +17,7 @@ import { bind } from 'lodash';
 export default function Page() {
     return (
 
-        <SmoothScrollbar disablePointerOnScroll={false}>
+        <SmoothScrollbar disablePointerOnScroll={false} config={{ smoothTouch: true }}>
             {(bind) => (<div className='body-container'>
                 <Hero />
 
@@ -99,7 +99,7 @@ export default function Page() {
 
 
             </div >)}
-        </SmoothScrollbar>
+        </SmoothScrollbar >
     )
 
 
