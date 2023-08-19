@@ -38,11 +38,6 @@ function SpinningBoxWebGL({ scale, scrollState }) {
 
             <group scale={scale.xy.min() * 0.5} position={[0, 0, 0]}>
                 <Branding scrollState={scrollState} />
-                {/* <mesh ref={mesh}>
-                    <boxGeometry />
-                    <meshNormalMaterial />
-                </mesh> */}
-
             </group >
 
 

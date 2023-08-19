@@ -8,10 +8,10 @@ export default function Branding(props) {
   const cylinder1 = useRef();
   const cylinder2 = useRef();
   const cylinder3 = useRef();
+
   useFrame(() => {
     cylinder1.current.rotation.x =
       ((props.scrollState.progress * Math.PI) / 2) * -1;
-
     cylinder2.current.rotation.x =
       ((props.scrollState.progress * Math.PI) / 4) * -1;
     cylinder3.current.rotation.x =
@@ -21,7 +21,6 @@ export default function Branding(props) {
   return (
     <group {...props} dispose={null}>
       <group ref={cylinder1}>
-        {' '}
         <mesh
           castShadow
           receiveShadow
@@ -35,7 +34,7 @@ export default function Branding(props) {
           castShadow
           receiveShadow
           geometry={nodes.Cylinder1.geometry}
-          material={materials.PaletteMaterial001}
+          material={materials['Material.020_Bake']}
         />
       </group>
 
@@ -53,7 +52,7 @@ export default function Branding(props) {
           castShadow
           receiveShadow
           geometry={nodes.Cylinder2.geometry}
-          material={materials.PaletteMaterial002}
+          material={materials.Material_Bake}
         />
       </group>
 
@@ -62,13 +61,13 @@ export default function Branding(props) {
           castShadow
           receiveShadow
           geometry={nodes.Cylinder3.geometry}
-          material={materials.PaletteMaterial002}
+          material={materials['Material.006_Bake']}
         />
         <mesh
           castShadow
           receiveShadow
           geometry={nodes.Cylinder4.geometry}
-          material={materials.PaletteMaterial002}
+          material={materials['Material.007_Bake']}
         />
       </group>
 
@@ -76,7 +75,7 @@ export default function Branding(props) {
         castShadow
         receiveShadow
         geometry={nodes.Cylinder5.geometry}
-        material={materials.PaletteMaterial002}
+        material={materials['Material.005_Bake']}
       />
 
       <mesh
@@ -92,7 +91,7 @@ export default function Branding(props) {
         castShadow
         receiveShadow
         geometry={nodes.Text003.geometry}
-        material={materials.PaletteMaterial002}
+        material={materials['Material.009']}
         position={[0.414, -0.008, 0.017]}
         rotation={[Math.PI / 2, 0, 0]}
         scale={0.057}
@@ -101,7 +100,7 @@ export default function Branding(props) {
         castShadow
         receiveShadow
         geometry={nodes.Text004.geometry}
-        material={materials.PaletteMaterial002}
+        material={materials['Material.009']}
         position={[0.987, -0.008, 0.017]}
         rotation={[Math.PI / 2, 0, 0]}
         scale={0.057}
