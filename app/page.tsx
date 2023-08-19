@@ -42,21 +42,21 @@ export default function Page() {
                     <div className='areas'>
                         <Link href="/philosophy/core-principles">
                             <div>
-                                <p>Core principles</p>
+                                <h4>Core principles</h4>
                                 <img src="/img/home/principles.svg" alt="Core principles" />
                             </div>
                         </Link>
 
                         <Link href="/philosophy/four-phases">
                             <div>
-                                <p>Four phases of design</p>
+                                <h4>Four phases of design</h4>
                                 <img src="/img/home/four-phases.svg" alt="Four phases of design" />
                             </div>
                         </Link>
 
                         <Link href="/philosophy/hypothesis-driven">
                             <div>
-                                <p>Hypothesis-driven design</p>
+                                <h4>Hypothesis-driven design</h4>
                                 <img src="/img/home/hypothesis-driven-design.svg" alt="Hypothesis-driven design" />
                             </div>
                         </Link>
@@ -73,9 +73,9 @@ export default function Page() {
 
                     </div>
                     <div className='areas'>
-                        <div><p>Core principles</p></div>
-                        <div> <Modular /></div>
-                        <div><p>Hypothesis-driven design</p></div>
+                        <div><h4>Branding</h4><Modular /></div>
+                        <div><h4>Modular brand system</h4> </div>
+                        <div><h4>Illustrations</h4><img src="/img/home/illustrations.png" alt="Illustrations" /></div>
                     </div>
                 </section>
 

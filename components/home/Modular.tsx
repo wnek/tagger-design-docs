@@ -21,13 +21,12 @@ export default function Modular() {
 function SpinningBoxWebGL({ scale, scrollState }) {
     const mesh = useRef()
     useFrame(() => {
-        // mesh.current.rotation.y = scrollState.progress * Math.PI * 2
+        mesh.current.rotation.y = scrollState.progress * Math.PI * 2
     })
 
     console.log(mesh)
     return (
         <>
-            {/* <PerspectiveCamera makeDefault position={[0, 2, 0]} lookAt={[0, 0, 0]} /> */}
 
             <group scale={scale.xy.min() * 0.5} position={[0, 0, 0]} >
 
@@ -38,7 +37,7 @@ function SpinningBoxWebGL({ scale, scrollState }) {
 
             </group >
 
-            <OrbitControls />
+
         </>
     )
 }

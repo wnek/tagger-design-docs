@@ -122,7 +122,7 @@ function StageComponent(props) {
 
                 {/* <Sparkles color="#FA6A42" count={1000} size={3} speed={0.4} position={[1, 0, 0]} scale={[10]} /> */}
 
-                <AccumulativeShadows temporal frames={100} color="black" colorBlend={1} toneMapped={false} alphaTest={0.3} opacity={2} scale={24}>
+                <AccumulativeShadows temporal frames={100} color="black" colorBlend={0.5} toneMapped={false} alphaTest={0.3} opacity={2} scale={24}>
                     <RandomizedLight amount={8} radius={4} ambient={0.5} intensity={2} position={[5, 5, -10]} bias={0.001} />
                 </AccumulativeShadows>
 
@@ -144,11 +144,11 @@ function StageComponent(props) {
                     <Comment castShadow />
                 </Float>
 
-                <Grid position={[0, -0.002, 0]}
+                <Grid position={[0, -0.02, 0]}
                     gridSize={[5, 5]}
                     cellSize={0.02}
                     cellThickness={1}
-                    cellColor={'#323232'}
+                    cellColor={'#616161'}
                     sectionSize={1.3}
                     sectionThickness={1.2}
                     sectionColor={'#FA6A42'}
@@ -159,7 +159,7 @@ function StageComponent(props) {
                 />
 
 
-                <Plane position={[0, -0.004, 0]} args={[40, 40]} rotation={[-Math.PI / 2, 0, 0]} receiveShadow >
+                <Plane position={[0, -0.03, 0]} args={[40, 40]} rotation={[-Math.PI / 2, 0, 0]} receiveShadow >
                     <meshBasicMaterial color="#191919" />
                 </Plane>
             </group>
