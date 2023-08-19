@@ -10,7 +10,7 @@ import * as THREE from 'three'
 
 // R3F
 import { useFrame, useThree } from '@react-three/fiber'
-import { Box, PerspectiveCamera, Float, Grid, Text, Billboard, Environment, Lightformer, AccumulativeShadows, RandomizedLight, Sparkles, Stars } from '@react-three/drei'
+import { PerspectiveCamera, Float, Grid, Environment, Lightformer, AccumulativeShadows, RandomizedLight, Plane } from '@react-three/drei'
 
 
 import Model from '../3d/Hero3d';
@@ -61,7 +61,7 @@ function HeroScene({ el }) {
             <>
 
                 <StageComponent {...props} />
-
+                <fog attach="fog" color="#000000" near={1} far={80} />
                 <PerspectiveCamera fov={80} ref={cameraRef} makeDefault={true} position={[0, 0, 18]} />
 
 
@@ -75,30 +75,16 @@ function HeroScene({ el }) {
                         scale={[50, 50]} // Scale it any way you prefer (optional = [1, 1])
                         target={[0, 10, 0]} // Target position (optional = undefined)
                     />
+
                     <Lightformer
-                        position={[0, -10, 2]}
+                        position={[10, 1, -10]}
                         form="ring"
-                        intensity={0.2}
+                        intensity={5}
                         color="white"
                         scale={[10, 5]}
                         target={[0, 0, 0]}
                     />
-                    <Lightformer
-                        position={[-2, 15, 1]}
-                        form="ring"
-                        intensity={50}
-                        color="#FA6A42"
-                        scale={[50, 50]}
-                        target={[0, 0, 0]}
-                    />
-                    <Lightformer
-                        position={[2, 30, 0]}
-                        form="ring"
-                        intensity={20}
-                        color="#FA6A42"
-                        scale={[10, 50]}
-                        target={[0, 0, 0]}
-                    />
+
                 </Environment>
             </>
         )}
@@ -136,7 +122,7 @@ function StageComponent(props) {
 
                 {/* <Sparkles color="#FA6A42" count={1000} size={3} speed={0.4} position={[1, 0, 0]} scale={[10]} /> */}
 
-                <AccumulativeShadows temporal frames={100} color="black" colorBlend={1} toneMapped={false} alphaTest={0.4} opacity={2} scale={24}>
+                <AccumulativeShadows temporal frames={100} color="black" colorBlend={1} toneMapped={false} alphaTest={0.3} opacity={2} scale={24}>
                     <RandomizedLight amount={8} radius={4} ambient={0.5} intensity={2} position={[5, 5, -10]} bias={0.001} />
                 </AccumulativeShadows>
 
@@ -158,11 +144,11 @@ function StageComponent(props) {
                     <Comment castShadow />
                 </Float>
 
-                <Grid position={[0, 0.01, 0]}
+                <Grid position={[0, -0.002, 0]}
                     gridSize={[5, 5]}
-                    cellSize={0.25}
+                    cellSize={0.02}
                     cellThickness={1}
-                    cellColor={'#6f6f6f'}
+                    cellColor={'#323232'}
                     sectionSize={1.3}
                     sectionThickness={1.2}
                     sectionColor={'#FA6A42'}
@@ -171,6 +157,11 @@ function StageComponent(props) {
                     followCamera={false}
                     infiniteGrid={true}
                 />
+
+
+                <Plane position={[0, -0.004, 0]} args={[40, 40]} rotation={[-Math.PI / 2, 0, 0]} receiveShadow >
+                    <meshBasicMaterial color="#191919" />
+                </Plane>
             </group>
 
 

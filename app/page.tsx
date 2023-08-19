@@ -40,9 +40,26 @@ export default function Page() {
                         </div>
                     </div>
                     <div className='areas'>
-                        <div><p>Core principles</p></div>
-                        <div><p>Four phases of design</p></div>
-                        <div><p>Hypothesis-driven design</p></div>
+                        <Link href="/philosophy/core-principles">
+                            <div>
+                                <p>Core principles</p>
+                                <img src="/img/home/principles.svg" alt="Core principles" />
+                            </div>
+                        </Link>
+
+                        <Link href="/philosophy/four-phases">
+                            <div>
+                                <p>Four phases of design</p>
+                                <img src="/img/home/four-phases.svg" alt="Four phases of design" />
+                            </div>
+                        </Link>
+
+                        <Link href="/philosophy/hypothesis-driven">
+                            <div>
+                                <p>Hypothesis-driven design</p>
+                                <img src="/img/home/hypothesis-driven-design.svg" alt="Hypothesis-driven design" />
+                            </div>
+                        </Link>
                     </div>
                 </section>
 

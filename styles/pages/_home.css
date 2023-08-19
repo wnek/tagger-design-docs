@@ -37,16 +37,50 @@ section {
 
 .philosophy_wrapper .areas {
   display: flex;
-  grid-column-start: 1;
-  grid-column-end: 5;
+  align-items: center;
+  justify-content: center;
   gap: 0.25em;
+}
+
+@media screen and (max-width: 1024px) {
+  .philosophy_wrapper .areas {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.25em;
+  }
+}
+
+.philosophy_wrapper .areas a {
+  background-color: var(--grey950);
+  width: 100%;
+  border-radius: 0.5em;
+  padding: 0.25em;
+  aspect-ratio: 1/1;
+  text-decoration: none;
 }
 
 .philosophy_wrapper .areas div {
   background-color: var(--grey950);
   width: 100%;
-  height: 10em;
   border-radius: 0.5em;
+  padding: 1em;
+  aspect-ratio: 1/1;
+  text-decoration: none;
+}
+
+.philosophy_wrapper .areas div:hover {
+  background-color: hsl(0, 0%, 6%);
+}
+
+.philosophy_wrapper .areas img {
+  margin: 0 auto;
+  width: 100%;
+}
+
+.philosophy_wrapper .areas p {
+  color: white;
 }
 
 .design-language_wrapper,
@@ -79,8 +113,6 @@ section {
   border-radius: 0.5em;
   background-color: var(--light-grey);
 }
-
-
 
 .design-system_wrapper {
   padding: 10em 1em;
