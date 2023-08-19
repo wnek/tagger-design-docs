@@ -3,7 +3,7 @@ import Link from 'next/link';
 
 
 // R3F-Scroll-Rig
-import { GlobalCanvas, ScrollScene, ViewportScrollScene, UseCanvas, SmoothScrollbar } from '@14islands/r3f-scroll-rig'
+import { ViewportScrollScene, UseCanvas } from '@14islands/r3f-scroll-rig'
 
 // Three.js
 import * as THREE from 'three'
@@ -75,7 +75,6 @@ function HeroScene({ el }) {
                         scale={[50, 50]} // Scale it any way you prefer (optional = [1, 1])
                         target={[0, 10, 0]} // Target position (optional = undefined)
                     />
-
                     <Lightformer
                         position={[10, 1, -10]}
                         form="ring"
@@ -84,7 +83,6 @@ function HeroScene({ el }) {
                         scale={[10, 5]}
                         target={[0, 0, 0]}
                     />
-
                 </Environment>
             </>
         )}
@@ -95,7 +93,7 @@ function HeroScene({ el }) {
 
 function StageComponent(props) {
 
-    const { size, viewport } = useThree();
+    const { size } = useThree();
 
     let modelScaleMultiplier = 0.4;
 
@@ -119,9 +117,6 @@ function StageComponent(props) {
     return (
         <>
             <group position={[0, -6, 0]} scale={props.scale.xy.min() * modelScaleMultiplier}>
-
-                {/* <Sparkles color="#FA6A42" count={1000} size={3} speed={0.4} position={[1, 0, 0]} scale={[10]} /> */}
-
                 <AccumulativeShadows temporal frames={100} color="black" colorBlend={0.5} toneMapped={false} alphaTest={0.3} opacity={2} scale={24}>
                     <RandomizedLight amount={8} radius={4} ambient={0.5} intensity={2} position={[5, 5, -10]} bias={0.001} />
                 </AccumulativeShadows>
@@ -137,7 +132,7 @@ function StageComponent(props) {
                 </Float>
 
                 <Float floatIntensity={0.5} rotationIntensity={0.1} speed={1.5}>
-                    <OrangeCursor castShadow />`
+                    <OrangeCursor castShadow />
                 </Float>
 
                 <Float floatIntensity={0.3} rotationIntensity={0.25} speed={1.5}>

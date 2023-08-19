@@ -1,7 +1,8 @@
 import { useRef } from 'react'
-import { useFrame } from '@react-three/fiber'
-import { PerspectiveCamera, AccumulativeShadows, RandomizedLigh, OrbitControls, RandomizedLight } from '@react-three/drei'
+
+import { Environment, Lightformer } from '@react-three/drei'
 import { UseCanvas, ScrollScene } from '@14islands/r3f-scroll-rig'
+import Branding from '/components/3d/Branding'
 
 export default function Modular() {
     const el = useRef()
@@ -19,21 +20,28 @@ export default function Modular() {
 }
 
 function SpinningBoxWebGL({ scale, scrollState }) {
-    const mesh = useRef()
-    useFrame(() => {
-        mesh.current.rotation.y = scrollState.progress * Math.PI * 2
-    })
 
-    console.log(mesh)
     return (
         <>
 
-            <group scale={scale.xy.min() * 0.5} position={[0, 0, 0]} >
+            <Environment blur={2}>
+                <Lightformer
+                    position={[0, 0, 2]}
+                    form="rect" // circle | ring | rect (optional, default = rect)
+                    intensity={4} // power level (optional = 1)
+                    color="white" // (optional = white)
+                    scale={[50, 50]} // Scale it any way you prefer (optional = [1, 1])
+                    target={[0, 10, 0]} // Target position (optional = undefined)
+                />
 
-                <mesh ref={mesh}>
+            </Environment>
+
+            <group scale={scale.xy.min() * 0.5} position={[0, 0, 0]}>
+                <Branding scrollState={scrollState} />
+                {/* <mesh ref={mesh}>
                     <boxGeometry />
                     <meshNormalMaterial />
-                </mesh>
+                </mesh> */}
 
             </group >
 
