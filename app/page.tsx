@@ -103,11 +103,11 @@ export default function Page() {
                             <h2>Fenix Design System</h2>
                             <p>The Fenix design system is the essence of our platform's visual language. It comprises an exhaustive set of guidelines for creating cohesive and scalable interfaces, maintaining visual and functional consistency across all touchpoints.</p>
                             <div className='areas'>
-                                <Link href="#"><p>Core principles</p>
+                                <Link href="#"><p>Foundations</p>
                                     <img src="/img/home/arrow-right.svg" alt="Arrow right" />
                                 </Link>
-                                <Link href="#"><p>Four phases of design</p><img src="/img/home/arrow-right.svg" alt="Arrow right" /></Link>
-                                <Link href="#"><p>Hypothesis-driven design</p><img src="/img/home/arrow-right.svg" alt="Arrow right" /></Link>
+                                <Link href="#"><p>Styles</p><img src="/img/home/arrow-right.svg" alt="Arrow right" /></Link>
+                                <Link href="#"><p>Components</p><img src="/img/home/arrow-right.svg" alt="Arrow right" /></Link>
                             </div>
                         </div>
 
@@ -125,9 +125,26 @@ export default function Page() {
 
                     </div>
                     <div className='areas'>
-                        <div><p>Core principles</p></div>
-                        <div><p>Four phases of design</p></div>
-                        <div><p>Hypothesis-driven design</p></div>
+                        <Link className="signals-trends" href="">
+                            <h4>Signals - #Trends</h4>
+                        </Link>
+
+                        <Link className="sharing" href="">
+                            <h4>[PLG]Sharing and Workspaces</h4>
+                        </Link>
+
+                        <Link className="taggeru" href="">
+                            <h4>TaggerU</h4>
+                        </Link>
+
+                        <Link className="playbooks" href="">
+                            <h4>Signals - Playbooks</h4>
+                        </Link>
+
+                        <Link className="smart-discovery" href="">
+                            <h4>Smart Discovery</h4>
+                        </Link>
+
                     </div>
                 </section>
 

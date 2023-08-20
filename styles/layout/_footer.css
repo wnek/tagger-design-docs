@@ -7,6 +7,13 @@ footer {
 
 .footer_wrapper {
   border-radius: 1em;
+  padding: 0 10rem;
+}
+
+@media screen and (max-width: 1024px) {
+  .footer_wrapper {
+    padding: 0;
+  }
 }
 
 .subpage_body_wrapper .footer_wrapper {
@@ -18,13 +25,16 @@ footer {
 }
 
 .footer-content {
+  border-top: 1px solid var(--grey900);
   display: grid;
   grid-template-columns: 1fr 1fr;
-  padding: 10em 0;
+  margin: 10em 0;
+  padding: 1rem 0;
 }
 
 .subpage_body_wrapper .footer-content {
   padding: 1em 1em 10em 1em;
+  border-top: none;
 }
 
 .footer-copyright p,
