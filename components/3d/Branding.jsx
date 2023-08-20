@@ -82,7 +82,7 @@ export default function Branding(props) {
         castShadow
         receiveShadow
         geometry={nodes.Text002.geometry}
-        material={materials.PaletteMaterial002}
+        material={materials['Material.009']}
         position={[-0.159, -0.008, 0.017]}
         rotation={[Math.PI / 2, 0, 0]}
         scale={0.057}

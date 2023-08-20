@@ -76,7 +76,8 @@ export default function Page() {
                     <div className='areas'>
 
                         <Link className='modular-brand-system' href="/design-language/*">
-                            <div><h4>Modular brand system</h4></div>
+                            <div><h4>Modular brand system</h4>
+                                <img src="/img/home/modular-brand-system.svg" alt="Modular brand system" /></div>
                         </Link>
 
                         <Link className="illustrations" href="/design-language/*">
@@ -92,19 +93,26 @@ export default function Page() {
                 </section>
 
                 <section className='design-system_wrapper'>
+
+
                     <div className='grid_wrapper'>
+                        <div className='design-system-img'>
+                            <img src="/img/home/fenix-design-system.svg" alt="Design system" />
+                        </div>
                         <div className='design-system_content'>
                             <h2>Fenix Design System</h2>
                             <p>The Fenix design system is the essence of our platform's visual language. It comprises an exhaustive set of guidelines for creating cohesive and scalable interfaces, maintaining visual and functional consistency across all touchpoints.</p>
-
+                            <div className='areas'>
+                                <Link href="#"><p>Core principles</p>
+                                    <img src="/img/home/arrow-right.svg" alt="Arrow right" />
+                                </Link>
+                                <Link href="#"><p>Four phases of design</p><img src="/img/home/arrow-right.svg" alt="Arrow right" /></Link>
+                                <Link href="#"><p>Hypothesis-driven design</p><img src="/img/home/arrow-right.svg" alt="Arrow right" /></Link>
+                            </div>
                         </div>
 
                     </div>
-                    <div className='areas'>
-                        <div><p>Core principles</p></div>
-                        <div><p>Four phases of design</p></div>
-                        <div><p>Hypothesis-driven design</p></div>
-                    </div>
+
                 </section>
 
                 <section className='tagger-labs_wrapper'>
