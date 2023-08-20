@@ -33,3 +33,7 @@ code {
   font-weight: 700;
   color: var(--primary-darkest);
 }
+
+a {
+  text-decoration: none;
+}

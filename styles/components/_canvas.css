@@ -1,5 +1,7 @@
-canvas{
-    z-index: -1;
- 
+canvas {
+  z-index: 1;
 }
 
+#ScrollRig-canvas {
+  z-index: 1;
+}

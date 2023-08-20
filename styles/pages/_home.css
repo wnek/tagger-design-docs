@@ -78,6 +78,8 @@ section {
 
 .philosophy_wrapper .areas a:hover {
   border: 1px solid var(--grey700);
+  text-decoration: underline;
+  color: var(--grey700);
 }
 
 .philosophy_wrapper .areas img {
@@ -102,8 +104,6 @@ section {
 
 .design-language_wrapper {
   padding: 10em 1em;
-  position: relative;
-  z-index: -1;
 }
 
 .design-language_content {
@@ -129,26 +129,72 @@ section {
 .design-language_wrapper .areas div {
   width: 100%;
   border-radius: 0.5em;
-  background-color: var(--light-grey);
   text-align: left;
 }
 
-.design-language_wrapper .areas div:nth-child(1) {
+.design-language_wrapper .modular-brand-system {
+  width: 100%;
+  border: 1px solid var(--light-grey);
+  grid-column-start: 1;
+  grid-column-end: 2;
+  width: 100%;
+  text-decoration: none;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  background-color: var(--light-grey);
+}
+
+.design-language_wrapper .modular-brand-system:hover,
+.design-language_wrapper .illustrations:hover,
+.design-language_wrapper .branding:hover {
+  border: 1px solid var(--grey700);
+  text-decoration: underline;
+  color: var(--grey400);
+}
+
+.design-language_wrapper .illustrations {
+  border: 1px solid var(--light-grey);
+  grid-column-start: 2;
+  grid-column-end: 3;
+  border-radius: 0.5rem;
+  position: relative;
+  overflow: hidden;
+  background-color: var(--light-grey);
+}
+
+.design-language_wrapper .illustrations div {
+  aspect-ratio: 1/1;
+  min-height: 100%;
+}
+
+.design-language_wrapper .illustrations img {
+  width: 100%;
+  position: absolute;
+  top: 0;
+}
+
+.design-language_wrapper .branding {
+  border: 1px solid var(--light-grey);
+  border-radius: 0.5rem;
   grid-column-start: 1;
   grid-column-end: 3;
   height: auto;
   aspect-ratio: 16/9;
+  position: relative;
 }
 
-.design-language_wrapper .areas div:nth-child(2) {
-  grid-column-start: 1;
-  grid-column-end: 2;
-  aspect-ratio: 1/1;
-  width: 100%;
+.design-language_wrapper .branding div {
+  height: auto;
+  aspect-ratio: 16/9;
+  min-height: 100%;
 }
-.design-language_wrapper .areas div:nth-child(3) {
-  grid-column-start: 2;
-  grid-column-end: 3;
+
+.design-language_wrapper .branding .modular-background {
+  width: 100%;
+  background-color: var(--light-grey);
+  position: absolute;
+  top: 0;
+  z-index: 0;
 }
 
 @media screen and (max-width: 1024px) {
@@ -156,23 +202,26 @@ section {
     display: grid;
     grid-template-columns: 1fr;
     gap: 1rem;
+    width: 100%;
   }
 
-  .design-language_wrapper .areas div:nth-child(1) {
+  .design-language_wrapper .branding {
     grid-column-start: 1;
     grid-column-end: 2;
-    height: auto;
-    aspect-ratio: 16/9;
-  }
-
-  .design-language_wrapper .areas div:nth-child(2) {
-    grid-column-start: 1;
-    grid-column-end: 2;
+    width: 100%;
     aspect-ratio: 1/1;
   }
-  .design-language_wrapper .areas div:nth-child(3) {
+
+  .design-language_wrapper .modular-brand-system {
     grid-column-start: 1;
     grid-column-end: 2;
+    width: 100%;
+    aspect-ratio: 1/1;
+  }
+  .design-language_wrapper .areas .illustrations {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    width: 100%;
   }
 }
 

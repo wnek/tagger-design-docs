@@ -19,6 +19,7 @@ export default function Page() {
 
         <SmoothScrollbar disablePointerOnScroll={false} config={{ syncTouch: true, touchInertiaMultiplier: 15 }}>
             {(bind) => (<div className='body-container'>
+
                 <Hero />
 
                 <section className='motto_wrapper grid_wrapper'>
@@ -64,18 +65,29 @@ export default function Page() {
                 </section>
 
                 <section className='design-language_wrapper'>
+
                     <div className='grid_wrapper'>
                         <div className='design-language_content'>
                             <h2>Design Language</h2>
                             <p>Our design language is not just about aesthetics, but about infusing your brand's ethos into every interaction, each campaign, every touchpoint.</p>
-
                         </div>
-
                     </div>
+
                     <div className='areas'>
-                        <div><h4>Branding</h4><Modular /></div>
-                        <div><h4>Modular brand system</h4> </div>
-                        <div><h4>Illustrations</h4><img src="/img/home/illustrations.png" alt="Illustrations" /></div>
+
+                        <Link className='modular-brand-system' href="/design-language/*">
+                            <div><h4>Modular brand system</h4></div>
+                        </Link>
+
+                        <Link className="illustrations" href="/design-language/*">
+                            <div><h4>Illustrations</h4><img src="/img/home/illustrations.png" alt="Illustrations" /></div>
+                        </Link>
+
+                        <Link className="branding" href="/design-language/*">
+                            <div><h4>Branding</h4><Modular /></div>
+                            <div className='modular-background'></div>
+                        </Link>
+
                     </div>
                 </section>
 
