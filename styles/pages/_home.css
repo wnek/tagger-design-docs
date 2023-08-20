@@ -366,6 +366,15 @@ section {
   padding: 10em 1em;
 }
 
+.tagger-labs_wrapper h4 {
+  color: #ffffff;
+  padding: 1rem 1rem 2rem;
+  position: relative;
+  top: 0;
+  left: 0;
+  margin: 0;
+}
+
 .tagger-labs_wrapper .areas {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -387,19 +396,36 @@ section {
 .tagger-labs_wrapper .taggeru,
 .tagger-labs_wrapper .playbooks,
 .tagger-labs_wrapper .smart-discovery {
-  border: 1px solid var(--light-grey);
+  border: 1px solid var(--grey900);
   border-radius: 0.5rem;
   height: auto;
   position: relative;
   aspect-ratio: 1/1;
   z-index: 0;
   width: 100%;
+  padding: 1rem;
+}
+
+.tagger-labs_wrapper .signals-trends:hover,
+.tagger-labs_wrapper .sharing:hover,
+.tagger-labs_wrapper .taggeru:hover,
+.tagger-labs_wrapper .playbooks:hover,
+.tagger-labs_wrapper .smart-discovery:hover {
+  border: 1px solid var(--grey700);
+  text-decoration: underline;
+  color: var(--grey700);
 }
 
 .tagger-labs_wrapper .signals-trends {
   grid-column-start: 1;
   grid-column-end: 3;
   aspect-ratio: 16/9;
+  padding: 0 0 1rem 0;
+}
+
+.tagger-labs_wrapper .signals-trends video {
+  border-radius: 0.5rem;
+  overflow: hidden;
 }
 
 .tagger-labs_wrapper .sharing {

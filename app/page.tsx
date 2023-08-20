@@ -11,7 +11,9 @@ import Hero from '../components/home/Hero';
 import Modular from '../components/home/Modular';
 
 import { SmoothScrollbar } from '@14islands/r3f-scroll-rig';
-import { bind } from 'lodash';
+
+import dynamic from 'next/dynamic';
+const ReactPlayer = dynamic(() => import('react-player/lazy'), { ssr: false });
 
 
 export default function Page() {
@@ -127,6 +129,8 @@ export default function Page() {
                     <div className='areas'>
                         <Link className="signals-trends" href="">
                             <h4>Signals - #Trends</h4>
+                            <ReactPlayer url='/img/home/trends-background.mp4' controls={false}
+                                playing={true} muted={true} loop={true} width="100%" height="100%" />
                         </Link>
 
                         <Link className="sharing" href="">
