@@ -134,19 +134,22 @@ export default function Page() {
                         </Link>
 
                         <Link className="sharing" href="">
-                            <h4>[PLG]Sharing and Workspaces</h4>
+                            <h4>[PLG] Sharing and Workspaces</h4>
+                            <img src="img/home/sharing.svg" alt="Sharing" />
                         </Link>
 
                         <Link className="taggeru" href="">
-                            <h4>TaggerU</h4>
+                            <h4>TaggerU</h4><img src="img/home/taggeru.svg" alt="TaggerU" />
                         </Link>
 
                         <Link className="playbooks" href="">
                             <h4>Signals - Playbooks</h4>
+                            <img src="img/home/playbooks.jpg" alt="Signals - Playbooks" />
                         </Link>
 
                         <Link className="smart-discovery" href="">
                             <h4>Smart Discovery</h4>
+                            <img src="img/home/smart-discovery.jpg" alt="Smart Discovery" />
                         </Link>
 
                     </div>
