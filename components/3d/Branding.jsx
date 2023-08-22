@@ -9,9 +9,10 @@ export default function Branding(props) {
   const cylinder2 = useRef();
   const cylinder3 = useRef();
 
-  useFrame(() => {
-    cylinder1.current.rotation.x =
-      ((props.scrollState.progress * Math.PI) / 2) * -1;
+  useFrame((state, delta) => {
+    cylinder1.current.rotation.x +=
+      delta * 0.5 * ((props.scrollState.progress * Math.PI) / 4) * -1;
+
     cylinder2.current.rotation.x =
       ((props.scrollState.progress * Math.PI) / 4) * -1;
     cylinder3.current.rotation.x =
