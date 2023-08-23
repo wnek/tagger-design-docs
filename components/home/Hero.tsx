@@ -53,8 +53,9 @@ function HeroScene({ el }) {
     useFrame((state) => {
 
         v.copy({ x: state.pointer.x, y: state.pointer.y, z: 0 })
-        cameraRef.current.position.lerp({ x: -state.pointer.x * 10, y: Math.max(-6, -state.pointer.y * 5), z: 20 }, 0.02)
+        cameraRef.current.position.lerp({ x: 0, y: Math.max(20, -state.pointer.x * 5), z: 0.1 }, 0.02)
         cameraRef.current.lookAt(0, 0, 0)
+        cameraRef.current.up.set(0, 1, 0);
     })
     return <ViewportScrollScene track={el} hideOffscreen={false}>
         {(props) => (
@@ -139,23 +140,9 @@ function StageComponent(props) {
                     <Comment castShadow />
                 </Float>
 
-                <Grid position={[0, -0.02, 0]}
-                    gridSize={[5, 5]}
-                    cellSize={0.02}
-                    cellThickness={1}
-                    cellColor={'#616161'}
-                    sectionSize={1.3}
-                    sectionThickness={1.2}
-                    sectionColor={'#FA6A42'}
-                    fadeDistance={30}
-                    fadeStrength={3}
-                    followCamera={false}
-                    infiniteGrid={true}
-                />
 
-
-                <Plane position={[0, -0.03, 0]} args={[40, 40]} rotation={[-Math.PI / 2, 0, 0]} receiveShadow >
-                    <meshBasicMaterial color="#191919" />
+                <Plane position={[0, -0.01, 0]} args={[40, 40]} rotation={[-Math.PI / 2, 0, 0]} receiveShadow >
+                    <meshBasicMaterial color="#ffffff" />
                 </Plane>
             </group>
 
