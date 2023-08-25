@@ -53,9 +53,9 @@ function HeroScene({ el }) {
     useFrame((state) => {
 
         v.copy({ x: state.pointer.x, y: state.pointer.y, z: 0 })
-        cameraRef.current.position.lerp({ x: 0, y: Math.max(20, -state.pointer.x * 5), z: 0.1 }, 0.02)
-        cameraRef.current.lookAt(0, 0, 0)
-        cameraRef.current.up.set(0, 1, 0);
+        cameraRef.current.position.lerp({ x: 0, y: Math.max(50, -state.pointer.x * 5), z: 0.1 }, 0.02)
+
+
     })
     return <ViewportScrollScene track={el} hideOffscreen={false}>
         {(props) => (
@@ -63,11 +63,20 @@ function HeroScene({ el }) {
 
                 <StageComponent {...props} />
                 <fog attach="fog" color="#000000" near={1} far={80} />
-                <PerspectiveCamera fov={80} ref={cameraRef} makeDefault={true} position={[0, 0, 18]} />
+
+                <PerspectiveCamera fov={20} ref={cameraRef} makeDefault={true} position={[0, -20, 0]} lookAt={[0, 0, 0]} />
 
 
 
                 <Environment blur={2}>
+                    <Lightformer
+                        position={[0, 30, 2]}
+                        form="rect" // circle | ring | rect (optional, default = rect)
+                        intensity={20} // power level (optional = 1)
+                        color="white" // (optional = white)
+                        scale={[50, 50]} // Scale it any way you prefer (optional = [1, 1])
+                        target={[0, 10, 0]} // Target position (optional = undefined)
+                    />
                     <Lightformer
                         position={[0, 15, 2]}
                         form="rect" // circle | ring | rect (optional, default = rect)

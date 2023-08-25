@@ -2,13 +2,14 @@
   display: flex;
   aspect-ratio: 16/10;
   width: calc(100% - 2em);
-  height: calc(100vh - 2em);
-  height: calc(100svh - 2em);
+  height: calc(200vh);
+  height: calc(200svh);
   text-align: center;
   border-radius: 1em;
   overflow: hidden;
   background: hsl(0, 0%, 0%);
   margin: 1em auto;
+  position: relative;
 }
 
 .hero-scroll-scene .logo {
@@ -16,6 +17,7 @@
   width: 200px;
   height: 200px;
   position: absolute;
+  z-index: 2;
 }
 
 .hero-scroll-scene .hero_content {
@@ -24,20 +26,27 @@
   height: 100%;
   color: #ffffff;
   font-weight: 700;
-  padding: 10em 2em;
+  padding: 20rem 2em;
 }
 
 .hero-scroll-scene .hero_content h1 {
   line-height: 120%;
+  position:relative;
+  font-size: var(--step-8);
+  z-index: 4;
 }
 
 .hero-scroll-scene .hero_content h2 {
   max-width: 40rem;
+  position:relative;
+  z-index: 4;
 }
 
 .hero-scroll-scene .hero_content p {
   font-size: var(--step--1);
-  color: var(--orange-500);
+  color: #FB8E23;
   font-weight: 500;
   margin: 0 auto;
+  position:relative;
+  z-index: 4;
 }
