@@ -28,6 +28,14 @@ section {
   padding: 10em 1em;
 }
 
+@media screen and (min-width: 1024px) {
+  .philosophy_wrapper .grid_wrapper,
+  .motto_wrapper .grid_wrapper {
+    max-width: 1600px;
+  
+  }
+}
+
 .philosophy_wrapper .philosophy_content {
   grid-column-start: 2;
   grid-column-end: 4;
@@ -70,10 +78,7 @@ section {
   border-radius: 0.5em;
   aspect-ratio: 1/1.1;
   text-decoration: none;
-  background-image: radial-gradient(#666666 0.5px, transparent 0.5px),
-    radial-gradient(#666666 0.5px, rgb(0, 0, 0) 0.5px);
-  background-size: 10px 10px;
-  background-position: 0 0, 10px 10px;
+ 
   overflow: hidden;
   border: 1px solid black;
 }
@@ -111,6 +116,7 @@ section {
 .design-language_wrapper .grid_wrapper,
 .tagger-labs_wrapper .grid_wrapper {
   padding: 0 10rem;
+  
 }
 
 @media screen and (max-width: 1024px) {
@@ -132,6 +138,7 @@ section {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 1rem;
+  align-items: end;
   width: 100%;
   padding: 0 10rem;
 }
@@ -158,18 +165,20 @@ section {
   border: 1px solid var(--light-grey);
   grid-column-start: 1;
   grid-column-end: 2;
+  aspect-ratio: 1.6/1;
   width: 100%;
   text-decoration: none;
   border-radius: 0.5rem;
   overflow: hidden;
   background-color: var(--light-grey);
   position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
 }
 
-.design-language_wrapper .modular-brand-system img {
-  position: absolute;
-  top: 0;
-}
+
 
 .design-language_wrapper .modular-brand-system:hover,
 .design-language_wrapper .illustrations:hover,
@@ -187,18 +196,15 @@ section {
   position: relative;
   overflow: hidden;
   background-color: var(--light-grey);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  aspect-ratio: 1/1.2;
 }
 
-.design-language_wrapper .illustrations div {
-  aspect-ratio: 1/1;
-  min-height: 100%;
-}
 
-.design-language_wrapper .illustrations img {
-  width: 100%;
-  position: absolute;
-  top: 0;
-}
+
 
 .design-language_wrapper .branding {
   border: 1px solid var(--light-grey);
@@ -287,8 +293,7 @@ section {
 }
 
 .design-system_wrapper .grid_wrapper {
-  padding: 10rem 10rem;
-  border: 1px solid var(--grey300);
+  padding: 1rem 10rem 10rem 10rem;
   max-width: 100%;
   border-radius: 0.5rem;
 }
@@ -299,8 +304,7 @@ section {
   }
 }
 
-.design-system_content,
-.tagger-labs_content {
+.design-system_content{
   grid-column-start: 3;
   grid-column-end: 5;
   text-align: left;
@@ -308,8 +312,7 @@ section {
 }
 
 @media screen and (max-width: 1024px) {
-  .design-system_content,
-  .tagger-labs_content {
+  .design-system_content {
     grid-column-start: 1;
     grid-column-end: 2;
   }
@@ -318,16 +321,12 @@ section {
 .design-system-img {
   width: 100%;
   height: 100%;
-  grid-column-start: 1;
-  grid-column-end: 3;
+  padding: 0 10rem;
 }
 
 @media screen and (max-width: 1024px) {
   .design-system-img {
-    width: 100%;
-    height: 100%;
-    grid-column-start: 1;
-    grid-column-end: 2;
+    padding: 0 1rem;
   }
 }
 
@@ -368,12 +367,62 @@ section {
 
 .tagger-labs_wrapper h4 {
   color: #ffffff;
-  padding: 1rem 1rem 2rem;
+}
+
+.tagger-labs_wrapper .tagger-labs_content{
+  grid-column-start: 1;
+  grid-column-end: 5;
+  border: 1px solid var(--grey900);
+  margin: 0 0 5em 0;
+  border-radius: 0.5rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  padding: 1rem;
   position: relative;
+}
+
+@media screen and (max-width: 1024px) {
+  .tagger-labs_wrapper .tagger-labs_content {
+    grid-template-columns: 1fr;
+  }
+}
+
+.tagger-labs_wrapper .tagger-labs_content .tagger-labs-logo{
+  grid-column-start: 1;
+  grid-column-end: 4;
+  display: block;
+  position: absolute;
   top: 0;
   left: 0;
-  margin: 0;
 }
+
+@media screen and (max-width: 1024px) {
+  .tagger-labs_wrapper .tagger-labs_content .tagger-labs-logo{
+    grid-column-start: 1;
+    grid-column-end: 4;
+    display: block;
+    position: relative;
+    top: -2rem;
+    left: -2rem;
+  }
+}
+
+.tagger-labs_wrapper .tagger-labs_content .tagger-labs-paragraph{
+  grid-column-start: 2;
+  grid-column-end: 3;
+  display: block;
+  padding: 0 0 40vh 0;
+}
+
+
+.tagger-labs_wrapper .tagger-labs_content .tagger-labs-text{
+  grid-column-start: 1;
+  grid-column-end: 4;
+  display: block;
+  width: 100%;
+
+}
+
 
 .tagger-labs_wrapper .areas {
   display: grid;
@@ -416,22 +465,76 @@ section {
   color: var(--grey700);
 }
 
+
+
 .tagger-labs_wrapper .signals-trends {
   grid-column-start: 1;
   grid-column-end: 3;
-  aspect-ratio: 16/9;
-  padding: 0 0 1rem 0;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow: hidden;
+  aspect-ratio: 16/12;
+  border-radius: 0.5rem;
 }
 
+
+
 .tagger-labs_wrapper .signals-trends video {
-  border-radius: 0.5rem;
-  overflow: hidden;
+  border-radius: 0.25rem;
+
+  
 }
+
 
 .tagger-labs_wrapper .sharing {
   grid-column-start: 1;
   grid-column-end: 2;
+  aspect-ratio: 1.2/1;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-between;
 }
+
+.tagger-labs_wrapper .signals-trends h4,
+.tagger-labs_wrapper .sharing h4,
+.tagger-labs_wrapper .taggeru  h4,
+.tagger-labs_wrapper .smart-discovery  h4{
+  display: block;
+  min-width: 100%;
+  margin: 0;
+}
+
+.tagger-labs_wrapper .taggeru {
+  grid-column-start: 2;
+  grid-column-end: 4;
+  aspect-ratio: 1/1;
+ 
+  display: flex;
+  align-items: start;
+  flex-direction: column;
+  justify-content: space-between;
+
+}
+
+.tagger-labs_wrapper .smart-discovery {
+  grid-column-start: 1;
+  grid-column-end: 4;
+  aspect-ratio: 16/10;
+  padding: 0 0 1rem 0;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 1rem;
+}
+
+.tagger-labs_wrapper .smart-discovery img {
+  width: 100%;
+}
+
 
 @media screen and (max-width: 1024px) {
   .tagger-labs_wrapper .signals-trends,
@@ -442,6 +545,7 @@ section {
     aspect-ratio: 1/1;
     grid-column-start: 1;
     grid-column-end: 2;
+ 
   }
 }
 
@@ -459,8 +563,4 @@ section {
   }
 }
 
-@media screen and (min-width: 1024px) {
-  .grid_wrapper {
-    max-width: 1600px;
-  }
-}
+
