@@ -10,7 +10,7 @@ import * as THREE from 'three'
 
 // R3F
 import { useFrame, useThree } from '@react-three/fiber'
-import { PerspectiveCamera, Float, Grid, Environment, Lightformer, AccumulativeShadows, RandomizedLight, Plane } from '@react-three/drei'
+import { PerspectiveCamera, Float, Grid, Environment, Lightformer, AccumulativeShadows, RandomizedLight, Plane, Box } from '@react-three/drei'
 
 
 import Model from '../3d/Hero3d';
@@ -49,12 +49,17 @@ function HeroScene({ el }) {
     const v = new THREE.Vector3()
 
     const cameraRef = useRef<THREE.Camera>()
+    const lightRef = useRef<THREE.Light>()
 
     useFrame((state) => {
 
         v.copy({ x: state.pointer.x, y: state.pointer.y, z: 0 })
         cameraRef.current.position.lerp({ x: 0, y: Math.max(50, -state.pointer.x * 5), z: 0.1 }, 0.02)
+        cameraRef.current.lookAt(0, 0, 0)
 
+        lightRef.current.position.lerp({
+            x: state.pointer.x * 5, y: -1, z: -state.pointer.y * 10
+        }, 0.05)
 
     })
     return <ViewportScrollScene track={el} hideOffscreen={false}>
@@ -62,38 +67,33 @@ function HeroScene({ el }) {
             <>
 
                 <StageComponent {...props} />
-                <fog attach="fog" color="#000000" near={1} far={80} />
+                {/* <fog attach="fog" color="#000000" near={1} far={80} /> */}
 
-                <PerspectiveCamera fov={20} ref={cameraRef} makeDefault={true} position={[0, -20, 0]} lookAt={[0, 0, 0]} />
-
+                <PerspectiveCamera fov={30} ref={cameraRef} makeDefault={true} position={[0, 50, 0]} />
+                <spotLight ref={lightRef} position={[0, -0.2, 2]} color="white" intensity={10000} />
 
 
                 <Environment blur={2}>
                     <Lightformer
-                        position={[0, 30, 2]}
+                        position={[0, 0, -5]}
+                        form="rect" // circle | ring | rect (optional, default = rect)
+                        intensity={2} // power level (optional = 1)
+                        color="white" // (optional = white)
+                        scale={[5, 5]} // Scale it any way you prefer (optional = [1, 1])
+                        target={[0, 0, 0]}
+                    />
+
+                    <Lightformer
+                        position={[0, 2, -5]}
                         form="rect" // circle | ring | rect (optional, default = rect)
                         intensity={20} // power level (optional = 1)
                         color="white" // (optional = white)
-                        scale={[50, 50]} // Scale it any way you prefer (optional = [1, 1])
-                        target={[0, 10, 0]} // Target position (optional = undefined)
-                    />
-                    <Lightformer
-                        position={[0, 15, 2]}
-                        form="rect" // circle | ring | rect (optional, default = rect)
-                        intensity={20} // power level (optional = 1)
-                        color="white" // (optional = white)
-                        scale={[50, 50]} // Scale it any way you prefer (optional = [1, 1])
-                        target={[0, 10, 0]} // Target position (optional = undefined)
-                    />
-                    <Lightformer
-                        position={[10, 1, -10]}
-                        form="ring"
-                        intensity={5}
-                        color="white"
-                        scale={[10, 5]}
+                        scale={[5, 5]} // Scale it any way you prefer (optional = [1, 1])
                         target={[0, 0, 0]}
                     />
                 </Environment>
+
+
             </>
         )}
 
@@ -105,31 +105,30 @@ function StageComponent(props) {
 
     const { size } = useThree();
 
-    let modelScaleMultiplier = 0.4;
+    // let modelScaleMultiplier = 0.4;
 
-    if (size.width < 480) {
-        modelScaleMultiplier = 1;
-    }
+    // if (size.width < 480) {
+    //     modelScaleMultiplier = 1;
+    // }
 
-    if (size.width > 480 && size.width < 1024) {
-        modelScaleMultiplier = 0.7;
-    }
+    // if (size.width > 480 && size.width < 1024) {
+    //     modelScaleMultiplier = 0.7;
+    // }
 
-    if (size.width > 1024 && size.width < 1600) {
-        modelScaleMultiplier = 0.8;
-    }
+    // if (size.width > 1024 && size.width < 1600) {
+    //     modelScaleMultiplier = 0.8;
+    // }
 
-    if (size.width > 1600) {
-        modelScaleMultiplier = 0.5;
-    }
+    // if (size.width > 1600) {
+    //     modelScaleMultiplier = 0.5;
+    // }
 
 
     return (
         <>
-            <group position={[0, -6, 0]} scale={props.scale.xy.min() * modelScaleMultiplier}>
-                <AccumulativeShadows temporal frames={100} color="black" colorBlend={0.5} toneMapped={false} alphaTest={0.3} opacity={2} scale={24}>
-                    <RandomizedLight amount={8} radius={4} ambient={0.5} intensity={2} position={[5, 5, -10]} bias={0.001} />
-                </AccumulativeShadows>
+            <group position={[0, 0, 0]} scale={props.scale.xy.min() * 0.2}>
+
+
 
                 <Model castShadow />
 
@@ -151,8 +150,9 @@ function StageComponent(props) {
 
 
                 <Plane position={[0, -0.01, 0]} args={[40, 40]} rotation={[-Math.PI / 2, 0, 0]} receiveShadow >
-                    <meshBasicMaterial color="#ffffff" />
+                    <meshBasicMaterial color="black" />
                 </Plane>
+
             </group>
 
 
