@@ -8,40 +8,50 @@ import React, { useRef } from 'react';
 import { useGLTF } from '@react-three/drei';
 
 export default function Model(props) {
-  const { nodes, materials } = useGLTF(
-    '/img/models/hero-top-view-transformed.glb'
-  );
+  const { nodes, materials } = useGLTF('/img/models/hero2-transformed.glb');
   return (
     <group {...props} dispose={null}>
       <mesh
         castShadow
         receiveShadow
-        geometry={nodes.browser.geometry}
-        material={materials.PaletteMaterial001}
+        geometry={nodes.Cube001.geometry}
+        material={materials.black}
+        position={[0, -0.543, 1.163]}
+        rotation={[-Math.PI / 2, 0, 0]}
       />
       <mesh
         castShadow
         receiveShadow
         geometry={nodes.Cylinder001.geometry}
-        material={materials.PaletteMaterial002}
-        position={[0.692, 0.649, 1.749]}
+        material={materials['Material.002']}
+        position={[0, -0.543, 1.109]}
         rotation={[-Math.PI / 2, 0, 0]}
       />
       <mesh
         castShadow
         receiveShadow
         geometry={nodes.Text.geometry}
-        material={materials.PaletteMaterial003}
-        position={[0.23, 0.663, 1.397]}
+        material={nodes.Text.material}
+        position={[0.177, 1.203, 0.178]}
       />
       <mesh
         castShadow
         receiveShadow
-        geometry={nodes.logo.geometry}
-        material={materials.PaletteMaterial004}
+        geometry={nodes.Cylinder002.geometry}
+        material={materials['Material.005']}
+        position={[0, -0.543, 1.163]}
+        rotation={[-Math.PI / 2, 0, 0]}
+      />
+      <mesh
+        castShadow
+        receiveShadow
+        geometry={nodes.Curve.geometry}
+        material={materials['Material.003']}
+        position={[-1.128, 0.396, -0.241]}
+        scale={2.582}
       />
     </group>
   );
 }
 
-useGLTF.preload('/img/models/hero-top-view-transformed.glb');
+useGLTF.preload('/img/models/hero2-transformed.glb');

@@ -50,7 +50,7 @@ function HeroScene({ el }) {
 
     const cameraRef = useRef<THREE.Camera>()
     const lightRef = useRef<THREE.Light>()
-
+    const lightRef2 = useRef<THREE.Light>()
     useFrame((state) => {
 
         v.copy({ x: state.pointer.x, y: state.pointer.y, z: 0 })
@@ -61,17 +61,22 @@ function HeroScene({ el }) {
             x: state.pointer.x * 5, y: -1, z: -state.pointer.y * 10
         }, 0.05)
 
+        lightRef2.current.position.lerp({
+            x: state.pointer.x * 2, y: -1, z: -state.pointer.y * 5
+        }, 0.05)
+
     })
     return <ViewportScrollScene track={el} hideOffscreen={false}>
         {(props) => (
             <>
 
-                <StageComponent {...props} />
+                <StageComponent {...props} position={[0, 0, 0]} />
                 {/* <fog attach="fog" color="#000000" near={1} far={80} /> */}
 
                 <PerspectiveCamera fov={30} ref={cameraRef} makeDefault={true} position={[0, 50, 0]} />
-                <spotLight ref={lightRef} position={[0, -0.2, 2]} color="white" intensity={10000} />
-
+                <spotLight ref={lightRef} position={[0, -0.2, 2]} color="white" intensity={0} />
+                <spotLight ref={lightRef2} position={[-10, -10, -4]} color="white" intensity={6000} />
+                <spotLight position={[-14, 4, -1]} color="white" intensity={500} />
 
                 <Environment blur={2}>
                     <Lightformer
@@ -91,6 +96,14 @@ function HeroScene({ el }) {
                         scale={[5, 5]} // Scale it any way you prefer (optional = [1, 1])
                         target={[0, 0, 0]}
                     />
+                    <Lightformer
+                        position={[0, -5, -5]}
+                        form="rect" // circle | ring | rect (optional, default = rect)
+                        intensity={2} // power level (optional = 1)
+                        color="white" // (optional = white)
+                        scale={[20, 20]} // Scale it any way you prefer (optional = [1, 1])
+                        target={[0, 0, 0]}
+                    />
                 </Environment>
 
 
@@ -101,7 +114,7 @@ function HeroScene({ el }) {
 
 }
 
-function StageComponent(props) {
+function StageComponent(props, position) {
 
     const { size } = useThree();
 
