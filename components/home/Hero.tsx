@@ -105,28 +105,28 @@ function StageComponent(props) {
 
     const { size } = useThree();
 
-    // let modelScaleMultiplier = 0.4;
+    let modelScaleMultiplier = 0.4;
 
-    // if (size.width < 480) {
-    //     modelScaleMultiplier = 1;
-    // }
+    if (size.width < 480) {
+        modelScaleMultiplier = 1;
+    }
 
-    // if (size.width > 480 && size.width < 1024) {
-    //     modelScaleMultiplier = 0.7;
-    // }
+    if (size.width > 480 && size.width < 1024) {
+        modelScaleMultiplier = 0.7;
+    }
 
-    // if (size.width > 1024 && size.width < 1600) {
-    //     modelScaleMultiplier = 0.8;
-    // }
+    if (size.width > 1024 && size.width < 1600) {
+        modelScaleMultiplier = 0.5;
+    }
 
-    // if (size.width > 1600) {
-    //     modelScaleMultiplier = 0.5;
-    // }
+    if (size.width > 1600) {
+        modelScaleMultiplier = 0.3;
+    }
 
 
     return (
         <>
-            <group position={[0, 0, 0]} scale={props.scale.xy.min() * 0.2}>
+            <group position={[0, 0, 0]} scale={props.scale.xy.min() * modelScaleMultiplier}>
 
 
 
