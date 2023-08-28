@@ -60,8 +60,8 @@ function HeroScene({ el }) {
     let modelPositionX = 0;
 
     if (size.width < 480) {
-        modelScaleMultiplier = 0.8;
-        modelPositionX = 5;
+        modelScaleMultiplier = 1.2;
+        modelPositionX = 7;
     }
 
     if (size.width > 480 && size.width < 1024) {
