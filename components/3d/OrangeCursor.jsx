@@ -11,7 +11,7 @@ export default function OrangeCursor(props) {
         castShadow
         receiveShadow
         geometry={nodes['orange-cursor'].geometry}
-        material={materials['Material.003']}
+        material={materials['Material.010']}
         position={[1.133, 0.555, -0.41]}
         rotation={[0, 0.203, 0]}
         scale={4.09}

@@ -23,25 +23,16 @@ export default function Model(props) {
         castShadow
         receiveShadow
         geometry={nodes.Text.geometry}
-        material={nodes.Text.material}
+        material={materials['Material.004']}
         position={[0.177, 1.887, 0.178]}
       />
       <mesh
         castShadow
         receiveShadow
-        geometry={nodes['01-Search'].geometry}
-        material={materials['Material.004']}
-        position={[-1.142, 0.395, 1.195]}
-        scale={6.011}
-      />
-      <mesh
-        castShadow
-        receiveShadow
-        geometry={nodes.Cylinder003.geometry}
+        geometry={nodes.Cylinder002.geometry}
         material={materials.black}
-        position={[-1.125, 0.396, 0.966]}
-        rotation={[-Math.PI, 0, -Math.PI]}
-        scale={2.582}
+        position={[-0.349, -0.543, 0.853]}
+        rotation={[-Math.PI / 2, 0, 0]}
       />
       <mesh
         castShadow
@@ -52,16 +43,16 @@ export default function Model(props) {
         scale={[0.316, 0.122, 0.316]}
       />
       <instancedMesh
-        args={[nodes.Plane002.geometry, materials.black, 13]}
+        args={[nodes.Plane007.geometry, materials['Material.001'], 10]}
         castShadow
         receiveShadow
-        instanceMatrix={nodes.Plane002.instanceMatrix}
+        instanceMatrix={nodes.Plane007.instanceMatrix}
       />
       <instancedMesh
-        args={[nodes.Cylinder.geometry, materials.black, 6]}
+        args={[nodes.Cylinder003.geometry, materials['Material.001'], 6]}
         castShadow
         receiveShadow
-        instanceMatrix={nodes.Cylinder.instanceMatrix}
+        instanceMatrix={nodes.Cylinder003.instanceMatrix}
       />
       <instancedMesh
         args={[nodes.Cylinder006.geometry, materials['Material.003'], 9]}
