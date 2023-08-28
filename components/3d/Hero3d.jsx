@@ -11,46 +11,28 @@ export default function Model(props) {
   const { nodes, materials } = useGLTF('/img/models/hero2-transformed.glb');
   return (
     <group {...props} dispose={null}>
-      <mesh
-        castShadow
-        receiveShadow
-        geometry={nodes.Cube001.geometry}
-        material={materials.black}
-        position={[0, -0.543, 1.163]}
-        rotation={[-Math.PI / 2, 0, 0]}
-      />
-      <mesh
-        castShadow
-        receiveShadow
-        geometry={nodes.Cylinder001.geometry}
-        material={materials['Material.002']}
-        position={[0, -0.543, 1.109]}
-        rotation={[-Math.PI / 2, 0, 0]}
-      />
-      <mesh
-        castShadow
-        receiveShadow
-        geometry={nodes.Text.geometry}
-        material={nodes.Text.material}
-        position={[0.177, 1.203, 0.178]}
-      />
-      <mesh
-        castShadow
-        receiveShadow
-        geometry={nodes.Cylinder002.geometry}
-        material={materials['Material.005']}
-        position={[0, -0.543, 1.163]}
-        rotation={[-Math.PI / 2, 0, 0]}
-      />
-      <mesh
-        castShadow
-        receiveShadow
-        geometry={nodes.Curve.geometry}
-        material={materials['Material.003']}
-        position={[-1.128, 0.396, -0.241]}
-        scale={2.582}
-      />
-    </group>
+    <mesh castShadow receiveShadow geometry={nodes.Cube001.geometry} material={materials.black} position={[0, -0.543, 1.163]} rotation={[-Math.PI / 2, 0, 0]} />
+    <mesh castShadow receiveShadow geometry={nodes.Cylinder001.geometry} material={materials['Material.002']} position={[0, -0.543, 1.109]} rotation={[-Math.PI / 2, 0, 0]} />
+    <mesh castShadow receiveShadow geometry={nodes.Text.geometry} material={nodes.Text.material} position={[0.177, 1.203, 0.178]} />
+    <mesh castShadow receiveShadow geometry={nodes.Text001.geometry} material={nodes.Text001.material} position={[-1.434, 0.692, -0.575]} />
+    <mesh castShadow receiveShadow geometry={nodes.Cylinder002.geometry} material={materials['Material.005']} position={[-0.349, -0.543, 0.853]} rotation={[-Math.PI / 2, 0, 0]} />
+    <mesh castShadow receiveShadow geometry={nodes['01-Search'].geometry} material={materials.black} position={[-1.142, 0.395, 1.195]} scale={6.011} />
+    <mesh castShadow receiveShadow geometry={nodes['02-Campaigns'].geometry} material={materials.black} position={[-1.142, 0.395, 1.195]} scale={6.011} />
+    <mesh castShadow receiveShadow geometry={nodes['03-Discovery'].geometry} material={materials.black} position={[-1.142, 0.395, 1.195]} scale={6.011} />
+    <mesh castShadow receiveShadow geometry={nodes['04-Labels'].geometry} material={materials.black} position={[-1.142, 0.395, 1.195]} scale={6.011} />
+    <mesh castShadow receiveShadow geometry={nodes['05-Signals'].geometry} material={materials.black} position={[-1.142, 0.395, 1.195]} scale={6.011} />
+    <mesh castShadow receiveShadow geometry={nodes['06-Report_Builder'].geometry} material={materials.black} position={[-1.142, 0.395, 1.195]} scale={6.011} />
+    <mesh castShadow receiveShadow geometry={nodes['07-Cross_Campaigns_Summary'].geometry} material={materials.black} position={[-1.142, 0.395, 1.195]} scale={6.011} />
+    <mesh castShadow receiveShadow geometry={nodes['08-Notifications'].geometry} material={materials.black} position={[-1.142, 0.395, 1.195]} scale={6.011} />
+    <mesh castShadow receiveShadow geometry={nodes['09-Messages'].geometry} material={materials.black} position={[-1.142, 0.395, 1.195]} scale={6.011} />
+    <mesh castShadow receiveShadow geometry={nodes['10-Expand_Navigation'].geometry} material={materials.black} position={[-1.142, 0.395, 1.195]} scale={6.011} />
+    <mesh castShadow receiveShadow geometry={nodes.Curve.geometry} material={materials['Material.003']} position={[-1.128, 0.396, -0.241]} scale={2.582} />
+    <mesh castShadow receiveShadow geometry={nodes.Cylinder003.geometry} material={materials.black} position={[-1.125, 0.396, 0.966]} rotation={[-Math.PI, 0, -Math.PI]} scale={2.582} />
+    <mesh castShadow receiveShadow geometry={nodes.Solid_1001.geometry} material={materials.black} position={[0.058, 0.356, 0.47]} scale={[0.316, 0.122, 0.316]} />
+    <mesh castShadow receiveShadow geometry={nodes.Solid_2.geometry} material={materials.black} position={[0.055, 0.378, 0.473]} scale={0.316} />
+    <mesh castShadow receiveShadow geometry={nodes.Solid_3.geometry} material={materials.black} position={[0.055, 0.383, 0.473]} scale={0.316} />
+    <mesh castShadow receiveShadow geometry={nodes.Solid_4.geometry} material={materials.black} position={[0.055, 0.383, 0.473]} scale={0.316} />
+  </group>
   );
 }
 

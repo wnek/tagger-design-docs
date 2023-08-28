@@ -75,35 +75,15 @@ function HeroScene({ el }) {
 
                 <PerspectiveCamera fov={30} ref={cameraRef} makeDefault={true} position={[0, 50, 0]} />
                 <spotLight ref={lightRef} position={[0, -0.2, 2]} color="white" intensity={0} />
-                <spotLight ref={lightRef2} position={[-10, -10, -4]} color="white" intensity={6000} />
-                <spotLight position={[-14, 4, -1]} color="white" intensity={500} />
+                <spotLight ref={lightRef2} position={[-10, -10, -4]} color="white" intensity={0} />
+                <spotLight position={[-14, 4, -1]} color="white" intensity={0} />
 
-                <Environment blur={2}>
-                    <Lightformer
-                        position={[0, 0, -5]}
-                        form="rect" // circle | ring | rect (optional, default = rect)
-                        intensity={2} // power level (optional = 1)
-                        color="white" // (optional = white)
-                        scale={[5, 5]} // Scale it any way you prefer (optional = [1, 1])
-                        target={[0, 0, 0]}
-                    />
+                <Environment files={"/img/models/studio_small_04_1k.hdr"} blur={10} background={"true"}>
 
-                    <Lightformer
-                        position={[0, 2, -5]}
-                        form="rect" // circle | ring | rect (optional, default = rect)
-                        intensity={20} // power level (optional = 1)
-                        color="white" // (optional = white)
-                        scale={[5, 5]} // Scale it any way you prefer (optional = [1, 1])
-                        target={[0, 0, 0]}
-                    />
-                    <Lightformer
-                        position={[0, -5, -5]}
-                        form="rect" // circle | ring | rect (optional, default = rect)
-                        intensity={2} // power level (optional = 1)
-                        color="white" // (optional = white)
-                        scale={[20, 20]} // Scale it any way you prefer (optional = [1, 1])
-                        target={[0, 0, 0]}
-                    />
+
+
+
+
                 </Environment>
 
 
@@ -121,19 +101,19 @@ function StageComponent(props, position) {
     let modelScaleMultiplier = 0.4;
 
     if (size.width < 480) {
-        modelScaleMultiplier = 1;
+        modelScaleMultiplier = 0.6;
     }
 
     if (size.width > 480 && size.width < 1024) {
-        modelScaleMultiplier = 0.7;
+        modelScaleMultiplier = 0.3;
     }
 
     if (size.width > 1024 && size.width < 1600) {
-        modelScaleMultiplier = 0.5;
+        modelScaleMultiplier = 0.4;
     }
 
     if (size.width > 1600) {
-        modelScaleMultiplier = 0.3;
+        modelScaleMultiplier = 0.25;
     }
 
 
@@ -162,9 +142,7 @@ function StageComponent(props, position) {
                 </Float>
 
 
-                <Plane position={[0, -0.01, 0]} args={[40, 40]} rotation={[-Math.PI / 2, 0, 0]} receiveShadow >
-                    <meshBasicMaterial color="black" />
-                </Plane>
+
 
             </group>
 
@@ -172,4 +150,3 @@ function StageComponent(props, position) {
         </>
     )
 }
-
