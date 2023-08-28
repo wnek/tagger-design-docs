@@ -51,102 +51,140 @@ function HeroScene({ el }) {
     const cameraRef = useRef<THREE.Camera>()
     const lightRef = useRef<THREE.Light>()
     const lightRef2 = useRef<THREE.Light>()
-    useFrame((state) => {
+    const stageRef = useRef<THREE.Group>()
 
-        v.copy({ x: state.pointer.x, y: state.pointer.y, z: 0 })
-        cameraRef.current.position.lerp({ x: 0, y: Math.max(50, -state.pointer.x * 5), z: 0.1 }, 0.02)
-        cameraRef.current.lookAt(0, 0, 0)
-
-        lightRef.current.position.lerp({
-            x: state.pointer.x * 5, y: -1, z: -state.pointer.y * 10
-        }, 0.05)
-
-        lightRef2.current.position.lerp({
-            x: state.pointer.x * 2, y: -1, z: -state.pointer.y * 5
-        }, 0.05)
-
-    })
-    return <ViewportScrollScene track={el} hideOffscreen={false}>
-        {(props) => (
-            <>
-
-                <StageComponent {...props} position={[0, 0, 0]} />
-                {/* <fog attach="fog" color="#000000" near={1} far={80} /> */}
-
-                <PerspectiveCamera fov={30} ref={cameraRef} makeDefault={true} position={[0, 50, 0]} />
-                <spotLight ref={lightRef} position={[0, -0.2, 2]} color="white" intensity={0} />
-                <spotLight ref={lightRef2} position={[-10, -10, -4]} color="white" intensity={0} />
-                <spotLight position={[-14, 4, -1]} color="white" intensity={0} />
-
-                <Environment files={"/img/models/studio_small_04_1k.hdr"} blur={10} background={"true"}>
-
-
-
-
-
-                </Environment>
-
-
-            </>
-        )}
-
-    </ViewportScrollScene>
-
-}
-
-function StageComponent(props, position) {
 
     const { size } = useThree();
 
     let modelScaleMultiplier = 0.4;
+    let modelPositionX = 0;
 
     if (size.width < 480) {
-        modelScaleMultiplier = 0.6;
+        modelScaleMultiplier = 0.8;
+        modelPositionX = 5;
     }
 
     if (size.width > 480 && size.width < 1024) {
-        modelScaleMultiplier = 0.3;
+        modelScaleMultiplier = 0.7;
+        modelPositionX = 3;
     }
 
     if (size.width > 1024 && size.width < 1600) {
         modelScaleMultiplier = 0.4;
+        modelPositionX = 5;
     }
 
     if (size.width > 1600) {
-        modelScaleMultiplier = 0.25;
+        modelScaleMultiplier = 0.35;
+        modelPositionX = 0;
     }
 
 
-    return (
-        <>
-            <group position={[0, 0, 0]} scale={props.scale.xy.min() * modelScaleMultiplier}>
+    useFrame((state) => {
+
+        v.copy({ x: state.pointer.x, y: state.pointer.y, z: 0 })
+        v.unproject(state.camera)
+
+        cameraRef.current.position.lerp({
+            x: state.pointer.x * 20, y: 50, z: -state.pointer.y * 10
+        }, 0.01)
+        cameraRef.current.lookAt(0, 0, 0)
+        cameraRef.current.up.set(0, 0, -1);
+        state.camera.updateProjectionMatrix()
+
+        lightRef.current.position.lerp({
+            x: state.pointer.x * 5, y: 50, z: -state.pointer.y * 10
+        }, 0.05)
+
+
+    })
+
+    return <ViewportScrollScene track={el} hideOffscreen={false}>
+        {(props) => (
+            <>
+                <group ref={stageRef} position={[0, 0, modelPositionX]} scale={props.scale.xy.min() * modelScaleMultiplier}>
 
 
 
-                <Model castShadow />
+                    <Model castShadow />
 
-                <Float floatIntensity={0.1} rotationIntensity={0.2} speed={1.1}>
-                    <GreyCursor castShadow />
-                </Float>
+                    <Float floatIntensity={0.1} rotationIntensity={0.1} speed={1.1}>
+                        <GreyCursor castShadow />
+                    </Float>
 
-                <Float floatIntensity={0.4} rotationIntensity={0.2} speed={1.2}>
-                    <RedCursor castShadow />
-                </Float>
+                    <Float floatIntensity={0.4} rotationIntensity={0.2} speed={1.2}>
+                        <RedCursor castShadow />
+                    </Float>
 
-                <Float floatIntensity={0.5} rotationIntensity={0.1} speed={1.5}>
-                    <OrangeCursor castShadow />
-                </Float>
+                    <Float floatIntensity={0.5} rotationIntensity={0.1} speed={1.5}>
+                        <OrangeCursor castShadow />
+                    </Float>
 
-                <Float floatIntensity={0.3} rotationIntensity={0.25} speed={1.5}>
-                    <Comment castShadow />
-                </Float>
-
-
+                    <Float floatIntensity={0.6} rotationIntensity={0.1} speed={1.5}>
+                        <Comment castShadow />
+                    </Float>
 
 
-            </group>
 
 
-        </>
-    )
+                </group>
+
+                <PerspectiveCamera fov={30} ref={cameraRef} makeDefault={true} position={[0, 50, 0]} />
+
+                <spotLight ref={lightRef} position={[-14, 200, -1]} color="white" intensity={100} />
+                {/* <rectAreaLight position={[0, 0, 20]} color="white" intensity={100} lookAt={[0, 0, 0]} width={2}
+                    height={200} /> */}
+
+                <Environment>
+                    <Lightformer
+                        form="rect" // circle | ring | rect (optional, default = rect)
+                        intensity={2} // power level (optional = 1)
+                        color="white" // (optional = white)
+                        scale={[10, 5]} // Scale it any way you prefer (optional = [1, 1])
+                        target={[0, 0, 0]}
+                        position={[-5, 1, -1]} // Target position (optional = undefined)
+                    />
+
+                    <Lightformer
+                        form="rect" // circle | ring | rect (optional, default = rect)
+                        intensity={1} // power level (optional = 1)
+                        color="white" // (optional = white)
+                        scale={[10, 5]} // Scale it any way you prefer (optional = [1, 1])
+                        target={[0, 0, 0]}
+                        position={[5, 1, -1]} // Target position (optional = undefined)
+                    />
+                    <Lightformer
+                        form="rect" // circle | ring | rect (optional, default = rect)
+                        intensity={1} // power level (optional = 1)
+                        color="white" // (optional = white)
+                        scale={[10, 5]} // Scale it any way you prefer (optional = [1, 1])
+                        target={[0, 0, 0]}
+                        position={[5, -10, -1]} // Target position (optional = undefined)
+                    />
+                    <Lightformer
+                        form="rect" // circle | ring | rect (optional, default = rect)
+                        intensity={10} // power level (optional = 1)
+                        color="orange" // (optional = white)
+                        scale={[10, 5]} // Scale it any way you prefer (optional = [1, 1])
+                        target={[0, 0, 0]}
+                        position={[5, 1, 10]} // Target position (optional = undefined)
+                    />
+                    <Lightformer
+                        form="rect" // circle | ring | rect (optional, default = rect)
+                        intensity={10} // power level (optional = 1)
+                        color="orange" // (optional = white)
+                        scale={[10, 5]} // Scale it any way you prefer (optional = [1, 1])
+                        target={[0, 0, 0]}
+                        position={[0, -2, 4]} // Target position (optional = undefined)
+                    />
+                </Environment>
+
+
+            </>
+        )
+        }
+
+    </ViewportScrollScene >
+
 }
+
