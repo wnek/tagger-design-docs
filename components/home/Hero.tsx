@@ -61,7 +61,7 @@ function HeroScene({ el }) {
 
     if (size.width < 480) {
         modelScaleMultiplier = 1.2;
-        modelPositionX = 7;
+        modelPositionX = 5;
     }
 
     if (size.width > 480 && size.width < 1024) {
