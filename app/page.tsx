@@ -52,7 +52,7 @@ export default function Page() {
                             </div>
                         </Link>
 
-                        <Link href="/philosophy/four-phases">
+                        <Link href="/philosophy/design-phases">
                             <div>
                                 <h4>Four phases of design</h4>
                                 <img src="/img/home/four-phases.svg" alt="Four phases of design" />

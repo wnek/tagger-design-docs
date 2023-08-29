@@ -129,7 +129,7 @@ function HeroScene({ el }) {
 
                 </group>
 
-                <PerspectiveCamera fov={30} ref={cameraRef} makeDefault={true} position={[0, 50, 0]} />
+                <PerspectiveCamera fov={30} ref={cameraRef} makeDefault={true} position={[0, 50, 0]} up={[0, 0, -1]} />
 
                 <spotLight ref={lightRef} position={[-14, 200, -1]} color="white" intensity={100} />
                 {/* <rectAreaLight position={[0, 0, 20]} color="white" intensity={100} lookAt={[0, 0, 0]} width={2}
