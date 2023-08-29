@@ -28,13 +28,16 @@ export default function Layout({
                             <Link className={lastPage === 'philosophy' ? "selected" : ""} href="/philosophy">Overview</Link>
 
 
-
+                            <hr></hr>
                             <Link className={lastPage === 'core-principles' ? "selected" : ""} href="/philosophy/core-principles">Core Principles</Link>
+                            <hr></hr>
+                            <Link className={lastPage === 'design-phases' ? "selected" : ""} href="/philosophy/design-phases">Design Phases</Link>
                             <Link className={lastPage === 'understand' ? "selected" : ""} href="/philosophy/understand">Understand</Link>
                             <Link className={lastPage === 'design' ? "selected" : ""} href="/philosophy/design">Design</Link>
                             <Link className={lastPage === 'verify' ? "selected" : ""} href="/philosophy/verify">Verify</Link>
                             <Link className={lastPage === 'implement' ? "selected" : ""} href="/philosophy/implement">Implement</Link>
-
+                            <hr></hr>
+                            <Link className={lastPage === 'hypothesis-driven' ? "selected" : ""} href="/philosophy/hypothesis-driven">Hypothesis-Driven Design</Link>
 
 
                         </div>

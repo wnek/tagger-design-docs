@@ -146,11 +146,11 @@ function HeroScene({ el }) {
                     />
                     <Lightformer
                         form="rect" // circle | ring | rect (optional, default = rect)
-                        intensity={300} // power level (optional = 1)
-                        color="orange" // (optional = white)
-                        scale={[20, 100]} // Scale it any way you prefer (optional = [1, 1])
+                        intensity={1} // power level (optional = 1)
+                        color="white" // (optional = white)
+                        scale={[500, 500]} // Scale it any way you prefer (optional = [1, 1])
                         target={[0, 0, 0]}
-                        position={[0, -200, -80]} // Target position (optional = undefined)
+                        position={[0, -100, -80]} // Target position (optional = undefined)
                     />
                     <Lightformer
                         form="rect" // circle | ring | rect (optional, default = rect)

@@ -151,3 +151,11 @@ ol {
   border: 1px solid var(--grey300);
   border-radius: 0.25em;
 }
+
+.side-nav hr{
+  border: none;
+  color: var(--grey300);
+  background-color:var(--grey300);
+  margin: 0.5rem 0;
+  height: 1px;
+}
