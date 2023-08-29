@@ -74,3 +74,11 @@
   position: relative;
   z-index: 4;
 }
+
+.loader {
+  background-color: #000000;
+  color: #ffffff;
+  display: block;
+  position: absolute;
+  top: 100rem;
+}

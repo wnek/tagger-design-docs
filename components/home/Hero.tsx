@@ -1,4 +1,4 @@
-import React, { useRef } from 'react'
+import React, { useRef, Suspense } from 'react'
 import Link from 'next/link';
 
 
@@ -9,8 +9,8 @@ import { ViewportScrollScene, UseCanvas } from '@14islands/r3f-scroll-rig'
 import * as THREE from 'three'
 
 // R3F
-import { useFrame, useThree } from '@react-three/fiber'
-import { PerspectiveCamera, Float, Grid, Environment, Lightformer, AccumulativeShadows, RandomizedLight, Plane, Box } from '@react-three/drei'
+import { useFrame, useThree, } from '@react-three/fiber'
+import { PerspectiveCamera, Float, Grid, Environment, Html, Lightformer, AccumulativeShadows, RandomizedLight, Plane, Box, useProgress } from '@react-three/drei'
 
 
 import Model from '../3d/Hero3d';
@@ -19,8 +19,24 @@ import Comment from '../3d/Comment';
 import RedCursor from '../3d/RedCursor';
 import GreyCursor from '../3d/GreyCursor';
 
+
+
+function Loader() {
+    const { progress } = useProgress();
+
+
+    return <Html as='div' center distanceFactor={10} wrapperClass={"loader"} transform zIndexRange={[1000, 0]}>
+        <h4>Loading: {Math.round(progress)}%</h4>
+    </Html>;
+}
+
+
 export default function Hero() {
     const el = useRef()
+    const { progress } = useProgress();
+
+
+
 
     return (
         <>
@@ -30,16 +46,22 @@ export default function Hero() {
                         <img src={'./img/tagger-logo-light.svg'} />
                     </Link>
                 </div>
-                <div className='hero_content'>
-                    <p>Tagger Design Nest</p>
-                    <h1>Shape Ideas into Reality</h1>
-                </div>
+                {progress >= 100 && (
+                    <div className='hero_content'>
+                        <p>Tagger Design Nest</p>
+                        <h1>Shape Ideas into Reality</h1>
+                    </div>
+                )}
 
             </div >
+
             <UseCanvas>
-                <HeroScene el={el} />
+                <Suspense fallback={<Loader />}>
+                    <HeroScene el={el} />
+                </Suspense>
 
             </UseCanvas>
+
         </>
 
     )
@@ -132,8 +154,8 @@ function HeroScene({ el }) {
                 <PerspectiveCamera fov={30} ref={cameraRef} makeDefault={true} position={[0, 50, 0]} up={[0, 0, -1]} />
 
                 <spotLight ref={lightRef} position={[-14, 200, -1]} color="white" intensity={100} />
-                {/* <rectAreaLight position={[0, 0, 20]} color="white" intensity={100} lookAt={[0, 0, 0]} width={2}
-                    height={200} /> */}
+                <rectAreaLight position={[0, 0, 20]} color="white" intensity={100} lookAt={[0, 0, 0]} width={2}
+                    height={200} />
 
                 <Environment>
                     <Lightformer
