@@ -10,7 +10,7 @@ import * as THREE from 'three'
 
 // R3F
 import { useFrame, useThree, } from '@react-three/fiber'
-import { PerspectiveCamera, Float, Grid, Environment, Html, Lightformer, AccumulativeShadows, RandomizedLight, Plane, Box, useProgress } from '@react-three/drei'
+import { PerspectiveCamera, Float, Grid, Environment, useTexture, Html, Cylinder, Lightformer, AccumulativeShadows, Sphere, RandomizedLight, Plane, Box, useProgress } from '@react-three/drei'
 
 
 import Model from '../3d/Hero3d';
@@ -75,7 +75,7 @@ function HeroScene({ el }) {
     const lightRef2 = useRef<THREE.Light>()
     const stageRef = useRef<THREE.Group>()
 
-
+    const backgroundTexture = useTexture('/img/models/background.jpg')
     const { size } = useThree();
 
     let modelScaleMultiplier = 0.4;
@@ -127,8 +127,7 @@ function HeroScene({ el }) {
                 <group ref={stageRef} position={[0, 0, modelPositionX]} scale={props.scale.xy.min() * modelScaleMultiplier}>
 
 
-
-                    <Model castShadow />
+                    <Model castShadow receiveShadow />
 
                     <Float floatIntensity={0.1} rotationIntensity={0.1} speed={1.1}>
                         <GreyCursor castShadow />
@@ -146,6 +145,13 @@ function HeroScene({ el }) {
                         <Comment castShadow />
                     </Float>
 
+                    <Cylinder scale={[6, 18, 6]} position={[0, 0, 1]} rotation={[Math.PI / 2, Math.PI / 2, 0]} openEnded>
+                        <meshBasicMaterial color="white" side={THREE.BackSide} map={backgroundTexture} />
+                    </Cylinder>
+
+                    <spotLight ref={lightRef} position={[-14, 200, -1]} color="white" intensity={2000} />
+
+
 
 
 
@@ -153,69 +159,18 @@ function HeroScene({ el }) {
 
                 <PerspectiveCamera fov={30} ref={cameraRef} makeDefault={true} position={[0, 50, 0]} up={[0, 0, -1]} />
 
-                <spotLight ref={lightRef} position={[-14, 200, -1]} color="white" intensity={100} />
-                <rectAreaLight position={[0, 0, 20]} color="white" intensity={100} lookAt={[0, 0, 0]} width={2}
-                    height={200} />
+
 
                 <Environment>
-                    <Lightformer
-                        form="ring" // circle | ring | rect (optional, default = rect)
-                        intensity={600} // power level (optional = 1)
-                        color="white" // (optional = white)
-                        scale={[20, 1]} // Scale it any way you prefer (optional = [1, 1])
-                        target={[0, 0, 0]}
-                        position={[0, 100, -80]} // Target position (optional = undefined)
-                    />
-                    <Lightformer
-                        form="rect" // circle | ring | rect (optional, default = rect)
-                        intensity={1} // power level (optional = 1)
-                        color="white" // (optional = white)
-                        scale={[500, 500]} // Scale it any way you prefer (optional = [1, 1])
-                        target={[0, 0, 0]}
-                        position={[0, -100, -80]} // Target position (optional = undefined)
-                    />
-                    <Lightformer
-                        form="rect" // circle | ring | rect (optional, default = rect)
-                        intensity={2} // power level (optional = 1)
-                        color="white" // (optional = white)
-                        scale={[10, 5]} // Scale it any way you prefer (optional = [1, 1])
-                        target={[0, 0, 0]}
-                        position={[-5, 1, -1]} // Target position (optional = undefined)
-                    />
+                    <Lightformer intensity={5} position={[0, 0, -50]} target={[0, 0, 0]} scale={100} />
+                    <Lightformer intensity={50} position={[-50, 0, -50]} target={[0, 0, 0]} scale={50} />
+                    <Lightformer form={"ring"} intensity={50} position={[0, 0, 50]} color={"#e95100"} target={[0, 0, 0]} scale={20} />
 
-                    <Lightformer
-                        form="rect" // circle | ring | rect (optional, default = rect)
-                        intensity={1} // power level (optional = 1)
-                        color="white" // (optional = white)
-                        scale={[10, 5]} // Scale it any way you prefer (optional = [1, 1])
-                        target={[0, 0, 0]}
-                        position={[5, 1, -1]} // Target position (optional = undefined)
-                    />
-                    <Lightformer
-                        form="rect" // circle | ring | rect (optional, default = rect)
-                        intensity={1} // power level (optional = 1)
-                        color="white" // (optional = white)
-                        scale={[10, 5]} // Scale it any way you prefer (optional = [1, 1])
-                        target={[0, 0, 0]}
-                        position={[5, -10, -1]} // Target position (optional = undefined)
-                    />
-                    <Lightformer
-                        form="rect" // circle | ring | rect (optional, default = rect)
-                        intensity={10} // power level (optional = 1)
-                        color="orange" // (optional = white)
-                        scale={[10, 5]} // Scale it any way you prefer (optional = [1, 1])
-                        target={[0, 0, 0]}
-                        position={[5, 1, 10]} // Target position (optional = undefined)
-                    />
-                    <Lightformer
-                        form="rect" // circle | ring | rect (optional, default = rect)
-                        intensity={10} // power level (optional = 1)
-                        color="orange" // (optional = white)
-                        scale={[10, 5]} // Scale it any way you prefer (optional = [1, 1])
-                        target={[0, 0, 0]}
-                        position={[0, -2, 4]} // Target position (optional = undefined)
-                    />
                 </Environment>
+
+
+
+
 
 
             </>
