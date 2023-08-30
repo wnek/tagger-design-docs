@@ -453,6 +453,14 @@ section {
   color: var(--grey700);
 }
 
+@media not all and (min-resolution: 0.001dpcm) {
+  @supports (-webkit-appearance: none) and (display: flow-root) {
+    .tagger-labs_wrapper .signals-trends {
+      display: none;
+    }
+  }
+}
+
 .tagger-labs_wrapper .signals-trends {
   grid-column-start: 1;
   grid-column-end: 3;
