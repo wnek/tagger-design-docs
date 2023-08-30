@@ -137,11 +137,12 @@ export default function Page() {
 
                         <Link className="sharing" href="">
                             <h4>[PLG] Sharing and Workspaces</h4>
-                            <img src="img/home/sharing.png" alt="Sharing" />
+                            <img src="img/home/sharing.jpg" alt="Sharing" />
                         </Link>
 
                         <Link className="taggeru" href="">
-                            <h4>TaggerU</h4><img src="img/home/taggeru.png" alt="TaggerU" />
+                            <h4>TaggerU</h4>
+                            <img src="img/home/taggeru.jpg" alt="TaggerU" />
                         </Link>
 
 
