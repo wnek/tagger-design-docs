@@ -92,8 +92,8 @@ function HeroScene({ el }) {
     }
 
     if (size.width > 1024 && size.width < 1600) {
-        modelScaleMultiplier = 0.4;
-        modelPositionX = 5;
+        modelScaleMultiplier = 0.5;
+        modelPositionX = 4;
     }
 
     if (size.width > 1600) {

@@ -79,16 +79,16 @@ export default function Page() {
 
                     <div className='areas'>
 
-                        <Link className='modular-brand-system' href="/design-language/*">
+                        <Link className='modular-brand-system' href="/design-language/labels">
                             <h4>Modular brand system</h4>
                             <img src="/img/home/modular-brand-system.png" alt="Modular brand system" />
                         </Link>
 
-                        <Link className="illustrations" href="/design-language/*">
+                        <Link className="illustrations" href="/design-language/illustrations">
                             <h4>Illustrations</h4><img src="/img/home/illustrations.png" alt="Illustrations" />
                         </Link>
 
-                        <Link className="branding" href="/design-language/*">
+                        <Link className="branding" href="/design-language/logotype">
                             <div><h4>Branding</h4><Modular /></div>
                             <div className='modular-background'></div>
                         </Link>
@@ -107,11 +107,11 @@ export default function Page() {
 
                             <p>The Fenix design system is the essence of our platform's visual language. It comprises an exhaustive set of guidelines for creating cohesive and scalable interfaces, maintaining visual and functional consistency across all touchpoints.</p>
                             <div className='areas'>
-                                <Link href="#"><p>Foundations</p>
+                                <Link href="/fenix-design-system"><p>Foundations</p>
                                     <img src="/img/home/arrow-right.svg" alt="Arrow right" />
                                 </Link>
-                                <Link href="#"><p>Styles</p><img src="/img/home/arrow-right.svg" alt="Arrow right" /></Link>
-                                <Link href="#"><p>Components</p><img src="/img/home/arrow-right.svg" alt="Arrow right" /></Link>
+                                <Link href="/fenix-design-system/color"><p>Styles</p><img src="/img/home/arrow-right.svg" alt="Arrow right" /></Link>
+                                <Link href="/fenix-design-system/badge"><p>Components</p><img src="/img/home/arrow-right.svg" alt="Arrow right" /></Link>
                             </div>
                         </div>
 
@@ -129,25 +129,25 @@ export default function Page() {
 
                     </div>
                     <div className='areas'>
-                        <Link className="signals-trends" href="">
+                        <Link className="signals-trends" href="/tagger-labs/trends">
                             <h4>Signals - #Trends</h4>
                             <ReactPlayer url='/img/home/trends-background.mp4' controls={false}
                                 playing={true} muted={true} loop={true} width="100%" height="auto" />
                         </Link>
 
-                        <Link className="sharing" href="">
+                        <Link className="sharing" href="/tagger-labs/workspaces">
                             <h4>[PLG] Sharing and Workspaces</h4>
                             <img src="img/home/sharing.jpg" alt="Sharing" />
                         </Link>
 
-                        <Link className="taggeru" href="">
+                        <Link className="taggeru" href="/tagger-labs/taggeru">
                             <h4>TaggerU</h4>
                             <img src="img/home/taggeru.jpg" alt="TaggerU" />
                         </Link>
 
 
 
-                        <Link className="smart-discovery" href="">
+                        <Link className="smart-discovery" href="/tagger-labs/smart-discovery">
                             <h4>Smart Discovery</h4>
                             <img src="img/home/smart-discovery.jpg" alt="Smart Discovery" />
                         </Link>

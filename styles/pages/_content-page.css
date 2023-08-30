@@ -5,6 +5,11 @@
   border-radius: 1rem;
 }
 
+.subpage a {
+  color: black;
+  text-decoration: underline;
+}
+
 @media screen and (max-width: 1024px) {
   .subpage {
     padding: 1rem;
@@ -22,10 +27,20 @@
 }
 
 .subpage article h1 {
-  border-bottom: 1px solid var(--grey300);
-  padding: 0 0 4rem 0;
   color: var(--grey900);
-  font-size: var(--step-5);
+  font-size: var(--step-4);
+  line-height: 110%;
+  letter-spacing: -0.02em;
+  margin: 1em auto 2em auto;
+  max-width: 40rem;
+}
+
+hr {
+  height: 1px;
+  border: 0;
+  background-color: var(--grey300);
+  max-width: 40rem;
+  margin: 0 auto;
 }
 
 .subpage article h2,
@@ -73,9 +88,9 @@ ol {
   }
 }
 
-@media screen and (max-width: 1600px) {
+@media screen and (min-width: 1024px) {
   .subpage .subpage_content {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr 4fr;
     gap: 1rem;
   }
 }
@@ -93,6 +108,7 @@ ol {
     background-color: white;
     border-radius: 0.5rem;
     padding: 2rem;
+    margin-top: 3rem;
   }
 }
 
@@ -105,20 +121,34 @@ ol {
   padding: 0;
   position: -webkit-sticky;
   position: sticky;
-  top: 2.7em;
   overflow-y: visible;
   flex-grow: 1;
   background-color: white;
   padding: 2em 2rem;
   border-radius: 0.5rem;
-  max-height: 100vh;
+}
+
+@media screen and (max-width: 1024px) {
+  .side-nav {
+    position: relative;
+    min-height: 100%;
+  }
 }
 
 @media screen and (max-width: 1600px) {
   .side-nav {
-    overflow-y: scroll;
-    max-height: calc(100vh - 15rem);
-    display: none;
+    display: flex;
+    flex-direction: column;
+    align-self: start;
+    justify-content: flex-start;
+    gap: 0.2rem;
+    padding: 0;
+    position: relative;
+    overflow-y: visible;
+    flex-grow: 1;
+    background-color: white;
+    padding: 2em 2rem;
+    border-radius: 0.5rem;
   }
 }
 
@@ -145,6 +175,7 @@ ol {
   padding: 0.5rem;
   border-radius: 0.25em;
   border: 1px solid white;
+  display: block;
 }
 
 .side-nav a:hover {
@@ -152,10 +183,10 @@ ol {
   border-radius: 0.25em;
 }
 
-.side-nav hr{
+.side-nav hr {
   border: none;
   color: var(--grey300);
-  background-color:var(--grey300);
+  background-color: var(--grey300);
   margin: 0.5rem 0;
   height: 1px;
 }

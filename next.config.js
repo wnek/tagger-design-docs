@@ -7,11 +7,4 @@ module.exports = {
     // !! WARN !!
     ignoreBuildErrors: true,
   },
-  head: {
-    link: {
-      rel: 'icon',
-      type: 'image/x-icon',
-      href: '/favicon.ico',
-    },
-  },
 };

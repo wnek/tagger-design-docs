@@ -3,7 +3,10 @@ import React from 'react'
 export default function Philosophy() {
     return (
         <article><h1>Philosophy</h1>
+            <img
+                src="/img/pages/philosophy/philosophy1.jpg" alt="Philosophy" />
             <h3>Welcome to the Design Team’s Philosophy Documentation</h3>
+
             <p>As you embark on your journey with our design team, it’s essential to understand the core philosophy that underpins our every decision, methodology, and action. We believe in a thoughtful, data-driven, and hypothesis-based approach to design that not only fosters innovation but ensures that the end product resonates with users. This documentation serves as your guide to our team's ideological foundation, giving you a holistic view of how and why we operate the way we do.</p>
 
             <h3>Core Principles</h3>

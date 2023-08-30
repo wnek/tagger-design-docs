@@ -1,13 +1,13 @@
 "use client"
 
-import {usePathname} from "next/navigation"
+import { usePathname } from "next/navigation"
 import Link from "next/link"
-import {SmoothScrollbar} from '@14islands/r3f-scroll-rig';
+import { SmoothScrollbar } from '@14islands/r3f-scroll-rig';
 import Logo from "components/Logo";
 
 export default function Layout({
-                                   children,
-                               }: {
+    children,
+}: {
     children: React.ReactNode
 }) {
     const currentPathname = usePathname()
@@ -20,14 +20,21 @@ export default function Layout({
 
 
                 <div className="subpage">
-                    <Logo/>
+                    <Logo />
                     <div className="subpage_content">
                         <div className="side-nav">
 
                             <Link className={lastPage === 'about' ? "selected" : ""}
-                                  href="/tagger-labs/about">About</Link>
-                            <Link className={lastPage === 'experiments' ? "selected" : ""}
-                                  href="/tagger-labs/experiments">Experiments</Link>
+                                href="/tagger-labs/about">About</Link>
+                            <p>Experiments</p>
+                            <Link className={lastPage === 'trends' ? "selected" : ""}
+                                href="/tagger-labs/trends">Signals - #Trends</Link>
+                            <Link className={lastPage === 'workspaces' ? "selected" : ""}
+                                href="/tagger-labs/workspaces">[PLG] Sharing and Workspaces</Link>
+                            <Link className={lastPage === 'taggeru' ? "selected" : ""}
+                                href="/tagger-labs/taggeru">TaggerU</Link>
+                            <Link className={lastPage === 'smart-discovery' ? "selected" : ""}
+                                href="/tagger-labs/smart-discovery">Smart Discovery</Link>
 
                         </div>
                         {children}
