@@ -413,12 +413,23 @@ section {
 }
 
 .tagger-labs_wrapper .areas {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  display: flex;
+  flex-direction: column;
   gap: 1rem;
   width: 100%;
   padding: 0 10rem;
   height: auto;
+}
+
+.second-row {
+  display: flex;
+  gap: 1rem;
+}
+
+@media screen and (max-width: 1024px) {
+  .second-row {
+    flex-direction: column;
+  }
 }
 
 @media screen and (max-width: 1024px) {
@@ -451,14 +462,6 @@ section {
   border: 1px solid var(--grey700);
   text-decoration: underline;
   color: var(--grey700);
-}
-
-@media not all and (min-resolution: 0.001dpcm) {
-  @supports (-webkit-appearance: none) and (display: flow-root) {
-    .tagger-labs_wrapper .signals-trends {
-      display: none;
-    }
-  }
 }
 
 .tagger-labs_wrapper .signals-trends {

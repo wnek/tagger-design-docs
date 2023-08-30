@@ -134,16 +134,17 @@ export default function Page() {
                             <ReactPlayer url='/img/home/trends-background.mp4' controls={false}
                                 playing={true} muted={true} loop={true} width="100%" height="auto" />
                         </Link>
+                        <div className='second-row'>
+                            <Link className="sharing" href="/tagger-labs/workspaces">
+                                <h4>[PLG] Sharing and Workspaces</h4>
+                                <img src="img/home/sharing.jpg" alt="Sharing" />
+                            </Link>
 
-                        <Link className="sharing" href="/tagger-labs/workspaces">
-                            <h4>[PLG] Sharing and Workspaces</h4>
-                            <img src="img/home/sharing.jpg" alt="Sharing" />
-                        </Link>
-
-                        <Link className="taggeru" href="/tagger-labs/taggeru">
-                            <h4>TaggerU</h4>
-                            <img src="img/home/taggeru.jpg" alt="TaggerU" />
-                        </Link>
+                            <Link className="taggeru" href="/tagger-labs/taggeru">
+                                <h4>TaggerU</h4>
+                                <img src="img/home/taggeru.jpg" alt="TaggerU" />
+                            </Link>
+                        </div>
 
 
 
