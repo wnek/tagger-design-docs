@@ -16,6 +16,7 @@ import { GlobalCanvas } from '@14islands/r3f-scroll-rig'
 import styles from '../styles/abstracts/_variables.module.css'
 import { Plus_Jakarta_Sans } from 'next/font/google'
 import { usePathname } from "next/navigation"
+import Script from 'next/script'
 
 const plusJakarta = Plus_Jakarta_Sans({
     subsets: ['latin'],
@@ -46,6 +47,16 @@ export default function RootLayout({
                     </div>
                     <Footer />
                 </div>
+                <Script src="https://www.googletagmanager.com/gtag/js?id=G-2419GERZ2B" />
+                <Script id="google-analytics">
+                    {`
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+ 
+          gtag('config', 'G-2419GERZ2B');
+        `}
+                </Script>
             </body>
         </html >
 
