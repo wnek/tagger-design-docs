@@ -48,8 +48,8 @@ export default function RootLayout({
                     <Footer />
                 </div>
 
-                <script async src="https://www.googletagmanager.com/gtag/js?id=G-2419GERZ2B"></script>
-                <script>
+                <Script async src="https://www.googletagmanager.com/gtag/js?id=G-2419GERZ2B"></Script>
+                <Script>
                     {`
                     window.dataLayer = window.dataLayer || [];
                     function gtag(){dataLayer.push(arguments);}
@@ -57,7 +57,7 @@ export default function RootLayout({
 
                     gtag('config', 'G-2419GERZ2B');
                     `}
-                </script>
+                </Script>
             </body>
         </html >
 
