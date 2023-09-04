@@ -3,6 +3,7 @@
 //Next.js
 import { Metadata } from 'next'
 import Link from 'next/link';
+import Image from 'next/image';
 
 
 import { motion } from 'framer-motion';
@@ -48,21 +49,27 @@ export default function Page() {
                         <Link href="/philosophy/core-principles">
                             <div>
                                 <h4>Core principles</h4>
-                                <img src="/img/home/principles.svg" alt="Core principles" />
+                                <div className='image-container'>
+                                    <Image src="/img/home/principles.svg" alt="Core principles" fill />
+                                </div>
                             </div>
                         </Link>
 
                         <Link href="/philosophy/design-phases">
                             <div>
                                 <h4>Four phases of design</h4>
-                                <img src="/img/home/four-phases.svg" alt="Four phases of design" />
+                                <div className='image-container'>
+                                    <Image src="/img/home/four-phases.svg" alt="Four phases of design" fill />
+                                </div>
                             </div>
                         </Link>
 
                         <Link href="/philosophy/hypothesis-driven">
                             <div>
                                 <h4>Hypothesis-driven design</h4>
-                                <img src="/img/home/hypothesis-driven-design.svg" alt="Hypothesis-driven design" />
+                                <div className='image-container'>
+                                    <Image src="/img/home/hypothesis-driven-design.svg" alt="Hypothesis-driven design" fill />
+                                </div>
                             </div>
                         </Link>
                     </div>

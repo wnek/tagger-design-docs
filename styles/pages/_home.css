@@ -88,9 +88,27 @@ section {
   color: var(--grey700);
 }
 
+.image-container {
+  width: 100%;
+  border: 1px solid red;
+  height: 100%;
+  display: block;
+}
+
+.image-container > div {
+  position: unset;
+}
+
+.image-container img {
+  object-fit: contain;
+  width: 100% !important;
+  position: relative !important;
+  height: unset !important;
+}
+
 .philosophy_wrapper .areas img {
   margin: 0 auto;
-  width: 100%;
+  object-fit: cover;
 }
 
 .philosophy_wrapper .areas h4 {
