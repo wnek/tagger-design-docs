@@ -88,7 +88,9 @@ export default function Page() {
 
                         <Link className='modular-brand-system' href="/design-language/labels">
                             <h4>Modular brand system</h4>
-                            <img src="/img/home/modular-brand-system.png" alt="Modular brand system" />
+                            <div className='image-container'>
+                                <Image src="/img/home/modular-brand-system.png" alt="Modular brand system" fill quality={100} />
+                            </div>
                         </Link>
 
                         <Link className="illustrations" href="/design-language/illustrations">
