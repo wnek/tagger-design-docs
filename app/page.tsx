@@ -94,12 +94,18 @@ export default function Page() {
                         </Link>
 
                         <Link className="illustrations" href="/design-language/illustrations">
-                            <h4>Illustrations</h4><img src="/img/home/illustrations.png" alt="Illustrations" />
+                            <h4>Illustrations</h4>
+                            <div className='image-container'>
+                                <Image src="/img/home/illustrations.png" alt="Illustrations" fill quality={100} />
+                            </div>
                         </Link>
 
                         <Link className="branding" href="/design-language/logotype">
-                            <div><h4>Branding</h4><Modular /></div>
-                            <div className='modular-background'></div>
+                            <div><h4>Branding</h4>
+
+                                <Modular />
+                            </div>
+
                         </Link>
 
                     </div>

@@ -1,5 +1,5 @@
 {
-  "name": "notion-x-example-minimal",
+  "name": "tagger-design",
   "version": "6.16.0",
   "private": true,
   "type": "commonjs",
@@ -19,14 +19,14 @@
     "@react-three/postprocessing": "^2.15.0",
     "@studio-freight/react-lenis": "^0.0.23",
     "@types/lodash": "^4.14.195",
+    "eslint-config-next": "^14.2.3",
     "framer-motion": "^10.13.1",
     "leva": "^0.9.35",
-    "next": "^13.4.13",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "react-notion-x": "^6.16.0",
+    "next": "^14.2.3",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
     "react-player": "^2.12.0",
-    "three": "^0.155.0"
+    "three": "^0.164.1"
   },
   "devDependencies": {
     "@types/node": "^16.11.2",

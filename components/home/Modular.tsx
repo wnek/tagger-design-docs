@@ -3,7 +3,7 @@ import { useRef } from 'react'
 import { Environment, Lightformer } from '@react-three/drei'
 import { useThree } from '@react-three/fiber'
 import { UseCanvas, ScrollScene } from '@14islands/r3f-scroll-rig'
-import Branding from '/components/3d/Branding'
+import Branding from '../3d/Branding'
 
 export default function Modular() {
     const el = useRef()
@@ -26,7 +26,7 @@ function SpinningBoxWebGL({ scale, scrollState }) {
     let modelScaleMultiplier = 0.5;
 
     if (size.width < 1024) {
-        modelScaleMultiplier = 0.3;
+        modelScaleMultiplier = 0.4;
     }
 
     return (

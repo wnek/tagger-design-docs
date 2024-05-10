@@ -3,7 +3,7 @@
 import { usePathname } from "next/navigation"
 import Link from "next/link"
 import { SmoothScrollbar } from '@14islands/r3f-scroll-rig';
-import Logo from "components/Logo";
+import Logo from "./../../../components/Logo"
 
 export default function Layout({
     children,
