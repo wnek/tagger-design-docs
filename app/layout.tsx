@@ -1,6 +1,6 @@
 "use client"
 import '../styles/main.css';
-import { useRef } from 'react';
+import { useRef, Suspense } from 'react';
 
 // Next.js
 import { Metadata } from 'next'
@@ -12,8 +12,6 @@ import Footer from '../components/Footer';
 // R3F-Scroll-Rig
 import { GlobalCanvas } from '@14islands/r3f-scroll-rig'
 
-
-import styles from '../styles/abstracts/_variables.module.css'
 import { Plus_Jakarta_Sans } from 'next/font/google'
 import { usePathname } from "next/navigation"
 import Script from 'next/script'
@@ -23,6 +21,7 @@ const plusJakarta = Plus_Jakarta_Sans({
     variable: '--font-plus-jakarta',
     display: 'swap',
 })
+
 
 export default function RootLayout({
     children,
@@ -35,7 +34,9 @@ export default function RootLayout({
     return (
 
         <html lang="en">
+
             <body className={currentPathname === '/' ? plusJakarta.className : plusJakarta.className + " subpage_body_wrapper"} >
+
                 <div ref={eventSource} className="event-source">
                     <div className='body-container'>
                         <Navbar />
@@ -48,6 +49,7 @@ export default function RootLayout({
                     <Footer />
                 </div>
 
+
                 <Script async src="https://www.googletagmanager.com/gtag/js?id=G-2419GERZ2B"></Script>
                 <Script>
                     {`
@@ -59,7 +61,9 @@ export default function RootLayout({
                     `}
                 </Script>
             </body>
+
         </html >
+
 
 
     )

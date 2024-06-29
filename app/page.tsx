@@ -5,9 +5,6 @@ import { Metadata } from 'next'
 import Link from 'next/link';
 import Image from 'next/image';
 
-
-import { motion } from 'framer-motion';
-
 import Hero from '../components/home/Hero';
 import Modular from '../components/home/Modular';
 

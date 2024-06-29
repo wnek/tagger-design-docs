@@ -10,7 +10,7 @@ import * as THREE from 'three'
 
 // R3F
 import { useFrame, useThree, } from '@react-three/fiber'
-import { PerspectiveCamera, Float, Grid, Environment, useTexture, Html, Cylinder, Lightformer, AccumulativeShadows, Sphere, RandomizedLight, Plane, Box, useProgress } from '@react-three/drei'
+import { PerspectiveCamera, Float, Environment, useTexture, Html, Cylinder, Lightformer, useProgress } from '@react-three/drei'
 
 
 import Model from '../3d/Hero3d';
@@ -21,14 +21,12 @@ import GreyCursor from '../3d/GreyCursor';
 
 
 
-function Loader() {
-    const { progress } = useProgress();
-
-
-    return <Html as='div' center distanceFactor={10} wrapperClass={"loader"} transform zIndexRange={[1000, 0]}>
-        <h4>Loading: {Math.round(progress)}%</h4>
-    </Html>;
-}
+// function Loader() {
+//     const { progress } = useProgress();
+//     return <Html as='div' center distanceFactor={10} wrapperClass={"loader"} transform zIndexRange={[1000, 0]}>
+//         <h4>Loading: {Math.round(progress)}%</h4>
+//     </Html>;
+// }
 
 
 export default function Hero() {
@@ -56,9 +54,9 @@ export default function Hero() {
             </div >
 
             <UseCanvas>
-                <Suspense fallback={<Loader />}>
-                    <HeroScene el={el} />
-                </Suspense>
+                {/* <Suspense fallback={<Loader />}> */}
+                <HeroScene el={el} />
+                {/* </Suspense> */}
 
             </UseCanvas>
 
